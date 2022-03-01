@@ -1,9 +1,12 @@
 from torch.nn import Linear, ReLU, Sequential
+from utils import *
 
-# Todo: add the script file including all the input settings
+mlp_config = config("mlp")
+
 
 def build_mlp_model(layers: list = [256, 256],
-                    activation: list = "Relu"):
+                    activation: str = "Relu"):
+
     torch_layers = []
     for inp, out in zip(layers[:-1], layers[1:]):
         torch_layers.append(Linear(inp, out))

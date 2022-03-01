@@ -7,10 +7,9 @@ import torch
 
 class mlp_dataset():
     def __init__(self,
-                 path=".",
+                 path,
                  shuffle=True):
         """
-
         :param path: The path to the dataset
         :param shuffle: if the dataset needs to be shuffled
         """
