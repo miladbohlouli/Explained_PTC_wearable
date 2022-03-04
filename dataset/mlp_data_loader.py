@@ -1,14 +1,15 @@
 import numpy as np
 import pandas as pd
 from dataset.data_helpers import *
-from torch.utils.data import TensorDataset, DataLoader
+from torch.utils.data import TensorDataset
 import torch
 
 
 class mlp_dataset():
     def __init__(self,
                  path,
-                 shuffle=True):
+                 shuffle=True,
+                 na_handling_method="average"):
         """
         :param path: The path to the dataset
         :param shuffle: if the dataset needs to be shuffled
@@ -17,15 +18,19 @@ class mlp_dataset():
         # Read the initial dataset
         ds = pd.read_csv(path)
 
-        # correct the missing values
-        ds = correct_NA_values(ds)
-
         # Some of the features have to be selected
         truncated_dataset = pd.concat([ds.iloc[:, 0:9], ds[
             ["mean.hr_5", "mean.WristT_5", "mean.AnkleT_5", "mean.PantT_5", "mean.act_5"]]], axis=1)
         self.num_people = pd.unique(truncated_dataset.loc[:, "ID"]).__len__()
         self.labels = ds.loc[:, 'therm_pref']
         self.shuffle = shuffle
+
+        # correct the missing values
+        truncated_dataset = correct_NA_values(
+            truncated_dataset,
+            method=na_handling_method
+        )
+
         self.columns = truncated_dataset.columns
 
         # remap the categorical values
@@ -55,12 +60,9 @@ class mlp_dataset():
     def __len__(self):
         return len(self.ds)
 
-# Todo:
-#   1. adding the loader with cross validation
-
 
 if __name__ == '__main__':
     mlp_ds = mlp_dataset("raw_data_Liu.csv")
-    print(mlp_ds.dataset)
+    # print(mlp_ds[1])
 
 
