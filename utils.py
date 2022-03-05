@@ -1,6 +1,8 @@
 import configparser
 from typing import Dict
 
+import numpy as np
+from sklearn.metrics import accuracy_score, balanced_accuracy_score, confusion_matrix
 
 def config(module_name: str) -> Dict[str, str]:
     """
@@ -19,3 +21,13 @@ def config(module_name: str) -> Dict[str, str]:
 
 def convert_str_to_list(string_list):
     return [int(item.strip()) for item in string_list.strip("][").split(",")]
+
+
+def evaluate_predictions(logits, labels):
+    predicted_labels = np.argmax(logits, 1)
+    accuracy = accuracy_score(labels, predicted_labels)
+    balanced_accuracy = balanced_accuracy_score(labels, predicted_labels)
+    conf_matrix = confusion_matrix(labels, predicted_labels)
+    return accuracy, balanced_accuracy, conf_matrix
+
+
