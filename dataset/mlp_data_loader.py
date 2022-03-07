@@ -9,6 +9,7 @@ class mlp_dataset():
     def __init__(self,
                  path,
                  shuffle=True,
+                 normlaize=True,
                  na_handling_method="average"):
         """
         :param path: The path to the dataset
@@ -38,6 +39,8 @@ class mlp_dataset():
         truncated_dataset.loc[:, 'Sex'] = truncated_dataset.loc[:, "Sex"].map(self.__dict)
         self.labels = self.labels.map({key: value for value, key in enumerate(sorted(self.labels.unique()))})
 
+        print(truncated_dataset.iloc[0, :])
+
         # convert the type
         self.dataset, self.labels = truncated_dataset.to_numpy().astype(np.float32), self.labels.to_numpy().astype(np.int64)
 
@@ -53,7 +56,6 @@ class mlp_dataset():
         indexes = np.where(self.dataset[:, 0] == idx)[0]
         np.random.shuffle(indexes) if self.shuffle else None
 
-        # Check if there are
         personal_data, personal_data_labels = torch.from_numpy(self.dataset[indexes, 4:]), torch.from_numpy(self.labels[indexes])
         return TensorDataset(personal_data, personal_data_labels)
 

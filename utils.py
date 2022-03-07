@@ -27,7 +27,7 @@ def evaluate_predictions(logits, labels):
     predicted_labels = np.argmax(logits, 1)
     accuracy = accuracy_score(labels, predicted_labels)
     balanced_accuracy = balanced_accuracy_score(labels, predicted_labels)
-    conf_matrix = confusion_matrix(labels, predicted_labels)
+    conf_matrix = confusion_matrix(labels, predicted_labels, labels=[0, 1, 2])
     return accuracy, balanced_accuracy, conf_matrix
 
 
