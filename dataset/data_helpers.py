@@ -16,3 +16,7 @@ def correct_NA_values(dataset,
 
     else:
         raise Exception("The entered format for the method is not valid")
+
+
+def normalize(dataset):
+    return ((dataset - dataset.mean(0)) / dataset.std(0))

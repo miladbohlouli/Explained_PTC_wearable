@@ -57,8 +57,13 @@ class mlp_dataset():
         indexes = np.where(self.dataset[:, 0] == idx)[0]
         np.random.shuffle(indexes) if self.shuffle else None
 
-
         personal_data, personal_data_labels = torch.from_numpy(self.dataset[indexes, 1:]), torch.from_numpy(self.labels[indexes])
+        personal_data_stds = personal_data.std(0)
+        personal_data[:, personal_data_stds != 0] = normalize(personal_data[:, personal_data_stds != 0])
+
+        print(personal_data_stds)
+        print(personal_data)
+
         return TensorDataset(personal_data, personal_data_labels)
 
     def __len__(self):
