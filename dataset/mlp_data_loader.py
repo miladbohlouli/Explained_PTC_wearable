@@ -25,6 +25,7 @@ class mlp_dataset():
         self.num_people = pd.unique(truncated_dataset.loc[:, "ID"]).__len__()
         self.labels = ds.loc[:, 'therm_pref']
         self.shuffle = shuffle
+        self.normalize = normlaize
 
         # correct the missing values
         truncated_dataset = correct_NA_values(
@@ -56,7 +57,8 @@ class mlp_dataset():
         indexes = np.where(self.dataset[:, 0] == idx)[0]
         np.random.shuffle(indexes) if self.shuffle else None
 
-        personal_data, personal_data_labels = torch.from_numpy(self.dataset[indexes, 4:]), torch.from_numpy(self.labels[indexes])
+
+        personal_data, personal_data_labels = torch.from_numpy(self.dataset[indexes, 1:]), torch.from_numpy(self.labels[indexes])
         return TensorDataset(personal_data, personal_data_labels)
 
     def __len__(self):
