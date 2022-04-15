@@ -62,7 +62,7 @@ class mlp_dataset():
         personal_data[:, personal_data_stds != 0] = normalize(personal_data[:, personal_data_stds != 0])
 
         print(personal_data_stds)
-        print(personal_data)
+        print(personal_data_labels)
 
         return TensorDataset(personal_data, personal_data_labels)
 
