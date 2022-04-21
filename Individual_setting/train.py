@@ -13,6 +13,8 @@ import os
 from utils import evaluate_predictions
 import seaborn as sns
 from matplotlib import pyplot as plt
+import warnings
+warnings.simplefilter('ignore', UserWarning)
 
 my_parser = argparse.ArgumentParser()
 my_parser.add_argument('-ds_dir',
@@ -39,7 +41,8 @@ my_parser.add_argument('-verbose',
                        default=False,
                        type=str)
 
-mlp_config = config("mlp")
+mlp_config = config("MLP")
+training_config = config("TRAINING")
 parser = my_parser.parse_args()
 logging.basicConfig(level=logging.DEBUG) if bool(parser.verbose) else None
 train_writer = SummaryWriter(os.path.join(parser.temp_dir, "train"))
@@ -60,7 +63,7 @@ def train():
     individual_household = ds[id]
 
     logging.debug(f"splitting the train and test dataset")
-    num_folds = int(mlp_config["k_fold"])
+    num_folds = int(training_config["k_fold"])
     resampled_evaluated_metrics = dict()
     resampled_evaluated_metrics["train_acc"] = []
     resampled_evaluated_metrics["train_acc_balanced"] = []
@@ -69,7 +72,7 @@ def train():
 
     kfold = KFold(
         n_splits=num_folds,
-        shuffle=True
+        shuffle=False
     )
 
     assert num_folds <= len(list(individual_household))
@@ -81,11 +84,13 @@ def train():
             batch_norm=bool(mlp_config["batch_norm"])
         )
 
+        logging.debug(model) if fold == 0 else None
+
         loss_model = CrossEntropyLoss()
         optimizer = Adam(model.parameters())
         global_step = 0
 
-        num_epochs = int(mlp_config["num_epochs"])
+        num_epochs = int(training_config["num_epochs"])
 
         logging.info(f"Fold ({fold}/{num_folds})")
         train_subsampler = SubsetRandomSampler(train_ids)
@@ -93,13 +98,13 @@ def train():
 
         train_loader = DataLoader(
             dataset=individual_household,
-            batch_size=int(mlp_config["batch_size"]),
-            sampler=train_subsampler
+            batch_size=int(training_config["batch_size"]),
+            sampler=train_subsampler,
         )
 
         test_loader = DataLoader(
             dataset=individual_household,
-            batch_size=int(mlp_config["batch_size"]),
+            batch_size=int(training_config["batch_size"]),
             sampler=test_subsampler,
         )
 
@@ -154,8 +159,8 @@ def train():
                 eval_writer.add_scalar(f"fold: {fold}/balanced accuracy", eval_balanced_acc, global_step)
 
 
-            print(f"Fold ({fold+1}/{num_folds})\t"
-                  f"Epoch ({i+1} / {num_epochs})\t train_loss: {train_loss_avr / num_samples:.2f}\t"
+            print(f"Fold ({fold+1:3}/{num_folds})\t"
+                  f"Epoch ({i+1:3} / {num_epochs})\t train_loss: {train_loss_avr / num_samples:.2f}\t"
                   f"train_acc (balanced): {train_balanced_acc_avr / num_samples:.2f}\t\t"
                   f"eval_acc (balanced): {eval_balanced_acc_avr / num_samples:.2f}\t")
 
@@ -169,6 +174,7 @@ def train():
             plt.ylabel("True label"), plt.xlabel("Predicted labe;")
             eval_writer.add_figure("evaluation confusion matrix", fig1, i)
 
+        print(80*"-")
     metrics_values = np.asarray([(np.round(np.mean(value), 2), np.round(np.std(value), 2)) for value in resampled_evaluated_metrics.values()])
     metrics_values_pd = pd.DataFrame(metrics_values.T, columns=["train_acc", "train_acc_balanced", "eval_acc", "eval_acc_balanced"],
                         index=["mean", "std"])

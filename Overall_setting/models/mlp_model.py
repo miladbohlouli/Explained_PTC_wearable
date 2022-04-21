@@ -1,7 +1,7 @@
-from torch.nn import Linear, ReLU, Sequential, BatchNorm1d
+from torch.nn import Linear, ReLU, Sequential, BatchNorm1d, MaxPool1d
 from utils import *
 
-mlp_config = config("mlp")
+mlp_config = config("MLP")
 
 
 def build_mlp_model(layers: list = [256, 256],
@@ -11,13 +11,14 @@ def build_mlp_model(layers: list = [256, 256],
     torch_layers = []
     for inp, out in zip(layers[:-1], layers[1:]):
         torch_layers.append(Linear(inp, out))
-        torch_layers.append(ReLU()) if activation == "Relu" else None
-        # torch_layers.append(BatchNorm1d(out)) if batch_norm else None
+        if activation.lower() == "relu": torch_layers.append(ReLU())
+        if batch_norm: torch_layers.append(BatchNorm1d(out))
 
     return Sequential(*torch_layers)
 
 
 if __name__ == '__main__':
     # Construct the model
-    layers = [8, 256, 256, 3]
-    build_mlp_model(layers)
+    model = build_mlp_model(convert_str_to_list(mlp_config["layers"]))
+
+
