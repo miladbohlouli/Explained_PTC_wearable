@@ -3,8 +3,10 @@ from typing import Dict
 import warnings
 import numpy as np
 from sklearn.metrics import accuracy_score, balanced_accuracy_score, confusion_matrix
+import pandas as pd
 
-def config(module_name: str) -> Dict[str, str]:
+
+def config(module_name: str):
     """
     Returns the configuration for any specific module
     :param module_name: the name of the module
@@ -22,10 +24,12 @@ def config(module_name: str) -> Dict[str, str]:
 def convert_str_to_list(string_list):
     return [int(item.strip()) for item in string_list.strip("][").split(",")]
 
+
 def convert_str_to_bool(string: str):
-    if string.lower() == "true": return True
-    elif string.lower() == "false": return False
-    else: print(f"Non valid input for boolean")
+    if string.lower() == "true" : return True
+    elif string.lower() == "false" : return False
+    else:raise Exception("Not a valid boolean")
+
 
 def evaluate_predictions(logits, labels):
     predicted_labels = np.argmax(logits, 1)
@@ -35,3 +39,12 @@ def evaluate_predictions(logits, labels):
     return accuracy, balanced_accuracy, conf_matrix
 
 
+def train_test_split(dataset, train_division):
+    data_len = len(dataset)
+    train_pivot = int(data_len * train_division)
+    indexes = list(range(data_len))
+    return indexes[:train_pivot], indexes[train_pivot:]
+
+
+def read_source_file(path):
+    return pd.read_csv(path)

@@ -1,9 +1,9 @@
 import pandas as pd
 from torch.utils.data import SubsetRandomSampler, DataLoader
-from models.mlp_model import *
+from models.mlp import *
 from torch.utils.tensorboard import SummaryWriter
 import argparse
-from dataset.mlp_data_loader import mlp_dataset
+from data.mlp_data_loader import mlp_dataset
 import numpy as np
 import logging
 from sklearn.model_selection import KFold
@@ -18,7 +18,7 @@ warnings.simplefilter('ignore', UserWarning)
 
 my_parser = argparse.ArgumentParser()
 my_parser.add_argument('-ds_dir',
-                       default="dataset/raw_data_Liu.csv",
+                       default="data/raw_data_Liu.csv",
                        type=str)
 
 
@@ -50,8 +50,8 @@ eval_writer = SummaryWriter(os.path.join(parser.temp_dir, "eval"))
 
 
 def train():
-    # load the dataset
-    logging.debug(f"Loading the dataset")
+    # load the data
+    logging.debug(f"Loading the data")
 
     ds = mlp_dataset(
         parser.ds_dir,
@@ -62,7 +62,7 @@ def train():
     logging.info(f"Chosen ID of the households: {id}")
     individual_household = ds[id]
 
-    logging.debug(f"splitting the train and test dataset")
+    logging.debug(f"splitting the train and test data")
     num_folds = int(training_config["k_fold"])
     resampled_evaluated_metrics = dict()
     resampled_evaluated_metrics["train_acc"] = []

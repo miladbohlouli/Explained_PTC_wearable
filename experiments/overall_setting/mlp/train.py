@@ -1,49 +1,28 @@
 from torch.utils.data import DataLoader
-from models.mlp_model import *
+from experiments.overall_setting.mlp.mlp_model import *
 from torch.utils.tensorboard import SummaryWriter
 import argparse
-from dataset.data_loader import dataset_loader
+from experiments.overall_setting.mlp.data_loader import dataset_loader
 import numpy as np
 import logging
 from torch.nn import CrossEntropyLoss
 from torch.optim import Adam
 import os
-from utils import evaluate_predictions
+from utils import *
 import seaborn as sns
 from matplotlib import pyplot as plt
 import warnings
+from PTC_classifier import Classifier
 warnings.simplefilter('ignore', UserWarning)
 
-# my_parser = argparse.ArgumentParser()
-# my_parser.add_argument('-ds_dir',
-#                        default="dataset/raw_data_Liu.csv",
-#                        type=str)
-#
-#
-# my_parser.add_argument('-save_dir',
-#                        help="directory used for saving the models",
-#                        default="save/",
-#                        type=str)
-#
-# my_parser.add_argument('-temp_dir',
-#                        help="directory used for visualization using the tesnorboard",
-#                        default="temp/",
-#                        type=str)
-#
-# my_parser.add_argument('-prefix',
-#                        help="prefix for saving and visualization",
-#                        default="",
-#                        type=str)
-#
-# my_parser.add_argument('-verbose',
-#                        type=str)
-#
-# parser = my_parser.parse_args()
-#
+
+class mlp_classifier(Classifier):
+    def __init__(self, model, data_loader):
+        pass
 
 
 def train(model=None,
-          ds_dir="dataset/raw_data_Liu.csv",
+          ds_dir="../../../data/PTC.csv",
           saving_dir="save/",
           temp_dir="temp/",
           prefix="",
@@ -55,8 +34,8 @@ def train(model=None,
     training_config = config("TRAINING")
     logging.basicConfig(level=logging.DEBUG) if bool(verbose) else None
 
-    # load the dataset
-    logging.debug(f"Loading the dataset")
+    # load the data
+    logging.debug(f"Loading the data")
 
     train_writer = SummaryWriter(os.path.join(temp_dir, prefix + "train"))
     eval_writer = SummaryWriter(os.path.join(temp_dir, prefix + "eval"))
@@ -73,7 +52,7 @@ def train(model=None,
         na_handling_method=mlp_config["na_handling_method"]
     )
 
-    logging.debug(f"splitting the train and test dataset")
+    logging.debug(f"splitting the train and test data")
 
     if model is None:
         model = build_mlp_model(
@@ -81,8 +60,6 @@ def train(model=None,
             activation=mlp_config["activation"],
             batch_norm=convert_str_to_bool(mlp_config["batch_norm"])
         )
-
-        # print(model)
 
     loss_model = CrossEntropyLoss()
     optimizer = Adam(model.parameters())

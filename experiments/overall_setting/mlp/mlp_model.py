@@ -1,8 +1,6 @@
 from torch.nn import Linear, ReLU, Sequential, BatchNorm1d, MaxPool1d
 from utils import *
 
-mlp_config = config("MLP")
-
 
 def build_mlp_model(layers: list = [256, 256],
                     activation: str = "Relu",

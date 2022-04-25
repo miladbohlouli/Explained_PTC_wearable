@@ -1,8 +1,7 @@
 import numpy as np
 import pandas as pd
-from dataset.data_helpers import *
-from torch.utils.data import TensorDataset, Dataset
-import torch
+from utils import *
+from torch.utils.data import Dataset
 
 
 class dataset_loader(Dataset):
@@ -26,10 +25,10 @@ class dataset_loader(Dataset):
         """
         A class to construct the train and test datasets as PyTorch Datasets
         :param path: The path for teh source initial file
-        :param train: IF we want the train or the test dataset
-        :param train_division: The size of the train dataset chosen [0-1]
-        :param shuffle: if to shuffle the dataset
-        :param normalize: if to normalize the dataset using the standard normalization
+        :param train: IF we want the train or the test data
+        :param train_division: The size of the train data chosen [0-1]
+        :param shuffle: if to shuffle the data
+        :param normalize: if to normalize the data using the standard normalization
         :param na_handling_method: How to handle the missing values
         """
         self.train = train
@@ -68,7 +67,7 @@ class dataset_loader(Dataset):
             dataset_loader.dataset, dataset_loader.labels = truncated_dataset.to_numpy().astype(np.float32), \
                                                   dataset_loader.labels.to_numpy().astype(np.int64)
 
-            # Normalize the dataset, note that the normalization is done by nomalising using the train section's
+            # Normalize the data, note that the normalization is done by nomalising using the train section's
             #   mean and std
             if normalize:
                 dataset_loader.mean, dataset_loader.std = dataset_loader.dataset[dataset_loader.train_indexes].mean(0) \

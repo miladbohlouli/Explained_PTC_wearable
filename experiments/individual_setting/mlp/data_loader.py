@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-from dataset.data_helpers import *
+from individual_setting.dataset.data_helpers import *
 from torch.utils.data import TensorDataset
 import torch
 
@@ -12,11 +12,11 @@ class mlp_dataset():
                  normlaize=True,
                  na_handling_method="average"):
         """
-        :param path: The path to the dataset
-        :param shuffle: if the dataset needs to be shuffled
+        :param path: The path to the data
+        :param shuffle: if the data needs to be shuffled
         """
 
-        # Read the initial dataset
+        # Read the initial data
         ds = pd.read_csv(path)
 
         # Some of the features have to be selected
@@ -48,12 +48,12 @@ class mlp_dataset():
     def __getitem__(self, idx):
         """
         :param idx:The index of the household
-        :return: a torch dataset containing all the samples for each household
+        :return: a torch data containing all the samples for each household
         """
         # Check the validity of the entered id and if the id exists
         assert idx in np.unique(self.dataset[:, 0])
 
-        # convert the dataset to tensors
+        # convert the data to tensors
         indexes = np.where(self.dataset[:, 0] == idx)[0]
         np.random.shuffle(indexes) if self.shuffle else None
 
