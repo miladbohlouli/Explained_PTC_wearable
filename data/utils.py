@@ -52,15 +52,25 @@ class Normalizer:
 
 
 class FeatureSelector:
-    def __init__(self):
-        self.selected_features_list = None
+    def __init__(self,
+                 selected_feature: list = None,
+                 label_title: list = None):
+        self.selected_features_list = selected_feature
+        self.label_title = label_title
 
-    def fit(self, dataset, labels):
+    def fit(self, dataset):
+        """
+        The default function that will be used for feature selection (The function may be overriden for other feature
+        selection methods)
+        :param dataset: The source dataset
+        """
         if type(dataset) is not pd.DataFrame:
             dataset = pd.DataFrame(dataset)
 
         self.selected_features_list = dataset.columns[1:9] + ["mean.hr_5", "mean.WristT_5", "mean.AnkleT_5",
                                                               "mean.PantT_5", "mean.act_5"]
+
+        self.label_title = 'therm_pref'
 
     def select_features(self, dataset):
         if self.selected_features_list is None:
@@ -69,4 +79,4 @@ class FeatureSelector:
         if type(dataset) is not pd.DataFrame:
             dataset = pd.DataFrame(dataset)
 
-        return dataset[:, self.selected_features_list]
+        return dataset[:, self.selected_features_list], dataset[:, self.label_title]

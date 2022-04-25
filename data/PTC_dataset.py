@@ -45,9 +45,10 @@ class PTC_dataset:
             np.random.shuffle(sampler)
         self.dataset = ds.iloc[sampler, :]
         self.labels = ds.iloc[sampler, :].loc[:, "therm_pref"]
+        self.dataset.drop("therm_pref", inplace=True, axis=1)
 
         # Feature selections
-        self.dataset = feature_selector.select_features(self.dataset)
+        self.dataset, self.labels = feature_selector.select_features(self.dataset)
         self.columns = self.dataset.columns
 
         # remap the categorical values
