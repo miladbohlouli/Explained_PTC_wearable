@@ -1,115 +1,103 @@
-import pandas as pd
 from torch.utils.data import SubsetRandomSampler, DataLoader
-from models.mlp import *
+from mlp import *
 from torch.utils.tensorboard import SummaryWriter
-import argparse
-from data.mlp_data_loader import mlp_dataset
+from Feature_selectors.naive_feature_selector import simple_feature_selector
+from NAhandlers.dropping_method import dropping_handler
+from NAhandlers.averaging import averaging_na_handler
+from normalizers.guassian_normalizer import guassian_normalizer
+from data_loader import mlp_dataset_individual
 import numpy as np
 import logging
-from sklearn.model_selection import KFold
 from torch.nn import CrossEntropyLoss
 from torch.optim import Adam
 import os
 from utils import evaluate_predictions
 import seaborn as sns
 from matplotlib import pyplot as plt
+from utils import train_test_split
 import warnings
-warnings.simplefilter('ignore', UserWarning)
+warnings.filterwarnings("ignore")
 
-my_parser = argparse.ArgumentParser()
-my_parser.add_argument('-ds_dir',
-                       default="data/raw_data_Liu.csv",
-                       type=str)
+def train(
+        config=None,
+        checkpoint_dir=None,
+        data_dir=None,
+        logging_dir=None
+):
 
+    # Setting the logging and the other tools for saving
+    train_writer = SummaryWriter(os.path.join(os.path.join(logging_dir, "tensorboard"), "train"))
+    eval_writer = SummaryWriter(os.path.join(os.path.join(logging_dir, "tensorboard"), "eval"))
 
-my_parser.add_argument('-save_dir',
-                       help="directory used for saving the models",
-                       default="save/",
-                       type=str)
+    logger = logging.getLogger("runtime_logs")
+    formatter = logging.Formatter('%(asctime)s %(name)s %(levelname)s %(message)s', datefmt="%Y-%m-%d %H:%M:%S")
+    hdlr1 = logging.FileHandler(os.path.join(logging_dir, "runtime.log"))
+    hdlr1.setFormatter(formatter)
+    logger.setLevel(logging.INFO)
+    logger.addHandler(hdlr1)
 
-my_parser.add_argument('-temp_dir',
-                       help="directory used for visualization using the tesnorboard",
-                       default="temp/",
-                       type=str)
-
-my_parser.add_argument('-prefix',
-                       help="prefix for saving and visualization",
-                       default="",
-                       type=str)
-
-my_parser.add_argument('-verbose',
-                       default=False,
-                       type=str)
-
-mlp_config = config("MLP")
-training_config = config("TRAINING")
-parser = my_parser.parse_args()
-logging.basicConfig(level=logging.DEBUG) if bool(parser.verbose) else None
-train_writer = SummaryWriter(os.path.join(parser.temp_dir, "train"))
-eval_writer = SummaryWriter(os.path.join(parser.temp_dir, "eval"))
-
-
-def train():
     # load the data
     logging.debug(f"Loading the data")
 
-    ds = mlp_dataset(
-        parser.ds_dir,
-        na_handling_method=mlp_config["na_handling_method"]
-    )
+    if "train.csv" not in os.listdir():
+        train_test_split(data_dir)
 
-    id = np.random.randint(1, ds.num_people + 1)
-    logging.info(f"Chosen ID of the households: {id}")
-    individual_household = ds[id]
+    home_ids = get_available_home_ids(path="../../../data")
+    train_dataset_dir = os.path.join(data_dir, "train.csv")
+    test_dataset_dir = os.path.join(data_dir, "test.csv")
+    house_eval_accuracies = dict()
+    for home_id in home_ids:
 
-    logging.debug(f"splitting the train and test data")
-    num_folds = int(training_config["k_fold"])
-    resampled_evaluated_metrics = dict()
-    resampled_evaluated_metrics["train_acc"] = []
-    resampled_evaluated_metrics["train_acc_balanced"] = []
-    resampled_evaluated_metrics["eval_acc"] = []
-    resampled_evaluated_metrics["eval_acc_balanced"] = []
-
-    kfold = KFold(
-        n_splits=num_folds,
-        shuffle=False
-    )
-
-    assert num_folds <= len(list(individual_household))
-
-    for fold, (train_ids, test_ids) in enumerate(kfold.split(individual_household)):
-        model = build_mlp_model(
-            layers=convert_str_to_list(mlp_config["layers"]),
-            activation=mlp_config["activation"],
-            batch_norm=bool(mlp_config["batch_norm"])
+        train_ds = mlp_dataset_individual(
+            path=train_dataset_dir,
+            shuffle=True,
+            feature_selector=simple_feature_selector(),
+            na_handler=averaging_na_handler(),
+            normalizer=guassian_normalizer(),
+            home_id=home_id,
+            train=True
         )
 
-        logging.debug(model) if fold == 0 else None
+        test_ds = mlp_dataset_individual(
+                path=test_dataset_dir,
+                shuffle=True,
+                feature_selector=train_ds.feature_selector,
+                na_handler=train_ds.na_handler,
+                normalizer=train_ds.normalizer,
+                home_id=home_id,
+                train=False
+            )
+
+        feature_size = train_ds.feature_selector.get_feature_size()
+        model = build_mlp_model(
+            [feature_size] + config["layers"]
+        ).float()
+
+        logger.info(model)
 
         loss_model = CrossEntropyLoss()
-        optimizer = Adam(model.parameters())
+        optimizer = Adam(model.parameters(), lr=config["lr"], weight_decay=config["weight_decay"])
         global_step = 0
 
-        num_epochs = int(training_config["num_epochs"])
-
-        logging.info(f"Fold ({fold}/{num_folds})")
-        train_subsampler = SubsetRandomSampler(train_ids)
-        test_subsampler = SubsetRandomSampler(test_ids)
-
         train_loader = DataLoader(
-            dataset=individual_household,
-            batch_size=int(training_config["batch_size"]),
-            sampler=train_subsampler,
+            dataset=train_ds,
+            batch_size=config["batch_size"],
         )
 
         test_loader = DataLoader(
-            dataset=individual_household,
-            batch_size=int(training_config["batch_size"]),
-            sampler=test_subsampler,
+            dataset=test_ds,
+            batch_size=config["batch_size"],
         )
 
+        logger.info(f"Training the model for home {home_id} with datasize {len(train_ds)}")
+
+        num_epochs = int(config["num_epochs"])
+        num_train_samples = len(train_ds)
+        num_test_samples = len(test_ds)
+        best_eval_accuracy = 0
+
         # training the model
-        for i in range(num_epochs):
+        for epoch in range(num_epochs):
             model.train()
             train_loss_avr = 0
             eval_loss_avr = 0
@@ -117,11 +105,10 @@ def train():
             train_balanced_acc_avr = 0
             eval_acc_avr = 0
             eval_balanced_acc_avr = 0
-            num_samples = 0
             total_conf_matrix = np.zeros((3, 3))
 
             for samples, labels in train_loader:
-                res = model(samples)
+                res = model(samples.float())
                 train_loss = loss_model(res, labels)
 
                 optimizer.zero_grad()
@@ -129,23 +116,20 @@ def train():
                 optimizer.step()
                 global_step += 1
 
-                train_writer.add_scalar(f"fold: {fold}/loss", train_loss, global_step)
-
                 # Calculate the accuracy
-                num_samples += len(samples)
                 train_acc, train_balanced_acc, _ = evaluate_predictions(res.detach().numpy(), labels)
                 train_loss_avr += train_loss.detach().numpy() * len(samples)
                 train_acc_avr += train_acc * len(samples)
                 train_balanced_acc_avr += train_balanced_acc * len(samples)
 
-                train_writer.add_scalar(f"fold: {fold}/loss", train_loss, global_step)
-                train_writer.add_scalar(f"fold: {fold}/accuracy", train_acc, global_step)
-                train_writer.add_scalar(f"fold: {fold}/balanced accuracy", train_balanced_acc, global_step)
+                train_writer.add_scalar(f"home_id: {home_id}/loss", train_loss, global_step)
+                train_writer.add_scalar(f"home_id: {home_id}/accuracy", train_acc, global_step)
+                train_writer.add_scalar(f"home_id: {home_id}/balanced accuracy", train_balanced_acc, global_step)
 
             # evaluating the model
             model.eval()
             for samples, labels in test_loader:
-                res = model(samples)
+                res = model(samples.float())
 
                 eval_loss = loss_model(res, labels)
 
@@ -155,43 +139,46 @@ def train():
                 eval_balanced_acc_avr += eval_balanced_acc * len(samples)
                 total_conf_matrix += eval_conf_matrix
 
-                eval_writer.add_scalar(f"fold: {fold}/accuracy", eval_acc, global_step)
-                eval_writer.add_scalar(f"fold: {fold}/balanced accuracy", eval_balanced_acc, global_step)
+                eval_writer.add_scalar(f"home_id: {home_id}/accuracy", eval_acc, global_step)
+                eval_writer.add_scalar(f"home_id: {home_id}/balanced accuracy", eval_balanced_acc, global_step)
+
+            logger.info(f"home_id ({home_id})\t"
+                  f"Epoch ({epoch+1:3} / {num_epochs})\t train_loss: {train_loss_avr / num_train_samples:.2f}\t"
+                  f"train_acc (balanced): {train_balanced_acc_avr / num_train_samples:.2f}\t\t"
+                  f"eval_acc (balanced): {eval_balanced_acc_avr / num_test_samples:.2f}\t")
+
+            if eval_balanced_acc_avr / num_test_samples > best_eval_accuracy:
+                best_eval_accuracy = eval_balanced_acc_avr / num_test_samples
+        house_eval_accuracies[home_id]=best_eval_accuracy
+
+    logger.info(house_eval_accuracies)
+    logger.info(f"The average overall accuracy for all the houses: {np.average(list(house_eval_accuracies.values()))}")
 
 
-            print(f"Fold ({fold+1:3}/{num_folds})\t"
-                  f"Epoch ({i+1:3} / {num_epochs})\t train_loss: {train_loss_avr / num_samples:.2f}\t"
-                  f"train_acc (balanced): {train_balanced_acc_avr / num_samples:.2f}\t\t"
-                  f"eval_acc (balanced): {eval_balanced_acc_avr / num_samples:.2f}\t")
-
-            # Logging the cross validated information
-            resampled_evaluated_metrics["train_acc"]. append(train_acc_avr / num_samples)
-            resampled_evaluated_metrics["train_acc_balanced"].append(train_balanced_acc_avr / num_samples)
-            resampled_evaluated_metrics["eval_acc"].append(eval_acc_avr / num_samples)
-            resampled_evaluated_metrics["eval_acc_balanced"].append(eval_balanced_acc_avr / num_samples)
-
-            fig1 = sns.heatmap(total_conf_matrix, annot=True, cmap=plt.cm.Blues).get_figure()
-            plt.ylabel("True label"), plt.xlabel("Predicted labe;")
-            eval_writer.add_figure("evaluation confusion matrix", fig1, i)
-
-        print(80*"-")
-    metrics_values = np.asarray([(np.round(np.mean(value), 2), np.round(np.std(value), 2)) for value in resampled_evaluated_metrics.values()])
-    metrics_values_pd = pd.DataFrame(metrics_values.T, columns=["train_acc", "train_acc_balanced", "eval_acc", "eval_acc_balanced"],
-                        index=["mean", "std"])
-
-    # The heatmap of the resampled results to be shown in tensorboard
-    plt.figure(figsize=(15, 5))
-    fig2 = sns.heatmap(metrics_values.T,
-                    annot=True,
-                    cmap=plt.cm.Blues,
-                    yticklabels=["mean", "std"],
-                    xticklabels=["train_acc", "train_accuracy_balanced", "eval_acc", "eval_acc_balanced"]).get_figure()
-    plt.xticks(rotation=0)
-    eval_writer.add_figure("The overall evaluation metrics", fig2)
 
 
 if __name__ == '__main__':
-    train()
+
+    config = dict()
+    # model parameters
+    config["layers"] = [256, 256, 3]
+    config["activation"] = "Relu"
+
+    # Training parameters
+    config["batch_size"] = 16
+    config["num_epochs"] = 100
+    config["weight_decay"] = 1e-5
+    config["lr"] = 1e-4
+
+    data_dir = os.path.abspath("../../../data")
+    logging_dir = os.path.abspath(".")
+
+    # save
+    train(
+        config=config,
+        data_dir=data_dir,
+        logging_dir=logging_dir
+    )
 
 
 

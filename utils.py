@@ -1,34 +1,51 @@
 import configparser
+import os.path
+import sys
 from typing import Dict
 import warnings
 import numpy as np
 from sklearn.metrics import accuracy_score, balanced_accuracy_score, confusion_matrix
 import pandas as pd
+from tqdm import tqdm
+import logging
+import pandas as pd
+import pickle as pk
 
 
-def config(module_name: str):
-    """
-    Returns the configuration for any specific module
-    :param module_name: the name of the module
-    :return: dictionary containing the parameters as keys and parameter values as the values
-    """
-    config = configparser.ConfigParser()
-    config.read("config.ini")
+def train_test_split(path, train_division=0.8):
+    logger = logging.getLogger("Data_splitting_logs")
+    logger.setLevel(logging.INFO)
+    format = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    handler = logging.StreamHandler()
+    handler.setFormatter(format)
+    logger.addHandler(handler)
 
-    try:
-        return config[module_name]
-    except KeyError as err:
-        print(f"Non existing module name:\n " f"{config.sections()} not {err}")
+    dataset = pd.read_csv(os.path.join(path, "PTC.csv"))
+    if dataset is None:
+        raise Exception("The provided path is not valid")
+
+    logger.info("Processing the dataset...")
+    user_ids = dataset["ID"].unique()
+    train_dataset = []
+    test_dataset = []
+    for user in tqdm(user_ids):
+        user_data = dataset[dataset["ID"] == user]
+        len_user = len(user_data)
+
+        train_dataset.append(user_data[:int(len_user * train_division)])
+        test_dataset.append(user_data[int(len_user * train_division):])
+
+    train_dataset = pd.concat(train_dataset, axis=0)
+    test_dataset = pd.concat(test_dataset, axis=0)
+
+    logger.info("Saving the dataset...")
+    train_dataset.to_csv(os.path.join(path, "train.csv"))
+    test_dataset.to_csv(os.path.join(path, "test.csv"))
 
 
-def convert_str_to_list(string_list):
-    return [int(item.strip()) for item in string_list.strip("][").split(",")]
-
-
-def convert_str_to_bool(string: str):
-    if string.lower() == "true" : return True
-    elif string.lower() == "false" : return False
-    else:raise Exception("Not a valid boolean")
+def get_available_home_ids(path):
+    dataset = pd.read_csv(os.path.join(path, "PTC.csv"))
+    return sorted(dataset["ID"].unique())
 
 
 def evaluate_predictions(logits, labels):
@@ -39,12 +56,9 @@ def evaluate_predictions(logits, labels):
     return accuracy, balanced_accuracy, conf_matrix
 
 
-def train_test_split(dataset, train_division):
-    data_len = len(dataset)
-    train_pivot = int(data_len * train_division)
-    indexes = list(range(data_len))
-    return indexes[:train_pivot], indexes[train_pivot:]
-
-
 def read_source_file(path):
     return pd.read_csv(path)
+
+
+if __name__ == '__main__':
+    train_test_split("data", train_division=0.8)

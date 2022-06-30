@@ -1,77 +1,54 @@
+import os
+
 import numpy as np
 import pandas as pd
-from individual_setting.dataset.data_helpers import *
+from experiments.individual_setting.mlp import *
 from torch.utils.data import TensorDataset
 import torch
+from utils import *
+from data.PTC_dataset import PTC_dataset
+from Feature_selectors.interface import FeatureSelector
+from NAhandlers.interface import NAhandler
+from Feature_selectors.naive_feature_selector import simple_feature_selector
+from NAhandlers.dropping_method import dropping_handler
+from normalizers.guassian_normalizer import guassian_normalizer
+from normalizers.interface import Normalizer
 
 
-class mlp_dataset():
+class mlp_dataset_individual(PTC_dataset):
     def __init__(self,
-                 path,
-                 shuffle=True,
-                 normlaize=True,
-                 na_handling_method="average"):
-        """
-        :param path: The path to the data
-        :param shuffle: if the data needs to be shuffled
-        """
-
-        # Read the initial data
-        ds = pd.read_csv(path)
-
-        # Some of the features have to be selected
-        truncated_dataset = pd.concat([ds.iloc[:, 0:9], ds[
-            ["mean.hr_5", "mean.WristT_5", "mean.AnkleT_5", "mean.PantT_5", "mean.act_5"]]], axis=1)
-        self.num_people = pd.unique(truncated_dataset.loc[:, "ID"]).__len__()
-        self.labels = ds.loc[:, 'therm_pref']
-        self.shuffle = shuffle
-        self.normalize = normlaize
-
-        # correct the missing values
-        truncated_dataset = correct_NA_values(
-            truncated_dataset,
-            method=na_handling_method
+                 path = None,
+                 shuffle: bool = True,
+                 feature_selector: FeatureSelector = None,
+                 na_handler: NAhandler = None,
+                 normalizer: Normalizer = None,
+                 home_id = None,
+                 train = True
+         ):
+        PTC_dataset.__init__(
+            self,
+            shuffle=shuffle,
+            feature_selector=feature_selector,
+            na_handler=na_handler,
+            normalizer=normalizer,
+            train = train
         )
-
-        self.columns = truncated_dataset.columns
-
-        # remap the categorical values
-        self.__dict = {key: value for value, key in enumerate(truncated_dataset.loc[:, "Sex"].unique())}
-        truncated_dataset.loc[:, 'Sex'] = truncated_dataset.loc[:, "Sex"].map(self.__dict)
-        self.labels = self.labels.map({key: value for value, key in enumerate(sorted(self.labels.unique()))})
-
-        print(truncated_dataset.iloc[0, :])
-
-        # convert the type
-        self.dataset, self.labels = truncated_dataset.to_numpy().astype(np.float32), self.labels.to_numpy().astype(np.int64)
-
-    def __getitem__(self, idx):
-        """
-        :param idx:The index of the household
-        :return: a torch data containing all the samples for each household
-        """
-        # Check the validity of the entered id and if the id exists
-        assert idx in np.unique(self.dataset[:, 0])
-
-        # convert the data to tensors
-        indexes = np.where(self.dataset[:, 0] == idx)[0]
-        np.random.shuffle(indexes) if self.shuffle else None
-
-        personal_data, personal_data_labels = torch.from_numpy(self.dataset[indexes, 1:]), torch.from_numpy(self.labels[indexes])
-        personal_data_stds = personal_data.std(0)
-        personal_data[:, personal_data_stds != 0] = normalize(personal_data[:, personal_data_stds != 0])
-
-        print(personal_data_stds)
-        print(personal_data_labels)
-
-        return TensorDataset(personal_data, personal_data_labels)
-
-    def __len__(self):
-        return len(self.ds)
+        assert home_id is not None
+        self.load_dataset(path)
+        self.make_data_individual(home_id)
+        self.pre_process_dataset()
 
 
 if __name__ == '__main__':
-    mlp_ds = mlp_dataset("raw_data_Liu.csv")
-    # print(mlp_ds[1])
+    home_ids = get_available_home_ids(path="../../../data")
+    train_dataset = mlp_dataset_individual(
+        path="../../../data/train.csv",
+        shuffle=True,
+        feature_selector=simple_feature_selector(),
+        na_handler=dropping_handler(),
+        normalizer=guassian_normalizer(),
+        home_id=1
+    )
 
+    print(train_dataset[0])
 

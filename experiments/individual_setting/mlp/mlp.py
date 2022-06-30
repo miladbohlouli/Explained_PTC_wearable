@@ -1,8 +1,6 @@
 from torch.nn import Linear, ReLU, Sequential, BatchNorm1d
 from utils import *
 
-mlp_config = config("mlp")
-
 
 def build_mlp_model(layers: list = [256, 256],
                     activation: str = "Relu",
@@ -12,7 +10,7 @@ def build_mlp_model(layers: list = [256, 256],
     for inp, out in zip(layers[:-1], layers[1:]):
         torch_layers.append(Linear(inp, out))
         torch_layers.append(ReLU()) if activation.lower() == "relu" else None
-        torch_layers.append(BatchNorm1d(out)) if batch_norm else None
+        # torch_layers.append(BatchNorm1d(out)) if batch_norm else None
 
     return Sequential(*torch_layers)
 

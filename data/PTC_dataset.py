@@ -1,16 +1,21 @@
 import numpy as np
-from data.utils import *
+from utils import *
+from Feature_selectors.interface import *
+from Feature_selectors.naive_feature_selector import simple_feature_selector
+from NAhandlers.interface import *
+from NAhandlers.dropping_method import dropping_handler
+from normalizers.interface import *
+from normalizers.guassian_normalizer import guassian_normalizer
+from torch.utils.data import Dataset
 
 
-class PTC_dataset:
+class PTC_dataset(Dataset):
     def __init__(self,
-                 path: str = None,
-                 dataset=None,
-                 sampler: list = None,
                  shuffle: bool = True,
                  feature_selector: FeatureSelector = None,
                  na_handler: NAhandler = None,
-                 normalizer: Normalizer = None):
+                 normalizer: Normalizer = None,
+                 train: bool = True):
         """
         A class to construct the train and test datasets as PyTorch Datasets
         :param path: the path for teh source initial file
@@ -23,43 +28,54 @@ class PTC_dataset:
         """
 
         # One of the path or data should be not None
-        assert (path is not None) or (dataset is not None)
         self.dataset = None
         self.labels = None
         self.columns = None
         self.path = None
+        self.train = train
+        self.feature_selector = feature_selector
+        self.na_handler = na_handler
+        self.normalizer = normalizer
+        self.shuffle = shuffle
 
+    def load_dataset(self, path):
         if path is not None:
-            ds = PTC_dataset.read_source_file(path)
+            self.dataset = PTC_dataset.read_source_file(path)
             self.path = path
+        else:
+            raise Exception("Path need to be provided for loading the dataset")
 
-        elif dataset is not None:
-            if type(dataset) is not pd.DataFrame:
-                ds = pd.DataFrame(dataset)
-            else:
-                ds = dataset
-
+    def pre_process_dataset(self):
+        assert self.dataset is not None
         # subsampling the original data according to the provided sampler
-        sampler = sampler if sampler is not None else list(range(len(ds)))
-        if shuffle:
+        if self.shuffle:
+            sampler = list(range(len(self.dataset)))
             np.random.shuffle(sampler)
-        self.dataset = ds.iloc[sampler, :]
-        self.labels = ds.iloc[sampler, :].loc[:, "therm_pref"]
-        self.dataset.drop("therm_pref", inplace=True, axis=1)
+            self.dataset = self.dataset.iloc[sampler, :]
 
         # Feature selections
-        self.dataset, self.labels = feature_selector.select_features(self.dataset)
+        if self.train:
+            self.feature_selector.fit(self.dataset)
+        self.dataset, self.labels = self.feature_selector.select_features(self.dataset)
         self.columns = self.dataset.columns
 
         # remap the categorical values
-        self.convert_nominal_numerical()
+        # self.convert_nominal_numerical()
+        self.convert_labels_nominal()
 
         # correct the missing values
-        self.dataset = na_handler.fix(self.dataset)
+        if self.train:
+            self.na_handler.fit(self.dataset)
+        self.dataset = self.na_handler.fix(self.dataset)
 
         # normalize the data using the normalizer class
-        if normalizer is not None:
-            self.dataset = normalizer.normalize(self.dataset)
+        if self.normalizer is not None:
+            if self.train:
+                self.normalizer.fit(self.dataset)
+            self.dataset = self.normalizer.normalize(self.dataset)
+
+        self.dataset = self.dataset.to_numpy()
+        self.labels = self.labels.to_numpy()
 
     def __getitem__(self, idx):
         return self.dataset[idx], self.labels[idx]
@@ -81,10 +97,15 @@ class PTC_dataset:
         """
         sex_dict = {key: value for value, key in enumerate(sorted(self.dataset.loc[:, "Sex"].unique()))}
         self.dataset.loc[:, 'Sex'] = self.dataset.loc[:, "Sex"].map(sex_dict)
-        self.labels = self.labels.map({key: value for value, key in enumerate(sorted(self.labels.unique()))})
 
         # Convert the datatype of the features
         self.dataset, self.labels = self.dataset.to_numpy().astype(np.float32), self.labels.to_numpy().astype(np.int64)
+
+    def make_data_individual(self, home_id):
+        self.dataset = self.dataset[self.dataset["ID"] == home_id]
+
+    def convert_labels_nominal(self):
+        self.labels = self.labels.map({key: value for value, key in enumerate(sorted(self.labels.unique()))})
 
     @staticmethod
     def cal_mean_std(dataset):
@@ -98,6 +119,16 @@ class PTC_dataset:
         return dataset
 
 
+if __name__ == '__main__':
+    normalizer = guassian_normalizer()
+    na_handler = dropping_handler()
+    sfs = simple_feature_selector()
+    data = PTC_dataset(
+        path="PTC.csv",
+        normalizer=normalizer,
+        na_handler=na_handler,
+        feature_selector=sfs
+    )
 
 
 
