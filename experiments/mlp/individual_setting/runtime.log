@@ -1,0 +1,1163 @@
+2022-07-01 13:43:12 runtime_logs INFO Sequential(
+  (0): Linear(in_features=5, out_features=128, bias=True)
+  (1): ReLU()
+  (2): Linear(in_features=128, out_features=3, bias=True)
+  (3): ReLU()
+)
+2022-07-01 13:43:12 runtime_logs INFO Training the model for home 1 with datasize 121
+2022-07-01 13:43:13 runtime_logs INFO home_id (1)	Epoch (  1 / 150)	 train_loss: 1.06	train_acc (balanced): 0.47		eval_acc (balanced): 0.58	
+2022-07-01 13:43:13 runtime_logs INFO home_id (1)	Epoch (  2 / 150)	 train_loss: 0.97	train_acc (balanced): 0.58		eval_acc (balanced): 0.52	
+2022-07-01 13:43:13 runtime_logs INFO home_id (1)	Epoch (  3 / 150)	 train_loss: 0.92	train_acc (balanced): 0.60		eval_acc (balanced): 0.52	
+2022-07-01 13:43:13 runtime_logs INFO home_id (1)	Epoch (  4 / 150)	 train_loss: 0.90	train_acc (balanced): 0.60		eval_acc (balanced): 0.52	
+2022-07-01 13:43:13 runtime_logs INFO home_id (1)	Epoch (  5 / 150)	 train_loss: 0.88	train_acc (balanced): 0.60		eval_acc (balanced): 0.52	
+2022-07-01 13:43:13 runtime_logs INFO home_id (1)	Epoch (  6 / 150)	 train_loss: 0.87	train_acc (balanced): 0.61		eval_acc (balanced): 0.52	
+2022-07-01 13:43:13 runtime_logs INFO home_id (1)	Epoch (  7 / 150)	 train_loss: 0.86	train_acc (balanced): 0.60		eval_acc (balanced): 0.52	
+2022-07-01 13:43:13 runtime_logs INFO home_id (1)	Epoch (  8 / 150)	 train_loss: 0.85	train_acc (balanced): 0.60		eval_acc (balanced): 0.52	
+2022-07-01 13:43:13 runtime_logs INFO home_id (1)	Epoch (  9 / 150)	 train_loss: 0.85	train_acc (balanced): 0.62		eval_acc (balanced): 0.52	
+2022-07-01 13:43:13 runtime_logs INFO home_id (1)	Epoch ( 10 / 150)	 train_loss: 0.84	train_acc (balanced): 0.63		eval_acc (balanced): 0.48	
+2022-07-01 13:43:13 runtime_logs INFO home_id (1)	Epoch ( 11 / 150)	 train_loss: 0.83	train_acc (balanced): 0.62		eval_acc (balanced): 0.48	
+2022-07-01 13:43:13 runtime_logs INFO home_id (1)	Epoch ( 12 / 150)	 train_loss: 0.83	train_acc (balanced): 0.61		eval_acc (balanced): 0.48	
+2022-07-01 13:43:13 runtime_logs INFO home_id (1)	Epoch ( 13 / 150)	 train_loss: 0.83	train_acc (balanced): 0.61		eval_acc (balanced): 0.48	
+2022-07-01 13:43:13 runtime_logs INFO home_id (1)	Epoch ( 14 / 150)	 train_loss: 0.81	train_acc (balanced): 0.62		eval_acc (balanced): 0.48	
+2022-07-01 13:43:13 runtime_logs INFO home_id (1)	Epoch ( 15 / 150)	 train_loss: 0.81	train_acc (balanced): 0.63		eval_acc (balanced): 0.48	
+2022-07-01 13:43:13 runtime_logs INFO home_id (1)	Epoch ( 16 / 150)	 train_loss: 0.80	train_acc (balanced): 0.62		eval_acc (balanced): 0.48	
+2022-07-01 13:43:13 runtime_logs INFO home_id (1)	Epoch ( 17 / 150)	 train_loss: 0.79	train_acc (balanced): 0.63		eval_acc (balanced): 0.48	
+2022-07-01 13:43:13 runtime_logs INFO home_id (1)	Epoch ( 18 / 150)	 train_loss: 0.79	train_acc (balanced): 0.63		eval_acc (balanced): 0.52	
+2022-07-01 13:43:13 runtime_logs INFO home_id (1)	Epoch ( 19 / 150)	 train_loss: 0.78	train_acc (balanced): 0.63		eval_acc (balanced): 0.52	
+2022-07-01 13:43:14 runtime_logs INFO home_id (1)	Epoch ( 20 / 150)	 train_loss: 0.78	train_acc (balanced): 0.63		eval_acc (balanced): 0.52	
+2022-07-01 13:43:14 runtime_logs INFO home_id (1)	Epoch ( 21 / 150)	 train_loss: 0.77	train_acc (balanced): 0.63		eval_acc (balanced): 0.52	
+2022-07-01 13:43:14 runtime_logs INFO home_id (1)	Epoch ( 22 / 150)	 train_loss: 0.77	train_acc (balanced): 0.63		eval_acc (balanced): 0.52	
+2022-07-01 13:43:14 runtime_logs INFO home_id (1)	Epoch ( 23 / 150)	 train_loss: 0.76	train_acc (balanced): 0.63		eval_acc (balanced): 0.52	
+2022-07-01 13:43:14 runtime_logs INFO home_id (1)	Epoch ( 24 / 150)	 train_loss: 0.76	train_acc (balanced): 0.63		eval_acc (balanced): 0.52	
+2022-07-01 13:43:14 runtime_logs INFO home_id (1)	Epoch ( 25 / 150)	 train_loss: 0.75	train_acc (balanced): 0.63		eval_acc (balanced): 0.52	
+2022-07-01 13:43:14 runtime_logs INFO home_id (1)	Epoch ( 26 / 150)	 train_loss: 0.75	train_acc (balanced): 0.63		eval_acc (balanced): 0.52	
+2022-07-01 13:43:14 runtime_logs INFO home_id (1)	Epoch ( 27 / 150)	 train_loss: 0.75	train_acc (balanced): 0.64		eval_acc (balanced): 0.52	
+2022-07-01 13:43:14 runtime_logs INFO home_id (1)	Epoch ( 28 / 150)	 train_loss: 0.74	train_acc (balanced): 0.64		eval_acc (balanced): 0.52	
+2022-07-01 13:43:14 runtime_logs INFO home_id (1)	Epoch ( 29 / 150)	 train_loss: 0.74	train_acc (balanced): 0.64		eval_acc (balanced): 0.52	
+2022-07-01 13:43:14 runtime_logs INFO home_id (1)	Epoch ( 30 / 150)	 train_loss: 0.74	train_acc (balanced): 0.65		eval_acc (balanced): 0.52	
+2022-07-01 13:43:14 runtime_logs INFO home_id (1)	Epoch ( 31 / 150)	 train_loss: 0.73	train_acc (balanced): 0.65		eval_acc (balanced): 0.52	
+2022-07-01 13:43:14 runtime_logs INFO Early stopping the training due to no change in validation accuracies
+2022-07-01 13:43:14 runtime_logs INFO Sequential(
+  (0): Linear(in_features=5, out_features=128, bias=True)
+  (1): ReLU()
+  (2): Linear(in_features=128, out_features=3, bias=True)
+  (3): ReLU()
+)
+2022-07-01 13:43:14 runtime_logs INFO Training the model for home 2 with datasize 201
+2022-07-01 13:43:14 runtime_logs INFO home_id (2)	Epoch (  1 / 150)	 train_loss: 1.02	train_acc (balanced): 0.53		eval_acc (balanced): 0.63	
+2022-07-01 13:43:14 runtime_logs INFO home_id (2)	Epoch (  2 / 150)	 train_loss: 0.94	train_acc (balanced): 0.58		eval_acc (balanced): 0.67	
+2022-07-01 13:43:14 runtime_logs INFO home_id (2)	Epoch (  3 / 150)	 train_loss: 0.91	train_acc (balanced): 0.60		eval_acc (balanced): 0.59	
+2022-07-01 13:43:15 runtime_logs INFO home_id (2)	Epoch (  4 / 150)	 train_loss: 0.88	train_acc (balanced): 0.62		eval_acc (balanced): 0.63	
+2022-07-01 13:43:15 runtime_logs INFO home_id (2)	Epoch (  5 / 150)	 train_loss: 0.87	train_acc (balanced): 0.64		eval_acc (balanced): 0.63	
+2022-07-01 13:43:15 runtime_logs INFO home_id (2)	Epoch (  6 / 150)	 train_loss: 0.85	train_acc (balanced): 0.65		eval_acc (balanced): 0.65	
+2022-07-01 13:43:15 runtime_logs INFO home_id (2)	Epoch (  7 / 150)	 train_loss: 0.84	train_acc (balanced): 0.66		eval_acc (balanced): 0.65	
+2022-07-01 13:43:15 runtime_logs INFO home_id (2)	Epoch (  8 / 150)	 train_loss: 0.83	train_acc (balanced): 0.66		eval_acc (balanced): 0.63	
+2022-07-01 13:43:15 runtime_logs INFO home_id (2)	Epoch (  9 / 150)	 train_loss: 0.82	train_acc (balanced): 0.67		eval_acc (balanced): 0.63	
+2022-07-01 13:43:15 runtime_logs INFO home_id (2)	Epoch ( 10 / 150)	 train_loss: 0.81	train_acc (balanced): 0.67		eval_acc (balanced): 0.61	
+2022-07-01 13:43:15 runtime_logs INFO home_id (2)	Epoch ( 11 / 150)	 train_loss: 0.80	train_acc (balanced): 0.68		eval_acc (balanced): 0.61	
+2022-07-01 13:43:15 runtime_logs INFO home_id (2)	Epoch ( 12 / 150)	 train_loss: 0.80	train_acc (balanced): 0.68		eval_acc (balanced): 0.63	
+2022-07-01 13:43:15 runtime_logs INFO home_id (2)	Epoch ( 13 / 150)	 train_loss: 0.79	train_acc (balanced): 0.67		eval_acc (balanced): 0.59	
+2022-07-01 13:43:15 runtime_logs INFO home_id (2)	Epoch ( 14 / 150)	 train_loss: 0.78	train_acc (balanced): 0.67		eval_acc (balanced): 0.57	
+2022-07-01 13:43:15 runtime_logs INFO home_id (2)	Epoch ( 15 / 150)	 train_loss: 0.77	train_acc (balanced): 0.67		eval_acc (balanced): 0.57	
+2022-07-01 13:43:16 runtime_logs INFO home_id (2)	Epoch ( 16 / 150)	 train_loss: 0.77	train_acc (balanced): 0.67		eval_acc (balanced): 0.55	
+2022-07-01 13:43:16 runtime_logs INFO home_id (2)	Epoch ( 17 / 150)	 train_loss: 0.76	train_acc (balanced): 0.68		eval_acc (balanced): 0.53	
+2022-07-01 13:43:16 runtime_logs INFO home_id (2)	Epoch ( 18 / 150)	 train_loss: 0.76	train_acc (balanced): 0.69		eval_acc (balanced): 0.51	
+2022-07-01 13:43:16 runtime_logs INFO home_id (2)	Epoch ( 19 / 150)	 train_loss: 0.75	train_acc (balanced): 0.69		eval_acc (balanced): 0.55	
+2022-07-01 13:43:16 runtime_logs INFO home_id (2)	Epoch ( 20 / 150)	 train_loss: 0.75	train_acc (balanced): 0.69		eval_acc (balanced): 0.55	
+2022-07-01 13:43:16 runtime_logs INFO home_id (2)	Epoch ( 21 / 150)	 train_loss: 0.74	train_acc (balanced): 0.69		eval_acc (balanced): 0.53	
+2022-07-01 13:43:16 runtime_logs INFO home_id (2)	Epoch ( 22 / 150)	 train_loss: 0.74	train_acc (balanced): 0.70		eval_acc (balanced): 0.53	
+2022-07-01 13:43:16 runtime_logs INFO home_id (2)	Epoch ( 23 / 150)	 train_loss: 0.73	train_acc (balanced): 0.70		eval_acc (balanced): 0.53	
+2022-07-01 13:43:16 runtime_logs INFO home_id (2)	Epoch ( 24 / 150)	 train_loss: 0.73	train_acc (balanced): 0.70		eval_acc (balanced): 0.51	
+2022-07-01 13:43:16 runtime_logs INFO home_id (2)	Epoch ( 25 / 150)	 train_loss: 0.72	train_acc (balanced): 0.70		eval_acc (balanced): 0.51	
+2022-07-01 13:43:16 runtime_logs INFO home_id (2)	Epoch ( 26 / 150)	 train_loss: 0.72	train_acc (balanced): 0.70		eval_acc (balanced): 0.51	
+2022-07-01 13:43:16 runtime_logs INFO home_id (2)	Epoch ( 27 / 150)	 train_loss: 0.72	train_acc (balanced): 0.70		eval_acc (balanced): 0.51	
+2022-07-01 13:43:17 runtime_logs INFO home_id (2)	Epoch ( 28 / 150)	 train_loss: 0.71	train_acc (balanced): 0.70		eval_acc (balanced): 0.51	
+2022-07-01 13:43:17 runtime_logs INFO home_id (2)	Epoch ( 29 / 150)	 train_loss: 0.71	train_acc (balanced): 0.70		eval_acc (balanced): 0.51	
+2022-07-01 13:43:17 runtime_logs INFO home_id (2)	Epoch ( 30 / 150)	 train_loss: 0.71	train_acc (balanced): 0.70		eval_acc (balanced): 0.51	
+2022-07-01 13:43:17 runtime_logs INFO home_id (2)	Epoch ( 31 / 150)	 train_loss: 0.70	train_acc (balanced): 0.70		eval_acc (balanced): 0.51	
+2022-07-01 13:43:17 runtime_logs INFO home_id (2)	Epoch ( 32 / 150)	 train_loss: 0.70	train_acc (balanced): 0.70		eval_acc (balanced): 0.51	
+2022-07-01 13:43:17 runtime_logs INFO Early stopping the training due to no change in validation accuracies
+2022-07-01 13:43:17 runtime_logs INFO Sequential(
+  (0): Linear(in_features=5, out_features=128, bias=True)
+  (1): ReLU()
+  (2): Linear(in_features=128, out_features=3, bias=True)
+  (3): ReLU()
+)
+2022-07-01 13:43:17 runtime_logs INFO Training the model for home 3 with datasize 258
+2022-07-01 13:43:17 runtime_logs INFO home_id (3)	Epoch (  1 / 150)	 train_loss: 0.92	train_acc (balanced): 0.67		eval_acc (balanced): 0.58	
+2022-07-01 13:43:17 runtime_logs INFO home_id (3)	Epoch (  2 / 150)	 train_loss: 0.76	train_acc (balanced): 0.71		eval_acc (balanced): 0.58	
+2022-07-01 13:43:17 runtime_logs INFO home_id (3)	Epoch (  3 / 150)	 train_loss: 0.70	train_acc (balanced): 0.72		eval_acc (balanced): 0.58	
+2022-07-01 13:43:17 runtime_logs INFO home_id (3)	Epoch (  4 / 150)	 train_loss: 0.66	train_acc (balanced): 0.73		eval_acc (balanced): 0.62	
+2022-07-01 13:43:17 runtime_logs INFO home_id (3)	Epoch (  5 / 150)	 train_loss: 0.64	train_acc (balanced): 0.74		eval_acc (balanced): 0.63	
+2022-07-01 13:43:17 runtime_logs INFO home_id (3)	Epoch (  6 / 150)	 train_loss: 0.62	train_acc (balanced): 0.76		eval_acc (balanced): 0.63	
+2022-07-01 13:43:18 runtime_logs INFO home_id (3)	Epoch (  7 / 150)	 train_loss: 0.61	train_acc (balanced): 0.77		eval_acc (balanced): 0.63	
+2022-07-01 13:43:18 runtime_logs INFO home_id (3)	Epoch (  8 / 150)	 train_loss: 0.60	train_acc (balanced): 0.78		eval_acc (balanced): 0.63	
+2022-07-01 13:43:18 runtime_logs INFO home_id (3)	Epoch (  9 / 150)	 train_loss: 0.60	train_acc (balanced): 0.79		eval_acc (balanced): 0.63	
+2022-07-01 13:43:18 runtime_logs INFO home_id (3)	Epoch ( 10 / 150)	 train_loss: 0.59	train_acc (balanced): 0.79		eval_acc (balanced): 0.63	
+2022-07-01 13:43:18 runtime_logs INFO home_id (3)	Epoch ( 11 / 150)	 train_loss: 0.58	train_acc (balanced): 0.79		eval_acc (balanced): 0.63	
+2022-07-01 13:43:18 runtime_logs INFO home_id (3)	Epoch ( 12 / 150)	 train_loss: 0.58	train_acc (balanced): 0.79		eval_acc (balanced): 0.63	
+2022-07-01 13:43:18 runtime_logs INFO home_id (3)	Epoch ( 13 / 150)	 train_loss: 0.57	train_acc (balanced): 0.79		eval_acc (balanced): 0.63	
+2022-07-01 13:43:18 runtime_logs INFO home_id (3)	Epoch ( 14 / 150)	 train_loss: 0.57	train_acc (balanced): 0.80		eval_acc (balanced): 0.63	
+2022-07-01 13:43:18 runtime_logs INFO home_id (3)	Epoch ( 15 / 150)	 train_loss: 0.57	train_acc (balanced): 0.80		eval_acc (balanced): 0.63	
+2022-07-01 13:43:19 runtime_logs INFO home_id (3)	Epoch ( 16 / 150)	 train_loss: 0.56	train_acc (balanced): 0.80		eval_acc (balanced): 0.63	
+2022-07-01 13:43:19 runtime_logs INFO home_id (3)	Epoch ( 17 / 150)	 train_loss: 0.56	train_acc (balanced): 0.80		eval_acc (balanced): 0.63	
+2022-07-01 13:43:19 runtime_logs INFO home_id (3)	Epoch ( 18 / 150)	 train_loss: 0.56	train_acc (balanced): 0.80		eval_acc (balanced): 0.63	
+2022-07-01 13:43:19 runtime_logs INFO home_id (3)	Epoch ( 19 / 150)	 train_loss: 0.56	train_acc (balanced): 0.80		eval_acc (balanced): 0.63	
+2022-07-01 13:43:19 runtime_logs INFO home_id (3)	Epoch ( 20 / 150)	 train_loss: 0.55	train_acc (balanced): 0.81		eval_acc (balanced): 0.63	
+2022-07-01 13:43:19 runtime_logs INFO home_id (3)	Epoch ( 21 / 150)	 train_loss: 0.55	train_acc (balanced): 0.80		eval_acc (balanced): 0.63	
+2022-07-01 13:43:19 runtime_logs INFO home_id (3)	Epoch ( 22 / 150)	 train_loss: 0.55	train_acc (balanced): 0.81		eval_acc (balanced): 0.63	
+2022-07-01 13:43:19 runtime_logs INFO home_id (3)	Epoch ( 23 / 150)	 train_loss: 0.55	train_acc (balanced): 0.81		eval_acc (balanced): 0.63	
+2022-07-01 13:43:19 runtime_logs INFO home_id (3)	Epoch ( 24 / 150)	 train_loss: 0.54	train_acc (balanced): 0.81		eval_acc (balanced): 0.63	
+2022-07-01 13:43:20 runtime_logs INFO home_id (3)	Epoch ( 25 / 150)	 train_loss: 0.54	train_acc (balanced): 0.81		eval_acc (balanced): 0.63	
+2022-07-01 13:43:20 runtime_logs INFO home_id (3)	Epoch ( 26 / 150)	 train_loss: 0.54	train_acc (balanced): 0.81		eval_acc (balanced): 0.62	
+2022-07-01 13:43:20 runtime_logs INFO home_id (3)	Epoch ( 27 / 150)	 train_loss: 0.54	train_acc (balanced): 0.81		eval_acc (balanced): 0.62	
+2022-07-01 13:43:20 runtime_logs INFO home_id (3)	Epoch ( 28 / 150)	 train_loss: 0.54	train_acc (balanced): 0.81		eval_acc (balanced): 0.62	
+2022-07-01 13:43:20 runtime_logs INFO home_id (3)	Epoch ( 29 / 150)	 train_loss: 0.53	train_acc (balanced): 0.81		eval_acc (balanced): 0.62	
+2022-07-01 13:43:20 runtime_logs INFO home_id (3)	Epoch ( 30 / 150)	 train_loss: 0.53	train_acc (balanced): 0.81		eval_acc (balanced): 0.62	
+2022-07-01 13:43:20 runtime_logs INFO home_id (3)	Epoch ( 31 / 150)	 train_loss: 0.53	train_acc (balanced): 0.81		eval_acc (balanced): 0.62	
+2022-07-01 13:43:20 runtime_logs INFO home_id (3)	Epoch ( 32 / 150)	 train_loss: 0.53	train_acc (balanced): 0.81		eval_acc (balanced): 0.62	
+2022-07-01 13:43:20 runtime_logs INFO home_id (3)	Epoch ( 33 / 150)	 train_loss: 0.53	train_acc (balanced): 0.81		eval_acc (balanced): 0.62	
+2022-07-01 13:43:20 runtime_logs INFO home_id (3)	Epoch ( 34 / 150)	 train_loss: 0.53	train_acc (balanced): 0.81		eval_acc (balanced): 0.62	
+2022-07-01 13:43:21 runtime_logs INFO home_id (3)	Epoch ( 35 / 150)	 train_loss: 0.52	train_acc (balanced): 0.81		eval_acc (balanced): 0.62	
+2022-07-01 13:43:21 runtime_logs INFO Early stopping the training due to no change in validation accuracies
+2022-07-01 13:43:21 runtime_logs INFO Sequential(
+  (0): Linear(in_features=5, out_features=128, bias=True)
+  (1): ReLU()
+  (2): Linear(in_features=128, out_features=3, bias=True)
+  (3): ReLU()
+)
+2022-07-01 13:43:21 runtime_logs INFO Training the model for home 4 with datasize 213
+2022-07-01 13:43:21 runtime_logs INFO home_id (4)	Epoch (  1 / 150)	 train_loss: 0.73	train_acc (balanced): 0.84		eval_acc (balanced): 0.85	
+2022-07-01 13:43:21 runtime_logs INFO home_id (4)	Epoch (  2 / 150)	 train_loss: 0.50	train_acc (balanced): 0.87		eval_acc (balanced): 0.85	
+2022-07-01 13:43:21 runtime_logs INFO home_id (4)	Epoch (  3 / 150)	 train_loss: 0.47	train_acc (balanced): 0.87		eval_acc (balanced): 0.85	
+2022-07-01 13:43:21 runtime_logs INFO home_id (4)	Epoch (  4 / 150)	 train_loss: 0.45	train_acc (balanced): 0.87		eval_acc (balanced): 0.85	
+2022-07-01 13:43:21 runtime_logs INFO home_id (4)	Epoch (  5 / 150)	 train_loss: 0.45	train_acc (balanced): 0.87		eval_acc (balanced): 0.85	
+2022-07-01 13:43:21 runtime_logs INFO home_id (4)	Epoch (  6 / 150)	 train_loss: 0.44	train_acc (balanced): 0.87		eval_acc (balanced): 0.85	
+2022-07-01 13:43:21 runtime_logs INFO home_id (4)	Epoch (  7 / 150)	 train_loss: 0.43	train_acc (balanced): 0.87		eval_acc (balanced): 0.85	
+2022-07-01 13:43:21 runtime_logs INFO home_id (4)	Epoch (  8 / 150)	 train_loss: 0.43	train_acc (balanced): 0.87		eval_acc (balanced): 0.85	
+2022-07-01 13:43:21 runtime_logs INFO home_id (4)	Epoch (  9 / 150)	 train_loss: 0.42	train_acc (balanced): 0.87		eval_acc (balanced): 0.85	
+2022-07-01 13:43:22 runtime_logs INFO home_id (4)	Epoch ( 10 / 150)	 train_loss: 0.42	train_acc (balanced): 0.87		eval_acc (balanced): 0.85	
+2022-07-01 13:43:22 runtime_logs INFO home_id (4)	Epoch ( 11 / 150)	 train_loss: 0.42	train_acc (balanced): 0.87		eval_acc (balanced): 0.85	
+2022-07-01 13:43:22 runtime_logs INFO home_id (4)	Epoch ( 12 / 150)	 train_loss: 0.41	train_acc (balanced): 0.87		eval_acc (balanced): 0.85	
+2022-07-01 13:43:22 runtime_logs INFO home_id (4)	Epoch ( 13 / 150)	 train_loss: 0.41	train_acc (balanced): 0.87		eval_acc (balanced): 0.85	
+2022-07-01 13:43:22 runtime_logs INFO home_id (4)	Epoch ( 14 / 150)	 train_loss: 0.41	train_acc (balanced): 0.87		eval_acc (balanced): 0.85	
+2022-07-01 13:43:22 runtime_logs INFO home_id (4)	Epoch ( 15 / 150)	 train_loss: 0.41	train_acc (balanced): 0.87		eval_acc (balanced): 0.85	
+2022-07-01 13:43:22 runtime_logs INFO home_id (4)	Epoch ( 16 / 150)	 train_loss: 0.40	train_acc (balanced): 0.87		eval_acc (balanced): 0.85	
+2022-07-01 13:43:22 runtime_logs INFO home_id (4)	Epoch ( 17 / 150)	 train_loss: 0.40	train_acc (balanced): 0.87		eval_acc (balanced): 0.85	
+2022-07-01 13:43:22 runtime_logs INFO home_id (4)	Epoch ( 18 / 150)	 train_loss: 0.40	train_acc (balanced): 0.87		eval_acc (balanced): 0.85	
+2022-07-01 13:43:22 runtime_logs INFO home_id (4)	Epoch ( 19 / 150)	 train_loss: 0.40	train_acc (balanced): 0.88		eval_acc (balanced): 0.85	
+2022-07-01 13:43:22 runtime_logs INFO home_id (4)	Epoch ( 20 / 150)	 train_loss: 0.40	train_acc (balanced): 0.87		eval_acc (balanced): 0.85	
+2022-07-01 13:43:23 runtime_logs INFO home_id (4)	Epoch ( 21 / 150)	 train_loss: 0.40	train_acc (balanced): 0.87		eval_acc (balanced): 0.85	
+2022-07-01 13:43:23 runtime_logs INFO home_id (4)	Epoch ( 22 / 150)	 train_loss: 0.39	train_acc (balanced): 0.88		eval_acc (balanced): 0.85	
+2022-07-01 13:43:23 runtime_logs INFO home_id (4)	Epoch ( 23 / 150)	 train_loss: 0.39	train_acc (balanced): 0.87		eval_acc (balanced): 0.85	
+2022-07-01 13:43:23 runtime_logs INFO home_id (4)	Epoch ( 24 / 150)	 train_loss: 0.39	train_acc (balanced): 0.88		eval_acc (balanced): 0.85	
+2022-07-01 13:43:23 runtime_logs INFO home_id (4)	Epoch ( 25 / 150)	 train_loss: 0.39	train_acc (balanced): 0.87		eval_acc (balanced): 0.85	
+2022-07-01 13:43:23 runtime_logs INFO home_id (4)	Epoch ( 26 / 150)	 train_loss: 0.39	train_acc (balanced): 0.88		eval_acc (balanced): 0.85	
+2022-07-01 13:43:23 runtime_logs INFO home_id (4)	Epoch ( 27 / 150)	 train_loss: 0.39	train_acc (balanced): 0.87		eval_acc (balanced): 0.85	
+2022-07-01 13:43:23 runtime_logs INFO home_id (4)	Epoch ( 28 / 150)	 train_loss: 0.39	train_acc (balanced): 0.88		eval_acc (balanced): 0.85	
+2022-07-01 13:43:23 runtime_logs INFO home_id (4)	Epoch ( 29 / 150)	 train_loss: 0.39	train_acc (balanced): 0.88		eval_acc (balanced): 0.85	
+2022-07-01 13:43:23 runtime_logs INFO home_id (4)	Epoch ( 30 / 150)	 train_loss: 0.38	train_acc (balanced): 0.88		eval_acc (balanced): 0.85	
+2022-07-01 13:43:23 runtime_logs INFO home_id (4)	Epoch ( 31 / 150)	 train_loss: 0.38	train_acc (balanced): 0.88		eval_acc (balanced): 0.85	
+2022-07-01 13:43:23 runtime_logs INFO Early stopping the training due to no change in validation accuracies
+2022-07-01 13:43:24 runtime_logs INFO Sequential(
+  (0): Linear(in_features=5, out_features=128, bias=True)
+  (1): ReLU()
+  (2): Linear(in_features=128, out_features=3, bias=True)
+  (3): ReLU()
+)
+2022-07-01 13:43:24 runtime_logs INFO Training the model for home 5 with datasize 215
+2022-07-01 13:43:24 runtime_logs INFO home_id (5)	Epoch (  1 / 150)	 train_loss: 1.08	train_acc (balanced): 0.26		eval_acc (balanced): 0.19	
+2022-07-01 13:43:24 runtime_logs INFO home_id (5)	Epoch (  2 / 150)	 train_loss: 1.04	train_acc (balanced): 0.30		eval_acc (balanced): 0.19	
+2022-07-01 13:43:24 runtime_logs INFO home_id (5)	Epoch (  3 / 150)	 train_loss: 1.03	train_acc (balanced): 0.29		eval_acc (balanced): 0.19	
+2022-07-01 13:43:24 runtime_logs INFO home_id (5)	Epoch (  4 / 150)	 train_loss: 0.96	train_acc (balanced): 0.48		eval_acc (balanced): 0.78	
+2022-07-01 13:43:24 runtime_logs INFO home_id (5)	Epoch (  5 / 150)	 train_loss: 0.80	train_acc (balanced): 0.70		eval_acc (balanced): 0.78	
+2022-07-01 13:43:24 runtime_logs INFO home_id (5)	Epoch (  6 / 150)	 train_loss: 0.75	train_acc (balanced): 0.71		eval_acc (balanced): 0.78	
+2022-07-01 13:43:24 runtime_logs INFO home_id (5)	Epoch (  7 / 150)	 train_loss: 0.72	train_acc (balanced): 0.72		eval_acc (balanced): 0.78	
+2022-07-01 13:43:24 runtime_logs INFO home_id (5)	Epoch (  8 / 150)	 train_loss: 0.70	train_acc (balanced): 0.72		eval_acc (balanced): 0.78	
+2022-07-01 13:43:24 runtime_logs INFO home_id (5)	Epoch (  9 / 150)	 train_loss: 0.69	train_acc (balanced): 0.73		eval_acc (balanced): 0.78	
+2022-07-01 13:43:24 runtime_logs INFO home_id (5)	Epoch ( 10 / 150)	 train_loss: 0.68	train_acc (balanced): 0.73		eval_acc (balanced): 0.78	
+2022-07-01 13:43:25 runtime_logs INFO home_id (5)	Epoch ( 11 / 150)	 train_loss: 0.67	train_acc (balanced): 0.73		eval_acc (balanced): 0.78	
+2022-07-01 13:43:25 runtime_logs INFO home_id (5)	Epoch ( 12 / 150)	 train_loss: 0.66	train_acc (balanced): 0.73		eval_acc (balanced): 0.78	
+2022-07-01 13:43:25 runtime_logs INFO home_id (5)	Epoch ( 13 / 150)	 train_loss: 0.66	train_acc (balanced): 0.74		eval_acc (balanced): 0.78	
+2022-07-01 13:43:25 runtime_logs INFO home_id (5)	Epoch ( 14 / 150)	 train_loss: 0.65	train_acc (balanced): 0.74		eval_acc (balanced): 0.78	
+2022-07-01 13:43:25 runtime_logs INFO home_id (5)	Epoch ( 15 / 150)	 train_loss: 0.64	train_acc (balanced): 0.74		eval_acc (balanced): 0.78	
+2022-07-01 13:43:25 runtime_logs INFO home_id (5)	Epoch ( 16 / 150)	 train_loss: 0.63	train_acc (balanced): 0.75		eval_acc (balanced): 0.80	
+2022-07-01 13:43:25 runtime_logs INFO home_id (5)	Epoch ( 17 / 150)	 train_loss: 0.62	train_acc (balanced): 0.75		eval_acc (balanced): 0.80	
+2022-07-01 13:43:25 runtime_logs INFO home_id (5)	Epoch ( 18 / 150)	 train_loss: 0.61	train_acc (balanced): 0.75		eval_acc (balanced): 0.80	
+2022-07-01 13:43:25 runtime_logs INFO home_id (5)	Epoch ( 19 / 150)	 train_loss: 0.60	train_acc (balanced): 0.75		eval_acc (balanced): 0.80	
+2022-07-01 13:43:25 runtime_logs INFO home_id (5)	Epoch ( 20 / 150)	 train_loss: 0.60	train_acc (balanced): 0.76		eval_acc (balanced): 0.80	
+2022-07-01 13:43:25 runtime_logs INFO home_id (5)	Epoch ( 21 / 150)	 train_loss: 0.59	train_acc (balanced): 0.76		eval_acc (balanced): 0.80	
+2022-07-01 13:43:26 runtime_logs INFO home_id (5)	Epoch ( 22 / 150)	 train_loss: 0.59	train_acc (balanced): 0.76		eval_acc (balanced): 0.80	
+2022-07-01 13:43:26 runtime_logs INFO home_id (5)	Epoch ( 23 / 150)	 train_loss: 0.58	train_acc (balanced): 0.76		eval_acc (balanced): 0.80	
+2022-07-01 13:43:26 runtime_logs INFO home_id (5)	Epoch ( 24 / 150)	 train_loss: 0.58	train_acc (balanced): 0.76		eval_acc (balanced): 0.80	
+2022-07-01 13:43:26 runtime_logs INFO home_id (5)	Epoch ( 25 / 150)	 train_loss: 0.57	train_acc (balanced): 0.77		eval_acc (balanced): 0.80	
+2022-07-01 13:43:26 runtime_logs INFO home_id (5)	Epoch ( 26 / 150)	 train_loss: 0.57	train_acc (balanced): 0.76		eval_acc (balanced): 0.80	
+2022-07-01 13:43:26 runtime_logs INFO home_id (5)	Epoch ( 27 / 150)	 train_loss: 0.56	train_acc (balanced): 0.77		eval_acc (balanced): 0.80	
+2022-07-01 13:43:26 runtime_logs INFO home_id (5)	Epoch ( 28 / 150)	 train_loss: 0.56	train_acc (balanced): 0.76		eval_acc (balanced): 0.80	
+2022-07-01 13:43:26 runtime_logs INFO home_id (5)	Epoch ( 29 / 150)	 train_loss: 0.56	train_acc (balanced): 0.76		eval_acc (balanced): 0.80	
+2022-07-01 13:43:26 runtime_logs INFO home_id (5)	Epoch ( 30 / 150)	 train_loss: 0.55	train_acc (balanced): 0.76		eval_acc (balanced): 0.80	
+2022-07-01 13:43:26 runtime_logs INFO home_id (5)	Epoch ( 31 / 150)	 train_loss: 0.55	train_acc (balanced): 0.77		eval_acc (balanced): 0.80	
+2022-07-01 13:43:26 runtime_logs INFO home_id (5)	Epoch ( 32 / 150)	 train_loss: 0.55	train_acc (balanced): 0.77		eval_acc (balanced): 0.80	
+2022-07-01 13:43:27 runtime_logs INFO home_id (5)	Epoch ( 33 / 150)	 train_loss: 0.55	train_acc (balanced): 0.77		eval_acc (balanced): 0.80	
+2022-07-01 13:43:27 runtime_logs INFO home_id (5)	Epoch ( 34 / 150)	 train_loss: 0.54	train_acc (balanced): 0.77		eval_acc (balanced): 0.80	
+2022-07-01 13:43:27 runtime_logs INFO home_id (5)	Epoch ( 35 / 150)	 train_loss: 0.54	train_acc (balanced): 0.78		eval_acc (balanced): 0.80	
+2022-07-01 13:43:27 runtime_logs INFO home_id (5)	Epoch ( 36 / 150)	 train_loss: 0.54	train_acc (balanced): 0.77		eval_acc (balanced): 0.80	
+2022-07-01 13:43:27 runtime_logs INFO home_id (5)	Epoch ( 37 / 150)	 train_loss: 0.54	train_acc (balanced): 0.78		eval_acc (balanced): 0.80	
+2022-07-01 13:43:27 runtime_logs INFO home_id (5)	Epoch ( 38 / 150)	 train_loss: 0.53	train_acc (balanced): 0.78		eval_acc (balanced): 0.80	
+2022-07-01 13:43:27 runtime_logs INFO home_id (5)	Epoch ( 39 / 150)	 train_loss: 0.53	train_acc (balanced): 0.78		eval_acc (balanced): 0.80	
+2022-07-01 13:43:27 runtime_logs INFO home_id (5)	Epoch ( 40 / 150)	 train_loss: 0.53	train_acc (balanced): 0.79		eval_acc (balanced): 0.80	
+2022-07-01 13:43:27 runtime_logs INFO home_id (5)	Epoch ( 41 / 150)	 train_loss: 0.53	train_acc (balanced): 0.78		eval_acc (balanced): 0.80	
+2022-07-01 13:43:27 runtime_logs INFO home_id (5)	Epoch ( 42 / 150)	 train_loss: 0.53	train_acc (balanced): 0.78		eval_acc (balanced): 0.80	
+2022-07-01 13:43:27 runtime_logs INFO home_id (5)	Epoch ( 43 / 150)	 train_loss: 0.52	train_acc (balanced): 0.79		eval_acc (balanced): 0.80	
+2022-07-01 13:43:27 runtime_logs INFO home_id (5)	Epoch ( 44 / 150)	 train_loss: 0.52	train_acc (balanced): 0.79		eval_acc (balanced): 0.80	
+2022-07-01 13:43:28 runtime_logs INFO home_id (5)	Epoch ( 45 / 150)	 train_loss: 0.52	train_acc (balanced): 0.79		eval_acc (balanced): 0.80	
+2022-07-01 13:43:28 runtime_logs INFO home_id (5)	Epoch ( 46 / 150)	 train_loss: 0.52	train_acc (balanced): 0.79		eval_acc (balanced): 0.80	
+2022-07-01 13:43:28 runtime_logs INFO Early stopping the training due to no change in validation accuracies
+2022-07-01 13:43:28 runtime_logs INFO Sequential(
+  (0): Linear(in_features=5, out_features=128, bias=True)
+  (1): ReLU()
+  (2): Linear(in_features=128, out_features=3, bias=True)
+  (3): ReLU()
+)
+2022-07-01 13:43:28 runtime_logs INFO Training the model for home 6 with datasize 193
+2022-07-01 13:43:28 runtime_logs INFO home_id (6)	Epoch (  1 / 150)	 train_loss: 1.06	train_acc (balanced): 0.44		eval_acc (balanced): 0.53	
+2022-07-01 13:43:28 runtime_logs INFO home_id (6)	Epoch (  2 / 150)	 train_loss: 1.00	train_acc (balanced): 0.53		eval_acc (balanced): 0.49	
+2022-07-01 13:43:28 runtime_logs INFO home_id (6)	Epoch (  3 / 150)	 train_loss: 0.97	train_acc (balanced): 0.54		eval_acc (balanced): 0.45	
+2022-07-01 13:43:28 runtime_logs INFO home_id (6)	Epoch (  4 / 150)	 train_loss: 0.96	train_acc (balanced): 0.55		eval_acc (balanced): 0.45	
+2022-07-01 13:43:28 runtime_logs INFO home_id (6)	Epoch (  5 / 150)	 train_loss: 0.95	train_acc (balanced): 0.55		eval_acc (balanced): 0.45	
+2022-07-01 13:43:28 runtime_logs INFO home_id (6)	Epoch (  6 / 150)	 train_loss: 0.94	train_acc (balanced): 0.55		eval_acc (balanced): 0.45	
+2022-07-01 13:43:28 runtime_logs INFO home_id (6)	Epoch (  7 / 150)	 train_loss: 0.93	train_acc (balanced): 0.55		eval_acc (balanced): 0.47	
+2022-07-01 13:43:28 runtime_logs INFO home_id (6)	Epoch (  8 / 150)	 train_loss: 0.92	train_acc (balanced): 0.56		eval_acc (balanced): 0.47	
+2022-07-01 13:43:28 runtime_logs INFO home_id (6)	Epoch (  9 / 150)	 train_loss: 0.92	train_acc (balanced): 0.56		eval_acc (balanced): 0.47	
+2022-07-01 13:43:28 runtime_logs INFO home_id (6)	Epoch ( 10 / 150)	 train_loss: 0.91	train_acc (balanced): 0.56		eval_acc (balanced): 0.47	
+2022-07-01 13:43:29 runtime_logs INFO home_id (6)	Epoch ( 11 / 150)	 train_loss: 0.91	train_acc (balanced): 0.57		eval_acc (balanced): 0.47	
+2022-07-01 13:43:29 runtime_logs INFO home_id (6)	Epoch ( 12 / 150)	 train_loss: 0.90	train_acc (balanced): 0.59		eval_acc (balanced): 0.45	
+2022-07-01 13:43:29 runtime_logs INFO home_id (6)	Epoch ( 13 / 150)	 train_loss: 0.90	train_acc (balanced): 0.59		eval_acc (balanced): 0.45	
+2022-07-01 13:43:29 runtime_logs INFO home_id (6)	Epoch ( 14 / 150)	 train_loss: 0.89	train_acc (balanced): 0.60		eval_acc (balanced): 0.45	
+2022-07-01 13:43:29 runtime_logs INFO home_id (6)	Epoch ( 15 / 150)	 train_loss: 0.89	train_acc (balanced): 0.60		eval_acc (balanced): 0.45	
+2022-07-01 13:43:29 runtime_logs INFO home_id (6)	Epoch ( 16 / 150)	 train_loss: 0.88	train_acc (balanced): 0.60		eval_acc (balanced): 0.45	
+2022-07-01 13:43:29 runtime_logs INFO home_id (6)	Epoch ( 17 / 150)	 train_loss: 0.88	train_acc (balanced): 0.60		eval_acc (balanced): 0.45	
+2022-07-01 13:43:29 runtime_logs INFO home_id (6)	Epoch ( 18 / 150)	 train_loss: 0.88	train_acc (balanced): 0.61		eval_acc (balanced): 0.45	
+2022-07-01 13:43:29 runtime_logs INFO home_id (6)	Epoch ( 19 / 150)	 train_loss: 0.87	train_acc (balanced): 0.62		eval_acc (balanced): 0.45	
+2022-07-01 13:43:29 runtime_logs INFO home_id (6)	Epoch ( 20 / 150)	 train_loss: 0.87	train_acc (balanced): 0.62		eval_acc (balanced): 0.45	
+2022-07-01 13:43:29 runtime_logs INFO home_id (6)	Epoch ( 21 / 150)	 train_loss: 0.87	train_acc (balanced): 0.62		eval_acc (balanced): 0.45	
+2022-07-01 13:43:29 runtime_logs INFO home_id (6)	Epoch ( 22 / 150)	 train_loss: 0.86	train_acc (balanced): 0.62		eval_acc (balanced): 0.45	
+2022-07-01 13:43:30 runtime_logs INFO home_id (6)	Epoch ( 23 / 150)	 train_loss: 0.86	train_acc (balanced): 0.62		eval_acc (balanced): 0.45	
+2022-07-01 13:43:30 runtime_logs INFO home_id (6)	Epoch ( 24 / 150)	 train_loss: 0.86	train_acc (balanced): 0.62		eval_acc (balanced): 0.45	
+2022-07-01 13:43:30 runtime_logs INFO home_id (6)	Epoch ( 25 / 150)	 train_loss: 0.85	train_acc (balanced): 0.62		eval_acc (balanced): 0.45	
+2022-07-01 13:43:30 runtime_logs INFO home_id (6)	Epoch ( 26 / 150)	 train_loss: 0.85	train_acc (balanced): 0.62		eval_acc (balanced): 0.45	
+2022-07-01 13:43:30 runtime_logs INFO home_id (6)	Epoch ( 27 / 150)	 train_loss: 0.85	train_acc (balanced): 0.62		eval_acc (balanced): 0.45	
+2022-07-01 13:43:30 runtime_logs INFO home_id (6)	Epoch ( 28 / 150)	 train_loss: 0.85	train_acc (balanced): 0.62		eval_acc (balanced): 0.45	
+2022-07-01 13:43:30 runtime_logs INFO home_id (6)	Epoch ( 29 / 150)	 train_loss: 0.84	train_acc (balanced): 0.62		eval_acc (balanced): 0.45	
+2022-07-01 13:43:30 runtime_logs INFO home_id (6)	Epoch ( 30 / 150)	 train_loss: 0.84	train_acc (balanced): 0.62		eval_acc (balanced): 0.45	
+2022-07-01 13:43:30 runtime_logs INFO home_id (6)	Epoch ( 31 / 150)	 train_loss: 0.84	train_acc (balanced): 0.62		eval_acc (balanced): 0.45	
+2022-07-01 13:43:30 runtime_logs INFO Early stopping the training due to no change in validation accuracies
+2022-07-01 13:43:30 runtime_logs INFO Sequential(
+  (0): Linear(in_features=5, out_features=128, bias=True)
+  (1): ReLU()
+  (2): Linear(in_features=128, out_features=3, bias=True)
+  (3): ReLU()
+)
+2022-07-01 13:43:30 runtime_logs INFO Training the model for home 7 with datasize 314
+2022-07-01 13:43:30 runtime_logs INFO home_id (7)	Epoch (  1 / 150)	 train_loss: 0.92	train_acc (balanced): 0.65		eval_acc (balanced): 0.77	
+2022-07-01 13:43:30 runtime_logs INFO home_id (7)	Epoch (  2 / 150)	 train_loss: 0.83	train_acc (balanced): 0.68		eval_acc (balanced): 0.80	
+2022-07-01 13:43:31 runtime_logs INFO home_id (7)	Epoch (  3 / 150)	 train_loss: 0.80	train_acc (balanced): 0.69		eval_acc (balanced): 0.78	
+2022-07-01 13:43:31 runtime_logs INFO home_id (7)	Epoch (  4 / 150)	 train_loss: 0.78	train_acc (balanced): 0.69		eval_acc (balanced): 0.76	
+2022-07-01 13:43:31 runtime_logs INFO home_id (7)	Epoch (  5 / 150)	 train_loss: 0.77	train_acc (balanced): 0.69		eval_acc (balanced): 0.76	
+2022-07-01 13:43:31 runtime_logs INFO home_id (7)	Epoch (  6 / 150)	 train_loss: 0.76	train_acc (balanced): 0.70		eval_acc (balanced): 0.76	
+2022-07-01 13:43:31 runtime_logs INFO home_id (7)	Epoch (  7 / 150)	 train_loss: 0.75	train_acc (balanced): 0.70		eval_acc (balanced): 0.76	
+2022-07-01 13:43:31 runtime_logs INFO home_id (7)	Epoch (  8 / 150)	 train_loss: 0.74	train_acc (balanced): 0.70		eval_acc (balanced): 0.76	
+2022-07-01 13:43:31 runtime_logs INFO home_id (7)	Epoch (  9 / 150)	 train_loss: 0.74	train_acc (balanced): 0.70		eval_acc (balanced): 0.76	
+2022-07-01 13:43:31 runtime_logs INFO home_id (7)	Epoch ( 10 / 150)	 train_loss: 0.73	train_acc (balanced): 0.70		eval_acc (balanced): 0.75	
+2022-07-01 13:43:32 runtime_logs INFO home_id (7)	Epoch ( 11 / 150)	 train_loss: 0.73	train_acc (balanced): 0.71		eval_acc (balanced): 0.75	
+2022-07-01 13:43:32 runtime_logs INFO home_id (7)	Epoch ( 12 / 150)	 train_loss: 0.73	train_acc (balanced): 0.71		eval_acc (balanced): 0.75	
+2022-07-01 13:43:32 runtime_logs INFO home_id (7)	Epoch ( 13 / 150)	 train_loss: 0.72	train_acc (balanced): 0.71		eval_acc (balanced): 0.75	
+2022-07-01 13:43:32 runtime_logs INFO home_id (7)	Epoch ( 14 / 150)	 train_loss: 0.72	train_acc (balanced): 0.71		eval_acc (balanced): 0.75	
+2022-07-01 13:43:32 runtime_logs INFO home_id (7)	Epoch ( 15 / 150)	 train_loss: 0.71	train_acc (balanced): 0.72		eval_acc (balanced): 0.73	
+2022-07-01 13:43:32 runtime_logs INFO home_id (7)	Epoch ( 16 / 150)	 train_loss: 0.71	train_acc (balanced): 0.71		eval_acc (balanced): 0.73	
+2022-07-01 13:43:32 runtime_logs INFO home_id (7)	Epoch ( 17 / 150)	 train_loss: 0.71	train_acc (balanced): 0.71		eval_acc (balanced): 0.73	
+2022-07-01 13:43:33 runtime_logs INFO home_id (7)	Epoch ( 18 / 150)	 train_loss: 0.70	train_acc (balanced): 0.72		eval_acc (balanced): 0.73	
+2022-07-01 13:43:33 runtime_logs INFO home_id (7)	Epoch ( 19 / 150)	 train_loss: 0.70	train_acc (balanced): 0.72		eval_acc (balanced): 0.73	
+2022-07-01 13:43:33 runtime_logs INFO home_id (7)	Epoch ( 20 / 150)	 train_loss: 0.70	train_acc (balanced): 0.72		eval_acc (balanced): 0.72	
+2022-07-01 13:43:33 runtime_logs INFO home_id (7)	Epoch ( 21 / 150)	 train_loss: 0.69	train_acc (balanced): 0.73		eval_acc (balanced): 0.71	
+2022-07-01 13:43:33 runtime_logs INFO home_id (7)	Epoch ( 22 / 150)	 train_loss: 0.69	train_acc (balanced): 0.73		eval_acc (balanced): 0.71	
+2022-07-01 13:43:33 runtime_logs INFO home_id (7)	Epoch ( 23 / 150)	 train_loss: 0.69	train_acc (balanced): 0.73		eval_acc (balanced): 0.71	
+2022-07-01 13:43:33 runtime_logs INFO home_id (7)	Epoch ( 24 / 150)	 train_loss: 0.69	train_acc (balanced): 0.73		eval_acc (balanced): 0.71	
+2022-07-01 13:43:33 runtime_logs INFO home_id (7)	Epoch ( 25 / 150)	 train_loss: 0.68	train_acc (balanced): 0.73		eval_acc (balanced): 0.72	
+2022-07-01 13:43:34 runtime_logs INFO home_id (7)	Epoch ( 26 / 150)	 train_loss: 0.68	train_acc (balanced): 0.73		eval_acc (balanced): 0.72	
+2022-07-01 13:43:34 runtime_logs INFO home_id (7)	Epoch ( 27 / 150)	 train_loss: 0.68	train_acc (balanced): 0.72		eval_acc (balanced): 0.72	
+2022-07-01 13:43:34 runtime_logs INFO home_id (7)	Epoch ( 28 / 150)	 train_loss: 0.68	train_acc (balanced): 0.72		eval_acc (balanced): 0.71	
+2022-07-01 13:43:34 runtime_logs INFO home_id (7)	Epoch ( 29 / 150)	 train_loss: 0.67	train_acc (balanced): 0.73		eval_acc (balanced): 0.72	
+2022-07-01 13:43:34 runtime_logs INFO home_id (7)	Epoch ( 30 / 150)	 train_loss: 0.67	train_acc (balanced): 0.72		eval_acc (balanced): 0.71	
+2022-07-01 13:43:34 runtime_logs INFO home_id (7)	Epoch ( 31 / 150)	 train_loss: 0.67	train_acc (balanced): 0.73		eval_acc (balanced): 0.71	
+2022-07-01 13:43:34 runtime_logs INFO home_id (7)	Epoch ( 32 / 150)	 train_loss: 0.66	train_acc (balanced): 0.73		eval_acc (balanced): 0.71	
+2022-07-01 13:43:34 runtime_logs INFO Early stopping the training due to no change in validation accuracies
+2022-07-01 13:43:34 runtime_logs INFO Sequential(
+  (0): Linear(in_features=5, out_features=128, bias=True)
+  (1): ReLU()
+  (2): Linear(in_features=128, out_features=3, bias=True)
+  (3): ReLU()
+)
+2022-07-01 13:43:34 runtime_logs INFO Training the model for home 8 with datasize 282
+2022-07-01 13:43:34 runtime_logs INFO home_id (8)	Epoch (  1 / 150)	 train_loss: 0.88	train_acc (balanced): 0.56		eval_acc (balanced): 0.86	
+2022-07-01 13:43:35 runtime_logs INFO home_id (8)	Epoch (  2 / 150)	 train_loss: 0.51	train_acc (balanced): 0.87		eval_acc (balanced): 0.86	
+2022-07-01 13:43:35 runtime_logs INFO home_id (8)	Epoch (  3 / 150)	 train_loss: 0.48	train_acc (balanced): 0.87		eval_acc (balanced): 0.86	
+2022-07-01 13:43:35 runtime_logs INFO home_id (8)	Epoch (  4 / 150)	 train_loss: 0.46	train_acc (balanced): 0.87		eval_acc (balanced): 0.86	
+2022-07-01 13:43:35 runtime_logs INFO home_id (8)	Epoch (  5 / 150)	 train_loss: 0.45	train_acc (balanced): 0.87		eval_acc (balanced): 0.86	
+2022-07-01 13:43:35 runtime_logs INFO home_id (8)	Epoch (  6 / 150)	 train_loss: 0.44	train_acc (balanced): 0.87		eval_acc (balanced): 0.86	
+2022-07-01 13:43:35 runtime_logs INFO home_id (8)	Epoch (  7 / 150)	 train_loss: 0.43	train_acc (balanced): 0.87		eval_acc (balanced): 0.86	
+2022-07-01 13:43:35 runtime_logs INFO home_id (8)	Epoch (  8 / 150)	 train_loss: 0.42	train_acc (balanced): 0.87		eval_acc (balanced): 0.86	
+2022-07-01 13:43:35 runtime_logs INFO home_id (8)	Epoch (  9 / 150)	 train_loss: 0.42	train_acc (balanced): 0.87		eval_acc (balanced): 0.86	
+2022-07-01 13:43:35 runtime_logs INFO home_id (8)	Epoch ( 10 / 150)	 train_loss: 0.41	train_acc (balanced): 0.87		eval_acc (balanced): 0.86	
+2022-07-01 13:43:36 runtime_logs INFO home_id (8)	Epoch ( 11 / 150)	 train_loss: 0.41	train_acc (balanced): 0.87		eval_acc (balanced): 0.86	
+2022-07-01 13:43:36 runtime_logs INFO home_id (8)	Epoch ( 12 / 150)	 train_loss: 0.40	train_acc (balanced): 0.87		eval_acc (balanced): 0.86	
+2022-07-01 13:43:36 runtime_logs INFO home_id (8)	Epoch ( 13 / 150)	 train_loss: 0.40	train_acc (balanced): 0.87		eval_acc (balanced): 0.86	
+2022-07-01 13:43:36 runtime_logs INFO home_id (8)	Epoch ( 14 / 150)	 train_loss: 0.39	train_acc (balanced): 0.87		eval_acc (balanced): 0.86	
+2022-07-01 13:43:36 runtime_logs INFO home_id (8)	Epoch ( 15 / 150)	 train_loss: 0.39	train_acc (balanced): 0.87		eval_acc (balanced): 0.86	
+2022-07-01 13:43:36 runtime_logs INFO home_id (8)	Epoch ( 16 / 150)	 train_loss: 0.38	train_acc (balanced): 0.87		eval_acc (balanced): 0.86	
+2022-07-01 13:43:36 runtime_logs INFO home_id (8)	Epoch ( 17 / 150)	 train_loss: 0.38	train_acc (balanced): 0.88		eval_acc (balanced): 0.86	
+2022-07-01 13:43:36 runtime_logs INFO home_id (8)	Epoch ( 18 / 150)	 train_loss: 0.38	train_acc (balanced): 0.87		eval_acc (balanced): 0.86	
+2022-07-01 13:43:36 runtime_logs INFO home_id (8)	Epoch ( 19 / 150)	 train_loss: 0.37	train_acc (balanced): 0.87		eval_acc (balanced): 0.86	
+2022-07-01 13:43:37 runtime_logs INFO home_id (8)	Epoch ( 20 / 150)	 train_loss: 0.37	train_acc (balanced): 0.88		eval_acc (balanced): 0.86	
+2022-07-01 13:43:37 runtime_logs INFO home_id (8)	Epoch ( 21 / 150)	 train_loss: 0.37	train_acc (balanced): 0.88		eval_acc (balanced): 0.86	
+2022-07-01 13:43:37 runtime_logs INFO home_id (8)	Epoch ( 22 / 150)	 train_loss: 0.37	train_acc (balanced): 0.87		eval_acc (balanced): 0.87	
+2022-07-01 13:43:37 runtime_logs INFO home_id (8)	Epoch ( 23 / 150)	 train_loss: 0.36	train_acc (balanced): 0.87		eval_acc (balanced): 0.87	
+2022-07-01 13:43:37 runtime_logs INFO home_id (8)	Epoch ( 24 / 150)	 train_loss: 0.36	train_acc (balanced): 0.88		eval_acc (balanced): 0.87	
+2022-07-01 13:43:37 runtime_logs INFO home_id (8)	Epoch ( 25 / 150)	 train_loss: 0.36	train_acc (balanced): 0.87		eval_acc (balanced): 0.87	
+2022-07-01 13:43:37 runtime_logs INFO home_id (8)	Epoch ( 26 / 150)	 train_loss: 0.36	train_acc (balanced): 0.87		eval_acc (balanced): 0.87	
+2022-07-01 13:43:37 runtime_logs INFO home_id (8)	Epoch ( 27 / 150)	 train_loss: 0.35	train_acc (balanced): 0.88		eval_acc (balanced): 0.87	
+2022-07-01 13:43:37 runtime_logs INFO home_id (8)	Epoch ( 28 / 150)	 train_loss: 0.35	train_acc (balanced): 0.88		eval_acc (balanced): 0.87	
+2022-07-01 13:43:38 runtime_logs INFO home_id (8)	Epoch ( 29 / 150)	 train_loss: 0.35	train_acc (balanced): 0.88		eval_acc (balanced): 0.87	
+2022-07-01 13:43:38 runtime_logs INFO home_id (8)	Epoch ( 30 / 150)	 train_loss: 0.35	train_acc (balanced): 0.89		eval_acc (balanced): 0.87	
+2022-07-01 13:43:38 runtime_logs INFO home_id (8)	Epoch ( 31 / 150)	 train_loss: 0.35	train_acc (balanced): 0.88		eval_acc (balanced): 0.87	
+2022-07-01 13:43:38 runtime_logs INFO home_id (8)	Epoch ( 32 / 150)	 train_loss: 0.35	train_acc (balanced): 0.88		eval_acc (balanced): 0.87	
+2022-07-01 13:43:38 runtime_logs INFO home_id (8)	Epoch ( 33 / 150)	 train_loss: 0.35	train_acc (balanced): 0.88		eval_acc (balanced): 0.87	
+2022-07-01 13:43:38 runtime_logs INFO home_id (8)	Epoch ( 34 / 150)	 train_loss: 0.34	train_acc (balanced): 0.88		eval_acc (balanced): 0.87	
+2022-07-01 13:43:38 runtime_logs INFO home_id (8)	Epoch ( 35 / 150)	 train_loss: 0.34	train_acc (balanced): 0.89		eval_acc (balanced): 0.87	
+2022-07-01 13:43:38 runtime_logs INFO home_id (8)	Epoch ( 36 / 150)	 train_loss: 0.34	train_acc (balanced): 0.88		eval_acc (balanced): 0.87	
+2022-07-01 13:43:39 runtime_logs INFO home_id (8)	Epoch ( 37 / 150)	 train_loss: 0.34	train_acc (balanced): 0.89		eval_acc (balanced): 0.87	
+2022-07-01 13:43:39 runtime_logs INFO home_id (8)	Epoch ( 38 / 150)	 train_loss: 0.34	train_acc (balanced): 0.88		eval_acc (balanced): 0.87	
+2022-07-01 13:43:39 runtime_logs INFO home_id (8)	Epoch ( 39 / 150)	 train_loss: 0.34	train_acc (balanced): 0.89		eval_acc (balanced): 0.87	
+2022-07-01 13:43:39 runtime_logs INFO home_id (8)	Epoch ( 40 / 150)	 train_loss: 0.34	train_acc (balanced): 0.88		eval_acc (balanced): 0.87	
+2022-07-01 13:43:39 runtime_logs INFO home_id (8)	Epoch ( 41 / 150)	 train_loss: 0.34	train_acc (balanced): 0.88		eval_acc (balanced): 0.87	
+2022-07-01 13:43:39 runtime_logs INFO home_id (8)	Epoch ( 42 / 150)	 train_loss: 0.34	train_acc (balanced): 0.89		eval_acc (balanced): 0.87	
+2022-07-01 13:43:39 runtime_logs INFO home_id (8)	Epoch ( 43 / 150)	 train_loss: 0.33	train_acc (balanced): 0.88		eval_acc (balanced): 0.87	
+2022-07-01 13:43:39 runtime_logs INFO home_id (8)	Epoch ( 44 / 150)	 train_loss: 0.33	train_acc (balanced): 0.89		eval_acc (balanced): 0.87	
+2022-07-01 13:43:39 runtime_logs INFO home_id (8)	Epoch ( 45 / 150)	 train_loss: 0.33	train_acc (balanced): 0.88		eval_acc (balanced): 0.87	
+2022-07-01 13:43:40 runtime_logs INFO home_id (8)	Epoch ( 46 / 150)	 train_loss: 0.33	train_acc (balanced): 0.89		eval_acc (balanced): 0.87	
+2022-07-01 13:43:40 runtime_logs INFO home_id (8)	Epoch ( 47 / 150)	 train_loss: 0.33	train_acc (balanced): 0.88		eval_acc (balanced): 0.87	
+2022-07-01 13:43:40 runtime_logs INFO home_id (8)	Epoch ( 48 / 150)	 train_loss: 0.33	train_acc (balanced): 0.89		eval_acc (balanced): 0.87	
+2022-07-01 13:43:40 runtime_logs INFO home_id (8)	Epoch ( 49 / 150)	 train_loss: 0.33	train_acc (balanced): 0.88		eval_acc (balanced): 0.87	
+2022-07-01 13:43:40 runtime_logs INFO home_id (8)	Epoch ( 50 / 150)	 train_loss: 0.33	train_acc (balanced): 0.89		eval_acc (balanced): 0.87	
+2022-07-01 13:43:40 runtime_logs INFO home_id (8)	Epoch ( 51 / 150)	 train_loss: 0.33	train_acc (balanced): 0.88		eval_acc (balanced): 0.87	
+2022-07-01 13:43:40 runtime_logs INFO home_id (8)	Epoch ( 52 / 150)	 train_loss: 0.33	train_acc (balanced): 0.89		eval_acc (balanced): 0.87	
+2022-07-01 13:43:40 runtime_logs INFO Early stopping the training due to no change in validation accuracies
+2022-07-01 13:43:40 runtime_logs INFO Sequential(
+  (0): Linear(in_features=5, out_features=128, bias=True)
+  (1): ReLU()
+  (2): Linear(in_features=128, out_features=3, bias=True)
+  (3): ReLU()
+)
+2022-07-01 13:43:40 runtime_logs INFO Training the model for home 9 with datasize 202
+2022-07-01 13:43:40 runtime_logs INFO home_id (9)	Epoch (  1 / 150)	 train_loss: 0.78	train_acc (balanced): 0.81		eval_acc (balanced): 0.75	
+2022-07-01 13:43:40 runtime_logs INFO home_id (9)	Epoch (  2 / 150)	 train_loss: 0.63	train_acc (balanced): 0.81		eval_acc (balanced): 0.75	
+2022-07-01 13:43:40 runtime_logs INFO home_id (9)	Epoch (  3 / 150)	 train_loss: 0.59	train_acc (balanced): 0.81		eval_acc (balanced): 0.75	
+2022-07-01 13:43:41 runtime_logs INFO home_id (9)	Epoch (  4 / 150)	 train_loss: 0.54	train_acc (balanced): 0.81		eval_acc (balanced): 0.75	
+2022-07-01 13:43:41 runtime_logs INFO home_id (9)	Epoch (  5 / 150)	 train_loss: 0.51	train_acc (balanced): 0.81		eval_acc (balanced): 0.75	
+2022-07-01 13:43:41 runtime_logs INFO home_id (9)	Epoch (  6 / 150)	 train_loss: 0.49	train_acc (balanced): 0.82		eval_acc (balanced): 0.75	
+2022-07-01 13:43:41 runtime_logs INFO home_id (9)	Epoch (  7 / 150)	 train_loss: 0.47	train_acc (balanced): 0.82		eval_acc (balanced): 0.75	
+2022-07-01 13:43:41 runtime_logs INFO home_id (9)	Epoch (  8 / 150)	 train_loss: 0.46	train_acc (balanced): 0.83		eval_acc (balanced): 0.75	
+2022-07-01 13:43:41 runtime_logs INFO home_id (9)	Epoch (  9 / 150)	 train_loss: 0.45	train_acc (balanced): 0.84		eval_acc (balanced): 0.75	
+2022-07-01 13:43:41 runtime_logs INFO home_id (9)	Epoch ( 10 / 150)	 train_loss: 0.44	train_acc (balanced): 0.84		eval_acc (balanced): 0.75	
+2022-07-01 13:43:41 runtime_logs INFO home_id (9)	Epoch ( 11 / 150)	 train_loss: 0.43	train_acc (balanced): 0.84		eval_acc (balanced): 0.75	
+2022-07-01 13:43:41 runtime_logs INFO home_id (9)	Epoch ( 12 / 150)	 train_loss: 0.42	train_acc (balanced): 0.84		eval_acc (balanced): 0.75	
+2022-07-01 13:43:41 runtime_logs INFO home_id (9)	Epoch ( 13 / 150)	 train_loss: 0.42	train_acc (balanced): 0.84		eval_acc (balanced): 0.75	
+2022-07-01 13:43:41 runtime_logs INFO home_id (9)	Epoch ( 14 / 150)	 train_loss: 0.41	train_acc (balanced): 0.84		eval_acc (balanced): 0.75	
+2022-07-01 13:43:41 runtime_logs INFO home_id (9)	Epoch ( 15 / 150)	 train_loss: 0.40	train_acc (balanced): 0.85		eval_acc (balanced): 0.75	
+2022-07-01 13:43:42 runtime_logs INFO home_id (9)	Epoch ( 16 / 150)	 train_loss: 0.40	train_acc (balanced): 0.85		eval_acc (balanced): 0.75	
+2022-07-01 13:43:42 runtime_logs INFO home_id (9)	Epoch ( 17 / 150)	 train_loss: 0.39	train_acc (balanced): 0.85		eval_acc (balanced): 0.75	
+2022-07-01 13:43:42 runtime_logs INFO home_id (9)	Epoch ( 18 / 150)	 train_loss: 0.39	train_acc (balanced): 0.85		eval_acc (balanced): 0.75	
+2022-07-01 13:43:42 runtime_logs INFO home_id (9)	Epoch ( 19 / 150)	 train_loss: 0.38	train_acc (balanced): 0.85		eval_acc (balanced): 0.75	
+2022-07-01 13:43:42 runtime_logs INFO home_id (9)	Epoch ( 20 / 150)	 train_loss: 0.38	train_acc (balanced): 0.85		eval_acc (balanced): 0.75	
+2022-07-01 13:43:42 runtime_logs INFO home_id (9)	Epoch ( 21 / 150)	 train_loss: 0.37	train_acc (balanced): 0.85		eval_acc (balanced): 0.75	
+2022-07-01 13:43:42 runtime_logs INFO home_id (9)	Epoch ( 22 / 150)	 train_loss: 0.37	train_acc (balanced): 0.85		eval_acc (balanced): 0.75	
+2022-07-01 13:43:42 runtime_logs INFO home_id (9)	Epoch ( 23 / 150)	 train_loss: 0.36	train_acc (balanced): 0.85		eval_acc (balanced): 0.75	
+2022-07-01 13:43:42 runtime_logs INFO home_id (9)	Epoch ( 24 / 150)	 train_loss: 0.36	train_acc (balanced): 0.85		eval_acc (balanced): 0.75	
+2022-07-01 13:43:42 runtime_logs INFO home_id (9)	Epoch ( 25 / 150)	 train_loss: 0.35	train_acc (balanced): 0.85		eval_acc (balanced): 0.75	
+2022-07-01 13:43:42 runtime_logs INFO home_id (9)	Epoch ( 26 / 150)	 train_loss: 0.35	train_acc (balanced): 0.85		eval_acc (balanced): 0.75	
+2022-07-01 13:43:42 runtime_logs INFO home_id (9)	Epoch ( 27 / 150)	 train_loss: 0.35	train_acc (balanced): 0.86		eval_acc (balanced): 0.75	
+2022-07-01 13:43:43 runtime_logs INFO home_id (9)	Epoch ( 28 / 150)	 train_loss: 0.34	train_acc (balanced): 0.86		eval_acc (balanced): 0.75	
+2022-07-01 13:43:43 runtime_logs INFO home_id (9)	Epoch ( 29 / 150)	 train_loss: 0.34	train_acc (balanced): 0.86		eval_acc (balanced): 0.75	
+2022-07-01 13:43:43 runtime_logs INFO home_id (9)	Epoch ( 30 / 150)	 train_loss: 0.33	train_acc (balanced): 0.86		eval_acc (balanced): 0.75	
+2022-07-01 13:43:43 runtime_logs INFO home_id (9)	Epoch ( 31 / 150)	 train_loss: 0.33	train_acc (balanced): 0.86		eval_acc (balanced): 0.75	
+2022-07-01 13:43:43 runtime_logs INFO Early stopping the training due to no change in validation accuracies
+2022-07-01 13:43:43 runtime_logs INFO Sequential(
+  (0): Linear(in_features=5, out_features=128, bias=True)
+  (1): ReLU()
+  (2): Linear(in_features=128, out_features=3, bias=True)
+  (3): ReLU()
+)
+2022-07-01 13:43:43 runtime_logs INFO Training the model for home 10 with datasize 204
+2022-07-01 13:43:43 runtime_logs INFO home_id (10)	Epoch (  1 / 150)	 train_loss: 0.99	train_acc (balanced): 0.58		eval_acc (balanced): 0.69	
+2022-07-01 13:43:43 runtime_logs INFO home_id (10)	Epoch (  2 / 150)	 train_loss: 0.92	train_acc (balanced): 0.60		eval_acc (balanced): 0.69	
+2022-07-01 13:43:43 runtime_logs INFO home_id (10)	Epoch (  3 / 150)	 train_loss: 0.90	train_acc (balanced): 0.60		eval_acc (balanced): 0.71	
+2022-07-01 13:43:43 runtime_logs INFO home_id (10)	Epoch (  4 / 150)	 train_loss: 0.89	train_acc (balanced): 0.60		eval_acc (balanced): 0.71	
+2022-07-01 13:43:43 runtime_logs INFO home_id (10)	Epoch (  5 / 150)	 train_loss: 0.88	train_acc (balanced): 0.60		eval_acc (balanced): 0.71	
+2022-07-01 13:43:43 runtime_logs INFO home_id (10)	Epoch (  6 / 150)	 train_loss: 0.87	train_acc (balanced): 0.60		eval_acc (balanced): 0.71	
+2022-07-01 13:43:43 runtime_logs INFO home_id (10)	Epoch (  7 / 150)	 train_loss: 0.86	train_acc (balanced): 0.62		eval_acc (balanced): 0.71	
+2022-07-01 13:43:44 runtime_logs INFO home_id (10)	Epoch (  8 / 150)	 train_loss: 0.85	train_acc (balanced): 0.62		eval_acc (balanced): 0.71	
+2022-07-01 13:43:44 runtime_logs INFO home_id (10)	Epoch (  9 / 150)	 train_loss: 0.85	train_acc (balanced): 0.62		eval_acc (balanced): 0.71	
+2022-07-01 13:43:44 runtime_logs INFO home_id (10)	Epoch ( 10 / 150)	 train_loss: 0.84	train_acc (balanced): 0.62		eval_acc (balanced): 0.71	
+2022-07-01 13:43:44 runtime_logs INFO home_id (10)	Epoch ( 11 / 150)	 train_loss: 0.84	train_acc (balanced): 0.63		eval_acc (balanced): 0.71	
+2022-07-01 13:43:44 runtime_logs INFO home_id (10)	Epoch ( 12 / 150)	 train_loss: 0.83	train_acc (balanced): 0.62		eval_acc (balanced): 0.71	
+2022-07-01 13:43:44 runtime_logs INFO home_id (10)	Epoch ( 13 / 150)	 train_loss: 0.83	train_acc (balanced): 0.63		eval_acc (balanced): 0.71	
+2022-07-01 13:43:44 runtime_logs INFO home_id (10)	Epoch ( 14 / 150)	 train_loss: 0.83	train_acc (balanced): 0.63		eval_acc (balanced): 0.71	
+2022-07-01 13:43:44 runtime_logs INFO home_id (10)	Epoch ( 15 / 150)	 train_loss: 0.82	train_acc (balanced): 0.63		eval_acc (balanced): 0.71	
+2022-07-01 13:43:44 runtime_logs INFO home_id (10)	Epoch ( 16 / 150)	 train_loss: 0.82	train_acc (balanced): 0.63		eval_acc (balanced): 0.71	
+2022-07-01 13:43:44 runtime_logs INFO home_id (10)	Epoch ( 17 / 150)	 train_loss: 0.81	train_acc (balanced): 0.64		eval_acc (balanced): 0.71	
+2022-07-01 13:43:44 runtime_logs INFO home_id (10)	Epoch ( 18 / 150)	 train_loss: 0.81	train_acc (balanced): 0.64		eval_acc (balanced): 0.71	
+2022-07-01 13:43:44 runtime_logs INFO home_id (10)	Epoch ( 19 / 150)	 train_loss: 0.80	train_acc (balanced): 0.65		eval_acc (balanced): 0.71	
+2022-07-01 13:43:45 runtime_logs INFO home_id (10)	Epoch ( 20 / 150)	 train_loss: 0.80	train_acc (balanced): 0.65		eval_acc (balanced): 0.71	
+2022-07-01 13:43:45 runtime_logs INFO home_id (10)	Epoch ( 21 / 150)	 train_loss: 0.79	train_acc (balanced): 0.66		eval_acc (balanced): 0.69	
+2022-07-01 13:43:45 runtime_logs INFO home_id (10)	Epoch ( 22 / 150)	 train_loss: 0.79	train_acc (balanced): 0.66		eval_acc (balanced): 0.69	
+2022-07-01 13:43:45 runtime_logs INFO home_id (10)	Epoch ( 23 / 150)	 train_loss: 0.79	train_acc (balanced): 0.66		eval_acc (balanced): 0.69	
+2022-07-01 13:43:45 runtime_logs INFO home_id (10)	Epoch ( 24 / 150)	 train_loss: 0.78	train_acc (balanced): 0.66		eval_acc (balanced): 0.69	
+2022-07-01 13:43:45 runtime_logs INFO home_id (10)	Epoch ( 25 / 150)	 train_loss: 0.78	train_acc (balanced): 0.66		eval_acc (balanced): 0.69	
+2022-07-01 13:43:45 runtime_logs INFO home_id (10)	Epoch ( 26 / 150)	 train_loss: 0.78	train_acc (balanced): 0.67		eval_acc (balanced): 0.69	
+2022-07-01 13:43:45 runtime_logs INFO home_id (10)	Epoch ( 27 / 150)	 train_loss: 0.77	train_acc (balanced): 0.67		eval_acc (balanced): 0.69	
+2022-07-01 13:43:45 runtime_logs INFO home_id (10)	Epoch ( 28 / 150)	 train_loss: 0.77	train_acc (balanced): 0.67		eval_acc (balanced): 0.69	
+2022-07-01 13:43:45 runtime_logs INFO home_id (10)	Epoch ( 29 / 150)	 train_loss: 0.77	train_acc (balanced): 0.67		eval_acc (balanced): 0.69	
+2022-07-01 13:43:45 runtime_logs INFO home_id (10)	Epoch ( 30 / 150)	 train_loss: 0.76	train_acc (balanced): 0.67		eval_acc (balanced): 0.69	
+2022-07-01 13:43:45 runtime_logs INFO home_id (10)	Epoch ( 31 / 150)	 train_loss: 0.76	train_acc (balanced): 0.67		eval_acc (balanced): 0.67	
+2022-07-01 13:43:46 runtime_logs INFO home_id (10)	Epoch ( 32 / 150)	 train_loss: 0.76	train_acc (balanced): 0.68		eval_acc (balanced): 0.67	
+2022-07-01 13:43:46 runtime_logs INFO home_id (10)	Epoch ( 33 / 150)	 train_loss: 0.75	train_acc (balanced): 0.68		eval_acc (balanced): 0.65	
+2022-07-01 13:43:46 runtime_logs INFO Early stopping the training due to no change in validation accuracies
+2022-07-01 13:43:46 runtime_logs INFO Sequential(
+  (0): Linear(in_features=5, out_features=128, bias=True)
+  (1): ReLU()
+  (2): Linear(in_features=128, out_features=3, bias=True)
+  (3): ReLU()
+)
+2022-07-01 13:43:46 runtime_logs INFO Training the model for home 11 with datasize 319
+2022-07-01 13:43:46 runtime_logs INFO home_id (11)	Epoch (  1 / 150)	 train_loss: 0.89	train_acc (balanced): 0.72		eval_acc (balanced): 0.93	
+2022-07-01 13:43:46 runtime_logs INFO home_id (11)	Epoch (  2 / 150)	 train_loss: 0.80	train_acc (balanced): 0.72		eval_acc (balanced): 0.93	
+2022-07-01 13:43:46 runtime_logs INFO home_id (11)	Epoch (  3 / 150)	 train_loss: 0.77	train_acc (balanced): 0.72		eval_acc (balanced): 0.93	
+2022-07-01 13:43:46 runtime_logs INFO home_id (11)	Epoch (  4 / 150)	 train_loss: 0.75	train_acc (balanced): 0.72		eval_acc (balanced): 0.93	
+2022-07-01 13:43:46 runtime_logs INFO home_id (11)	Epoch (  5 / 150)	 train_loss: 0.73	train_acc (balanced): 0.73		eval_acc (balanced): 0.93	
+2022-07-01 13:43:46 runtime_logs INFO home_id (11)	Epoch (  6 / 150)	 train_loss: 0.72	train_acc (balanced): 0.73		eval_acc (balanced): 0.93	
+2022-07-01 13:43:47 runtime_logs INFO home_id (11)	Epoch (  7 / 150)	 train_loss: 0.71	train_acc (balanced): 0.74		eval_acc (balanced): 0.93	
+2022-07-01 13:43:47 runtime_logs INFO home_id (11)	Epoch (  8 / 150)	 train_loss: 0.71	train_acc (balanced): 0.73		eval_acc (balanced): 0.93	
+2022-07-01 13:43:47 runtime_logs INFO home_id (11)	Epoch (  9 / 150)	 train_loss: 0.70	train_acc (balanced): 0.74		eval_acc (balanced): 0.93	
+2022-07-01 13:43:47 runtime_logs INFO home_id (11)	Epoch ( 10 / 150)	 train_loss: 0.70	train_acc (balanced): 0.74		eval_acc (balanced): 0.93	
+2022-07-01 13:43:47 runtime_logs INFO home_id (11)	Epoch ( 11 / 150)	 train_loss: 0.69	train_acc (balanced): 0.74		eval_acc (balanced): 0.93	
+2022-07-01 13:43:47 runtime_logs INFO home_id (11)	Epoch ( 12 / 150)	 train_loss: 0.69	train_acc (balanced): 0.75		eval_acc (balanced): 0.93	
+2022-07-01 13:43:47 runtime_logs INFO home_id (11)	Epoch ( 13 / 150)	 train_loss: 0.68	train_acc (balanced): 0.75		eval_acc (balanced): 0.93	
+2022-07-01 13:43:47 runtime_logs INFO home_id (11)	Epoch ( 14 / 150)	 train_loss: 0.68	train_acc (balanced): 0.75		eval_acc (balanced): 0.93	
+2022-07-01 13:43:48 runtime_logs INFO home_id (11)	Epoch ( 15 / 150)	 train_loss: 0.68	train_acc (balanced): 0.75		eval_acc (balanced): 0.93	
+2022-07-01 13:43:48 runtime_logs INFO home_id (11)	Epoch ( 16 / 150)	 train_loss: 0.68	train_acc (balanced): 0.75		eval_acc (balanced): 0.93	
+2022-07-01 13:43:48 runtime_logs INFO home_id (11)	Epoch ( 17 / 150)	 train_loss: 0.67	train_acc (balanced): 0.75		eval_acc (balanced): 0.93	
+2022-07-01 13:43:48 runtime_logs INFO home_id (11)	Epoch ( 18 / 150)	 train_loss: 0.67	train_acc (balanced): 0.76		eval_acc (balanced): 0.93	
+2022-07-01 13:43:48 runtime_logs INFO home_id (11)	Epoch ( 19 / 150)	 train_loss: 0.67	train_acc (balanced): 0.75		eval_acc (balanced): 0.93	
+2022-07-01 13:43:48 runtime_logs INFO home_id (11)	Epoch ( 20 / 150)	 train_loss: 0.67	train_acc (balanced): 0.76		eval_acc (balanced): 0.93	
+2022-07-01 13:43:48 runtime_logs INFO home_id (11)	Epoch ( 21 / 150)	 train_loss: 0.67	train_acc (balanced): 0.76		eval_acc (balanced): 0.93	
+2022-07-01 13:43:49 runtime_logs INFO home_id (11)	Epoch ( 22 / 150)	 train_loss: 0.67	train_acc (balanced): 0.75		eval_acc (balanced): 0.93	
+2022-07-01 13:43:49 runtime_logs INFO home_id (11)	Epoch ( 23 / 150)	 train_loss: 0.66	train_acc (balanced): 0.76		eval_acc (balanced): 0.93	
+2022-07-01 13:43:49 runtime_logs INFO home_id (11)	Epoch ( 24 / 150)	 train_loss: 0.66	train_acc (balanced): 0.76		eval_acc (balanced): 0.93	
+2022-07-01 13:43:49 runtime_logs INFO home_id (11)	Epoch ( 25 / 150)	 train_loss: 0.66	train_acc (balanced): 0.76		eval_acc (balanced): 0.93	
+2022-07-01 13:43:49 runtime_logs INFO home_id (11)	Epoch ( 26 / 150)	 train_loss: 0.66	train_acc (balanced): 0.75		eval_acc (balanced): 0.91	
+2022-07-01 13:43:49 runtime_logs INFO home_id (11)	Epoch ( 27 / 150)	 train_loss: 0.66	train_acc (balanced): 0.76		eval_acc (balanced): 0.93	
+2022-07-01 13:43:49 runtime_logs INFO home_id (11)	Epoch ( 28 / 150)	 train_loss: 0.66	train_acc (balanced): 0.76		eval_acc (balanced): 0.91	
+2022-07-01 13:43:49 runtime_logs INFO home_id (11)	Epoch ( 29 / 150)	 train_loss: 0.66	train_acc (balanced): 0.76		eval_acc (balanced): 0.91	
+2022-07-01 13:43:50 runtime_logs INFO home_id (11)	Epoch ( 30 / 150)	 train_loss: 0.66	train_acc (balanced): 0.76		eval_acc (balanced): 0.91	
+2022-07-01 13:43:50 runtime_logs INFO home_id (11)	Epoch ( 31 / 150)	 train_loss: 0.65	train_acc (balanced): 0.76		eval_acc (balanced): 0.91	
+2022-07-01 13:43:50 runtime_logs INFO Early stopping the training due to no change in validation accuracies
+2022-07-01 13:43:50 runtime_logs INFO Sequential(
+  (0): Linear(in_features=5, out_features=128, bias=True)
+  (1): ReLU()
+  (2): Linear(in_features=128, out_features=3, bias=True)
+  (3): ReLU()
+)
+2022-07-01 13:43:50 runtime_logs INFO Training the model for home 12 with datasize 131
+2022-07-01 13:43:50 runtime_logs INFO home_id (12)	Epoch (  1 / 150)	 train_loss: 0.99	train_acc (balanced): 0.61		eval_acc (balanced): 0.55	
+2022-07-01 13:43:50 runtime_logs INFO home_id (12)	Epoch (  2 / 150)	 train_loss: 0.85	train_acc (balanced): 0.66		eval_acc (balanced): 0.55	
+2022-07-01 13:43:50 runtime_logs INFO home_id (12)	Epoch (  3 / 150)	 train_loss: 0.80	train_acc (balanced): 0.66		eval_acc (balanced): 0.52	
+2022-07-01 13:43:50 runtime_logs INFO home_id (12)	Epoch (  4 / 150)	 train_loss: 0.77	train_acc (balanced): 0.66		eval_acc (balanced): 0.45	
+2022-07-01 13:43:50 runtime_logs INFO home_id (12)	Epoch (  5 / 150)	 train_loss: 0.75	train_acc (balanced): 0.66		eval_acc (balanced): 0.39	
+2022-07-01 13:43:50 runtime_logs INFO home_id (12)	Epoch (  6 / 150)	 train_loss: 0.73	train_acc (balanced): 0.68		eval_acc (balanced): 0.39	
+2022-07-01 13:43:50 runtime_logs INFO home_id (12)	Epoch (  7 / 150)	 train_loss: 0.71	train_acc (balanced): 0.69		eval_acc (balanced): 0.39	
+2022-07-01 13:43:50 runtime_logs INFO home_id (12)	Epoch (  8 / 150)	 train_loss: 0.70	train_acc (balanced): 0.69		eval_acc (balanced): 0.36	
+2022-07-01 13:43:50 runtime_logs INFO home_id (12)	Epoch (  9 / 150)	 train_loss: 0.68	train_acc (balanced): 0.69		eval_acc (balanced): 0.36	
+2022-07-01 13:43:50 runtime_logs INFO home_id (12)	Epoch ( 10 / 150)	 train_loss: 0.67	train_acc (balanced): 0.69		eval_acc (balanced): 0.36	
+2022-07-01 13:43:50 runtime_logs INFO home_id (12)	Epoch ( 11 / 150)	 train_loss: 0.66	train_acc (balanced): 0.70		eval_acc (balanced): 0.36	
+2022-07-01 13:43:50 runtime_logs INFO home_id (12)	Epoch ( 12 / 150)	 train_loss: 0.66	train_acc (balanced): 0.69		eval_acc (balanced): 0.36	
+2022-07-01 13:43:50 runtime_logs INFO home_id (12)	Epoch ( 13 / 150)	 train_loss: 0.65	train_acc (balanced): 0.69		eval_acc (balanced): 0.39	
+2022-07-01 13:43:50 runtime_logs INFO home_id (12)	Epoch ( 14 / 150)	 train_loss: 0.64	train_acc (balanced): 0.70		eval_acc (balanced): 0.39	
+2022-07-01 13:43:50 runtime_logs INFO home_id (12)	Epoch ( 15 / 150)	 train_loss: 0.64	train_acc (balanced): 0.72		eval_acc (balanced): 0.39	
+2022-07-01 13:43:51 runtime_logs INFO home_id (12)	Epoch ( 16 / 150)	 train_loss: 0.63	train_acc (balanced): 0.72		eval_acc (balanced): 0.39	
+2022-07-01 13:43:51 runtime_logs INFO home_id (12)	Epoch ( 17 / 150)	 train_loss: 0.63	train_acc (balanced): 0.71		eval_acc (balanced): 0.39	
+2022-07-01 13:43:51 runtime_logs INFO home_id (12)	Epoch ( 18 / 150)	 train_loss: 0.62	train_acc (balanced): 0.72		eval_acc (balanced): 0.39	
+2022-07-01 13:43:51 runtime_logs INFO home_id (12)	Epoch ( 19 / 150)	 train_loss: 0.62	train_acc (balanced): 0.72		eval_acc (balanced): 0.39	
+2022-07-01 13:43:51 runtime_logs INFO home_id (12)	Epoch ( 20 / 150)	 train_loss: 0.61	train_acc (balanced): 0.73		eval_acc (balanced): 0.42	
+2022-07-01 13:43:51 runtime_logs INFO home_id (12)	Epoch ( 21 / 150)	 train_loss: 0.60	train_acc (balanced): 0.73		eval_acc (balanced): 0.39	
+2022-07-01 13:43:51 runtime_logs INFO home_id (12)	Epoch ( 22 / 150)	 train_loss: 0.60	train_acc (balanced): 0.73		eval_acc (balanced): 0.39	
+2022-07-01 13:43:51 runtime_logs INFO home_id (12)	Epoch ( 23 / 150)	 train_loss: 0.58	train_acc (balanced): 0.75		eval_acc (balanced): 0.39	
+2022-07-01 13:43:51 runtime_logs INFO home_id (12)	Epoch ( 24 / 150)	 train_loss: 0.57	train_acc (balanced): 0.75		eval_acc (balanced): 0.39	
+2022-07-01 13:43:51 runtime_logs INFO home_id (12)	Epoch ( 25 / 150)	 train_loss: 0.56	train_acc (balanced): 0.76		eval_acc (balanced): 0.39	
+2022-07-01 13:43:51 runtime_logs INFO home_id (12)	Epoch ( 26 / 150)	 train_loss: 0.56	train_acc (balanced): 0.76		eval_acc (balanced): 0.39	
+2022-07-01 13:43:51 runtime_logs INFO home_id (12)	Epoch ( 27 / 150)	 train_loss: 0.55	train_acc (balanced): 0.77		eval_acc (balanced): 0.39	
+2022-07-01 13:43:51 runtime_logs INFO home_id (12)	Epoch ( 28 / 150)	 train_loss: 0.55	train_acc (balanced): 0.77		eval_acc (balanced): 0.39	
+2022-07-01 13:43:51 runtime_logs INFO home_id (12)	Epoch ( 29 / 150)	 train_loss: 0.54	train_acc (balanced): 0.77		eval_acc (balanced): 0.39	
+2022-07-01 13:43:51 runtime_logs INFO home_id (12)	Epoch ( 30 / 150)	 train_loss: 0.54	train_acc (balanced): 0.77		eval_acc (balanced): 0.39	
+2022-07-01 13:43:51 runtime_logs INFO home_id (12)	Epoch ( 31 / 150)	 train_loss: 0.53	train_acc (balanced): 0.77		eval_acc (balanced): 0.39	
+2022-07-01 13:43:51 runtime_logs INFO Early stopping the training due to no change in validation accuracies
+2022-07-01 13:43:51 runtime_logs INFO Sequential(
+  (0): Linear(in_features=5, out_features=128, bias=True)
+  (1): ReLU()
+  (2): Linear(in_features=128, out_features=3, bias=True)
+  (3): ReLU()
+)
+2022-07-01 13:43:51 runtime_logs INFO Training the model for home 13 with datasize 158
+2022-07-01 13:43:51 runtime_logs INFO home_id (13)	Epoch (  1 / 150)	 train_loss: 0.92	train_acc (balanced): 0.64		eval_acc (balanced): 0.70	
+2022-07-01 13:43:51 runtime_logs INFO home_id (13)	Epoch (  2 / 150)	 train_loss: 0.71	train_acc (balanced): 0.74		eval_acc (balanced): 0.70	
+2022-07-01 13:43:52 runtime_logs INFO home_id (13)	Epoch (  3 / 150)	 train_loss: 0.63	train_acc (balanced): 0.76		eval_acc (balanced): 0.68	
+2022-07-01 13:43:52 runtime_logs INFO home_id (13)	Epoch (  4 / 150)	 train_loss: 0.59	train_acc (balanced): 0.74		eval_acc (balanced): 0.70	
+2022-07-01 13:43:52 runtime_logs INFO home_id (13)	Epoch (  5 / 150)	 train_loss: 0.57	train_acc (balanced): 0.76		eval_acc (balanced): 0.70	
+2022-07-01 13:43:52 runtime_logs INFO home_id (13)	Epoch (  6 / 150)	 train_loss: 0.55	train_acc (balanced): 0.76		eval_acc (balanced): 0.70	
+2022-07-01 13:43:52 runtime_logs INFO home_id (13)	Epoch (  7 / 150)	 train_loss: 0.54	train_acc (balanced): 0.77		eval_acc (balanced): 0.70	
+2022-07-01 13:43:52 runtime_logs INFO home_id (13)	Epoch (  8 / 150)	 train_loss: 0.53	train_acc (balanced): 0.78		eval_acc (balanced): 0.70	
+2022-07-01 13:43:52 runtime_logs INFO home_id (13)	Epoch (  9 / 150)	 train_loss: 0.52	train_acc (balanced): 0.78		eval_acc (balanced): 0.70	
+2022-07-01 13:43:52 runtime_logs INFO home_id (13)	Epoch ( 10 / 150)	 train_loss: 0.51	train_acc (balanced): 0.77		eval_acc (balanced): 0.70	
+2022-07-01 13:43:52 runtime_logs INFO home_id (13)	Epoch ( 11 / 150)	 train_loss: 0.50	train_acc (balanced): 0.75		eval_acc (balanced): 0.70	
+2022-07-01 13:43:52 runtime_logs INFO home_id (13)	Epoch ( 12 / 150)	 train_loss: 0.50	train_acc (balanced): 0.75		eval_acc (balanced): 0.70	
+2022-07-01 13:43:52 runtime_logs INFO home_id (13)	Epoch ( 13 / 150)	 train_loss: 0.49	train_acc (balanced): 0.75		eval_acc (balanced): 0.70	
+2022-07-01 13:43:52 runtime_logs INFO home_id (13)	Epoch ( 14 / 150)	 train_loss: 0.48	train_acc (balanced): 0.77		eval_acc (balanced): 0.70	
+2022-07-01 13:43:52 runtime_logs INFO home_id (13)	Epoch ( 15 / 150)	 train_loss: 0.48	train_acc (balanced): 0.77		eval_acc (balanced): 0.70	
+2022-07-01 13:43:52 runtime_logs INFO home_id (13)	Epoch ( 16 / 150)	 train_loss: 0.47	train_acc (balanced): 0.77		eval_acc (balanced): 0.70	
+2022-07-01 13:43:52 runtime_logs INFO home_id (13)	Epoch ( 17 / 150)	 train_loss: 0.47	train_acc (balanced): 0.77		eval_acc (balanced): 0.70	
+2022-07-01 13:43:52 runtime_logs INFO home_id (13)	Epoch ( 18 / 150)	 train_loss: 0.46	train_acc (balanced): 0.77		eval_acc (balanced): 0.68	
+2022-07-01 13:43:53 runtime_logs INFO home_id (13)	Epoch ( 19 / 150)	 train_loss: 0.46	train_acc (balanced): 0.77		eval_acc (balanced): 0.68	
+2022-07-01 13:43:53 runtime_logs INFO home_id (13)	Epoch ( 20 / 150)	 train_loss: 0.46	train_acc (balanced): 0.77		eval_acc (balanced): 0.68	
+2022-07-01 13:43:53 runtime_logs INFO home_id (13)	Epoch ( 21 / 150)	 train_loss: 0.45	train_acc (balanced): 0.77		eval_acc (balanced): 0.68	
+2022-07-01 13:43:53 runtime_logs INFO home_id (13)	Epoch ( 22 / 150)	 train_loss: 0.45	train_acc (balanced): 0.77		eval_acc (balanced): 0.68	
+2022-07-01 13:43:53 runtime_logs INFO home_id (13)	Epoch ( 23 / 150)	 train_loss: 0.45	train_acc (balanced): 0.78		eval_acc (balanced): 0.68	
+2022-07-01 13:43:53 runtime_logs INFO home_id (13)	Epoch ( 24 / 150)	 train_loss: 0.44	train_acc (balanced): 0.78		eval_acc (balanced): 0.68	
+2022-07-01 13:43:53 runtime_logs INFO home_id (13)	Epoch ( 25 / 150)	 train_loss: 0.44	train_acc (balanced): 0.78		eval_acc (balanced): 0.65	
+2022-07-01 13:43:53 runtime_logs INFO home_id (13)	Epoch ( 26 / 150)	 train_loss: 0.44	train_acc (balanced): 0.78		eval_acc (balanced): 0.65	
+2022-07-01 13:43:53 runtime_logs INFO home_id (13)	Epoch ( 27 / 150)	 train_loss: 0.43	train_acc (balanced): 0.79		eval_acc (balanced): 0.65	
+2022-07-01 13:43:53 runtime_logs INFO home_id (13)	Epoch ( 28 / 150)	 train_loss: 0.43	train_acc (balanced): 0.80		eval_acc (balanced): 0.65	
+2022-07-01 13:43:53 runtime_logs INFO home_id (13)	Epoch ( 29 / 150)	 train_loss: 0.43	train_acc (balanced): 0.80		eval_acc (balanced): 0.65	
+2022-07-01 13:43:53 runtime_logs INFO home_id (13)	Epoch ( 30 / 150)	 train_loss: 0.42	train_acc (balanced): 0.80		eval_acc (balanced): 0.65	
+2022-07-01 13:43:53 runtime_logs INFO home_id (13)	Epoch ( 31 / 150)	 train_loss: 0.42	train_acc (balanced): 0.80		eval_acc (balanced): 0.65	
+2022-07-01 13:43:53 runtime_logs INFO Early stopping the training due to no change in validation accuracies
+2022-07-01 13:43:53 runtime_logs INFO Sequential(
+  (0): Linear(in_features=5, out_features=128, bias=True)
+  (1): ReLU()
+  (2): Linear(in_features=128, out_features=3, bias=True)
+  (3): ReLU()
+)
+2022-07-01 13:43:53 runtime_logs INFO Training the model for home 14 with datasize 257
+2022-07-01 13:43:53 runtime_logs INFO home_id (14)	Epoch (  1 / 150)	 train_loss: 0.79	train_acc (balanced): 0.76		eval_acc (balanced): 0.92	
+2022-07-01 13:43:54 runtime_logs INFO home_id (14)	Epoch (  2 / 150)	 train_loss: 0.66	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:43:54 runtime_logs INFO home_id (14)	Epoch (  3 / 150)	 train_loss: 0.65	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:43:54 runtime_logs INFO home_id (14)	Epoch (  4 / 150)	 train_loss: 0.64	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:43:54 runtime_logs INFO home_id (14)	Epoch (  5 / 150)	 train_loss: 0.63	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:43:54 runtime_logs INFO home_id (14)	Epoch (  6 / 150)	 train_loss: 0.62	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:43:54 runtime_logs INFO home_id (14)	Epoch (  7 / 150)	 train_loss: 0.62	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:43:54 runtime_logs INFO home_id (14)	Epoch (  8 / 150)	 train_loss: 0.61	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:43:54 runtime_logs INFO home_id (14)	Epoch (  9 / 150)	 train_loss: 0.61	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:43:54 runtime_logs INFO home_id (14)	Epoch ( 10 / 150)	 train_loss: 0.61	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:43:54 runtime_logs INFO home_id (14)	Epoch ( 11 / 150)	 train_loss: 0.60	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:43:55 runtime_logs INFO home_id (14)	Epoch ( 12 / 150)	 train_loss: 0.60	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:43:55 runtime_logs INFO home_id (14)	Epoch ( 13 / 150)	 train_loss: 0.60	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:43:55 runtime_logs INFO home_id (14)	Epoch ( 14 / 150)	 train_loss: 0.59	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:43:55 runtime_logs INFO home_id (14)	Epoch ( 15 / 150)	 train_loss: 0.59	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:43:55 runtime_logs INFO home_id (14)	Epoch ( 16 / 150)	 train_loss: 0.59	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:43:55 runtime_logs INFO home_id (14)	Epoch ( 17 / 150)	 train_loss: 0.58	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:43:55 runtime_logs INFO home_id (14)	Epoch ( 18 / 150)	 train_loss: 0.58	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:43:55 runtime_logs INFO home_id (14)	Epoch ( 19 / 150)	 train_loss: 0.58	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:43:55 runtime_logs INFO home_id (14)	Epoch ( 20 / 150)	 train_loss: 0.58	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:43:56 runtime_logs INFO home_id (14)	Epoch ( 21 / 150)	 train_loss: 0.57	train_acc (balanced): 0.79		eval_acc (balanced): 0.92	
+2022-07-01 13:43:56 runtime_logs INFO home_id (14)	Epoch ( 22 / 150)	 train_loss: 0.57	train_acc (balanced): 0.79		eval_acc (balanced): 0.92	
+2022-07-01 13:43:56 runtime_logs INFO home_id (14)	Epoch ( 23 / 150)	 train_loss: 0.57	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:43:56 runtime_logs INFO home_id (14)	Epoch ( 24 / 150)	 train_loss: 0.56	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:43:56 runtime_logs INFO home_id (14)	Epoch ( 25 / 150)	 train_loss: 0.56	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:43:56 runtime_logs INFO home_id (14)	Epoch ( 26 / 150)	 train_loss: 0.56	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:43:56 runtime_logs INFO home_id (14)	Epoch ( 27 / 150)	 train_loss: 0.56	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:43:56 runtime_logs INFO home_id (14)	Epoch ( 28 / 150)	 train_loss: 0.55	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:43:56 runtime_logs INFO home_id (14)	Epoch ( 29 / 150)	 train_loss: 0.55	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:43:57 runtime_logs INFO home_id (14)	Epoch ( 30 / 150)	 train_loss: 0.55	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:43:57 runtime_logs INFO home_id (14)	Epoch ( 31 / 150)	 train_loss: 0.55	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:43:57 runtime_logs INFO Early stopping the training due to no change in validation accuracies
+2022-07-01 13:45:13 runtime_logs INFO Sequential(
+  (0): Linear(in_features=5, out_features=128, bias=True)
+  (1): ReLU()
+  (2): Linear(in_features=128, out_features=3, bias=True)
+  (3): ReLU()
+)
+2022-07-01 13:45:13 runtime_logs INFO Training the model for home 1 with datasize 121
+2022-07-01 13:45:13 runtime_logs INFO home_id (1)	Epoch (  1 / 150)	 train_loss: 1.05	train_acc (balanced): 0.48		eval_acc (balanced): 0.55	
+2022-07-01 13:45:13 runtime_logs INFO home_id (1)	Epoch (  2 / 150)	 train_loss: 0.96	train_acc (balanced): 0.56		eval_acc (balanced): 0.55	
+2022-07-01 13:45:13 runtime_logs INFO home_id (1)	Epoch (  3 / 150)	 train_loss: 0.91	train_acc (balanced): 0.55		eval_acc (balanced): 0.52	
+2022-07-01 13:45:13 runtime_logs INFO home_id (1)	Epoch (  4 / 150)	 train_loss: 0.88	train_acc (balanced): 0.59		eval_acc (balanced): 0.55	
+2022-07-01 13:45:13 runtime_logs INFO home_id (1)	Epoch (  5 / 150)	 train_loss: 0.86	train_acc (balanced): 0.60		eval_acc (balanced): 0.52	
+2022-07-01 13:45:13 runtime_logs INFO home_id (1)	Epoch (  6 / 150)	 train_loss: 0.85	train_acc (balanced): 0.61		eval_acc (balanced): 0.52	
+2022-07-01 13:45:13 runtime_logs INFO home_id (1)	Epoch (  7 / 150)	 train_loss: 0.83	train_acc (balanced): 0.63		eval_acc (balanced): 0.52	
+2022-07-01 13:45:13 runtime_logs INFO home_id (1)	Epoch (  8 / 150)	 train_loss: 0.82	train_acc (balanced): 0.63		eval_acc (balanced): 0.52	
+2022-07-01 13:45:13 runtime_logs INFO home_id (1)	Epoch (  9 / 150)	 train_loss: 0.81	train_acc (balanced): 0.62		eval_acc (balanced): 0.52	
+2022-07-01 13:45:13 runtime_logs INFO home_id (1)	Epoch ( 10 / 150)	 train_loss: 0.81	train_acc (balanced): 0.62		eval_acc (balanced): 0.52	
+2022-07-01 13:45:13 runtime_logs INFO home_id (1)	Epoch ( 11 / 150)	 train_loss: 0.80	train_acc (balanced): 0.64		eval_acc (balanced): 0.52	
+2022-07-01 13:45:13 runtime_logs INFO home_id (1)	Epoch ( 12 / 150)	 train_loss: 0.79	train_acc (balanced): 0.64		eval_acc (balanced): 0.52	
+2022-07-01 13:45:13 runtime_logs INFO home_id (1)	Epoch ( 13 / 150)	 train_loss: 0.78	train_acc (balanced): 0.64		eval_acc (balanced): 0.52	
+2022-07-01 13:45:14 runtime_logs INFO home_id (1)	Epoch ( 14 / 150)	 train_loss: 0.78	train_acc (balanced): 0.63		eval_acc (balanced): 0.52	
+2022-07-01 13:45:14 runtime_logs INFO home_id (1)	Epoch ( 15 / 150)	 train_loss: 0.77	train_acc (balanced): 0.63		eval_acc (balanced): 0.52	
+2022-07-01 13:45:14 runtime_logs INFO home_id (1)	Epoch ( 16 / 150)	 train_loss: 0.77	train_acc (balanced): 0.64		eval_acc (balanced): 0.52	
+2022-07-01 13:45:14 runtime_logs INFO home_id (1)	Epoch ( 17 / 150)	 train_loss: 0.76	train_acc (balanced): 0.64		eval_acc (balanced): 0.52	
+2022-07-01 13:45:14 runtime_logs INFO home_id (1)	Epoch ( 18 / 150)	 train_loss: 0.76	train_acc (balanced): 0.64		eval_acc (balanced): 0.52	
+2022-07-01 13:45:14 runtime_logs INFO home_id (1)	Epoch ( 19 / 150)	 train_loss: 0.75	train_acc (balanced): 0.64		eval_acc (balanced): 0.52	
+2022-07-01 13:45:14 runtime_logs INFO home_id (1)	Epoch ( 20 / 150)	 train_loss: 0.75	train_acc (balanced): 0.64		eval_acc (balanced): 0.52	
+2022-07-01 13:45:14 runtime_logs INFO home_id (1)	Epoch ( 21 / 150)	 train_loss: 0.74	train_acc (balanced): 0.64		eval_acc (balanced): 0.52	
+2022-07-01 13:45:14 runtime_logs INFO home_id (1)	Epoch ( 22 / 150)	 train_loss: 0.74	train_acc (balanced): 0.64		eval_acc (balanced): 0.55	
+2022-07-01 13:45:14 runtime_logs INFO home_id (1)	Epoch ( 23 / 150)	 train_loss: 0.73	train_acc (balanced): 0.65		eval_acc (balanced): 0.55	
+2022-07-01 13:45:14 runtime_logs INFO home_id (1)	Epoch ( 24 / 150)	 train_loss: 0.73	train_acc (balanced): 0.65		eval_acc (balanced): 0.55	
+2022-07-01 13:45:14 runtime_logs INFO home_id (1)	Epoch ( 25 / 150)	 train_loss: 0.73	train_acc (balanced): 0.65		eval_acc (balanced): 0.55	
+2022-07-01 13:45:14 runtime_logs INFO home_id (1)	Epoch ( 26 / 150)	 train_loss: 0.72	train_acc (balanced): 0.65		eval_acc (balanced): 0.55	
+2022-07-01 13:45:14 runtime_logs INFO home_id (1)	Epoch ( 27 / 150)	 train_loss: 0.72	train_acc (balanced): 0.65		eval_acc (balanced): 0.55	
+2022-07-01 13:45:14 runtime_logs INFO home_id (1)	Epoch ( 28 / 150)	 train_loss: 0.72	train_acc (balanced): 0.66		eval_acc (balanced): 0.55	
+2022-07-01 13:45:14 runtime_logs INFO home_id (1)	Epoch ( 29 / 150)	 train_loss: 0.71	train_acc (balanced): 0.66		eval_acc (balanced): 0.55	
+2022-07-01 13:45:14 runtime_logs INFO home_id (1)	Epoch ( 30 / 150)	 train_loss: 0.71	train_acc (balanced): 0.66		eval_acc (balanced): 0.55	
+2022-07-01 13:45:14 runtime_logs INFO home_id (1)	Epoch ( 31 / 150)	 train_loss: 0.71	train_acc (balanced): 0.65		eval_acc (balanced): 0.55	
+2022-07-01 13:45:14 runtime_logs INFO Early stopping the training due to no change in validation accuracies
+2022-07-01 13:45:14 runtime_logs INFO Sequential(
+  (0): Linear(in_features=5, out_features=128, bias=True)
+  (1): ReLU()
+  (2): Linear(in_features=128, out_features=3, bias=True)
+  (3): ReLU()
+)
+2022-07-01 13:45:14 runtime_logs INFO Training the model for home 2 with datasize 201
+2022-07-01 13:45:14 runtime_logs INFO home_id (2)	Epoch (  1 / 150)	 train_loss: 1.00	train_acc (balanced): 0.55		eval_acc (balanced): 0.63	
+2022-07-01 13:45:15 runtime_logs INFO home_id (2)	Epoch (  2 / 150)	 train_loss: 0.97	train_acc (balanced): 0.55		eval_acc (balanced): 0.63	
+2022-07-01 13:45:15 runtime_logs INFO home_id (2)	Epoch (  3 / 150)	 train_loss: 0.95	train_acc (balanced): 0.55		eval_acc (balanced): 0.63	
+2022-07-01 13:45:15 runtime_logs INFO home_id (2)	Epoch (  4 / 150)	 train_loss: 0.94	train_acc (balanced): 0.55		eval_acc (balanced): 0.63	
+2022-07-01 13:45:15 runtime_logs INFO home_id (2)	Epoch (  5 / 150)	 train_loss: 0.92	train_acc (balanced): 0.55		eval_acc (balanced): 0.61	
+2022-07-01 13:45:15 runtime_logs INFO home_id (2)	Epoch (  6 / 150)	 train_loss: 0.91	train_acc (balanced): 0.56		eval_acc (balanced): 0.59	
+2022-07-01 13:45:15 runtime_logs INFO home_id (2)	Epoch (  7 / 150)	 train_loss: 0.91	train_acc (balanced): 0.56		eval_acc (balanced): 0.59	
+2022-07-01 13:45:15 runtime_logs INFO home_id (2)	Epoch (  8 / 150)	 train_loss: 0.90	train_acc (balanced): 0.56		eval_acc (balanced): 0.59	
+2022-07-01 13:45:15 runtime_logs INFO home_id (2)	Epoch (  9 / 150)	 train_loss: 0.89	train_acc (balanced): 0.57		eval_acc (balanced): 0.59	
+2022-07-01 13:45:15 runtime_logs INFO home_id (2)	Epoch ( 10 / 150)	 train_loss: 0.89	train_acc (balanced): 0.57		eval_acc (balanced): 0.59	
+2022-07-01 13:45:15 runtime_logs INFO home_id (2)	Epoch ( 11 / 150)	 train_loss: 0.88	train_acc (balanced): 0.57		eval_acc (balanced): 0.61	
+2022-07-01 13:45:15 runtime_logs INFO home_id (2)	Epoch ( 12 / 150)	 train_loss: 0.88	train_acc (balanced): 0.57		eval_acc (balanced): 0.61	
+2022-07-01 13:45:15 runtime_logs INFO home_id (2)	Epoch ( 13 / 150)	 train_loss: 0.87	train_acc (balanced): 0.59		eval_acc (balanced): 0.59	
+2022-07-01 13:45:16 runtime_logs INFO home_id (2)	Epoch ( 14 / 150)	 train_loss: 0.86	train_acc (balanced): 0.60		eval_acc (balanced): 0.61	
+2022-07-01 13:45:16 runtime_logs INFO home_id (2)	Epoch ( 15 / 150)	 train_loss: 0.86	train_acc (balanced): 0.61		eval_acc (balanced): 0.59	
+2022-07-01 13:45:16 runtime_logs INFO home_id (2)	Epoch ( 16 / 150)	 train_loss: 0.86	train_acc (balanced): 0.61		eval_acc (balanced): 0.59	
+2022-07-01 13:45:16 runtime_logs INFO home_id (2)	Epoch ( 17 / 150)	 train_loss: 0.85	train_acc (balanced): 0.61		eval_acc (balanced): 0.59	
+2022-07-01 13:45:16 runtime_logs INFO home_id (2)	Epoch ( 18 / 150)	 train_loss: 0.85	train_acc (balanced): 0.62		eval_acc (balanced): 0.53	
+2022-07-01 13:45:16 runtime_logs INFO home_id (2)	Epoch ( 19 / 150)	 train_loss: 0.84	train_acc (balanced): 0.61		eval_acc (balanced): 0.51	
+2022-07-01 13:45:16 runtime_logs INFO home_id (2)	Epoch ( 20 / 150)	 train_loss: 0.84	train_acc (balanced): 0.62		eval_acc (balanced): 0.51	
+2022-07-01 13:45:16 runtime_logs INFO home_id (2)	Epoch ( 21 / 150)	 train_loss: 0.84	train_acc (balanced): 0.61		eval_acc (balanced): 0.51	
+2022-07-01 13:45:16 runtime_logs INFO home_id (2)	Epoch ( 22 / 150)	 train_loss: 0.83	train_acc (balanced): 0.62		eval_acc (balanced): 0.47	
+2022-07-01 13:45:16 runtime_logs INFO home_id (2)	Epoch ( 23 / 150)	 train_loss: 0.83	train_acc (balanced): 0.64		eval_acc (balanced): 0.51	
+2022-07-01 13:45:16 runtime_logs INFO home_id (2)	Epoch ( 24 / 150)	 train_loss: 0.83	train_acc (balanced): 0.64		eval_acc (balanced): 0.51	
+2022-07-01 13:45:16 runtime_logs INFO home_id (2)	Epoch ( 25 / 150)	 train_loss: 0.82	train_acc (balanced): 0.63		eval_acc (balanced): 0.47	
+2022-07-01 13:45:17 runtime_logs INFO home_id (2)	Epoch ( 26 / 150)	 train_loss: 0.82	train_acc (balanced): 0.64		eval_acc (balanced): 0.49	
+2022-07-01 13:45:17 runtime_logs INFO home_id (2)	Epoch ( 27 / 150)	 train_loss: 0.82	train_acc (balanced): 0.64		eval_acc (balanced): 0.47	
+2022-07-01 13:45:17 runtime_logs INFO home_id (2)	Epoch ( 28 / 150)	 train_loss: 0.81	train_acc (balanced): 0.64		eval_acc (balanced): 0.47	
+2022-07-01 13:45:17 runtime_logs INFO home_id (2)	Epoch ( 29 / 150)	 train_loss: 0.81	train_acc (balanced): 0.65		eval_acc (balanced): 0.47	
+2022-07-01 13:45:17 runtime_logs INFO home_id (2)	Epoch ( 30 / 150)	 train_loss: 0.81	train_acc (balanced): 0.65		eval_acc (balanced): 0.47	
+2022-07-01 13:45:17 runtime_logs INFO home_id (2)	Epoch ( 31 / 150)	 train_loss: 0.81	train_acc (balanced): 0.66		eval_acc (balanced): 0.49	
+2022-07-01 13:45:17 runtime_logs INFO Early stopping the training due to no change in validation accuracies
+2022-07-01 13:45:17 runtime_logs INFO Sequential(
+  (0): Linear(in_features=5, out_features=128, bias=True)
+  (1): ReLU()
+  (2): Linear(in_features=128, out_features=3, bias=True)
+  (3): ReLU()
+)
+2022-07-01 13:45:17 runtime_logs INFO Training the model for home 3 with datasize 258
+2022-07-01 13:45:17 runtime_logs INFO home_id (3)	Epoch (  1 / 150)	 train_loss: 0.91	train_acc (balanced): 0.67		eval_acc (balanced): 0.58	
+2022-07-01 13:45:17 runtime_logs INFO home_id (3)	Epoch (  2 / 150)	 train_loss: 0.77	train_acc (balanced): 0.70		eval_acc (balanced): 0.58	
+2022-07-01 13:45:17 runtime_logs INFO home_id (3)	Epoch (  3 / 150)	 train_loss: 0.71	train_acc (balanced): 0.73		eval_acc (balanced): 0.58	
+2022-07-01 13:45:17 runtime_logs INFO home_id (3)	Epoch (  4 / 150)	 train_loss: 0.67	train_acc (balanced): 0.74		eval_acc (balanced): 0.63	
+2022-07-01 13:45:17 runtime_logs INFO home_id (3)	Epoch (  5 / 150)	 train_loss: 0.64	train_acc (balanced): 0.76		eval_acc (balanced): 0.63	
+2022-07-01 13:45:18 runtime_logs INFO home_id (3)	Epoch (  6 / 150)	 train_loss: 0.62	train_acc (balanced): 0.76		eval_acc (balanced): 0.63	
+2022-07-01 13:45:18 runtime_logs INFO home_id (3)	Epoch (  7 / 150)	 train_loss: 0.61	train_acc (balanced): 0.78		eval_acc (balanced): 0.63	
+2022-07-01 13:45:18 runtime_logs INFO home_id (3)	Epoch (  8 / 150)	 train_loss: 0.60	train_acc (balanced): 0.78		eval_acc (balanced): 0.63	
+2022-07-01 13:45:18 runtime_logs INFO home_id (3)	Epoch (  9 / 150)	 train_loss: 0.59	train_acc (balanced): 0.79		eval_acc (balanced): 0.63	
+2022-07-01 13:45:18 runtime_logs INFO home_id (3)	Epoch ( 10 / 150)	 train_loss: 0.58	train_acc (balanced): 0.79		eval_acc (balanced): 0.63	
+2022-07-01 13:45:18 runtime_logs INFO home_id (3)	Epoch ( 11 / 150)	 train_loss: 0.58	train_acc (balanced): 0.79		eval_acc (balanced): 0.63	
+2022-07-01 13:45:18 runtime_logs INFO home_id (3)	Epoch ( 12 / 150)	 train_loss: 0.57	train_acc (balanced): 0.79		eval_acc (balanced): 0.63	
+2022-07-01 13:45:18 runtime_logs INFO home_id (3)	Epoch ( 13 / 150)	 train_loss: 0.57	train_acc (balanced): 0.80		eval_acc (balanced): 0.63	
+2022-07-01 13:45:18 runtime_logs INFO home_id (3)	Epoch ( 14 / 150)	 train_loss: 0.57	train_acc (balanced): 0.80		eval_acc (balanced): 0.63	
+2022-07-01 13:45:19 runtime_logs INFO home_id (3)	Epoch ( 15 / 150)	 train_loss: 0.56	train_acc (balanced): 0.81		eval_acc (balanced): 0.63	
+2022-07-01 13:45:19 runtime_logs INFO home_id (3)	Epoch ( 16 / 150)	 train_loss: 0.56	train_acc (balanced): 0.80		eval_acc (balanced): 0.65	
+2022-07-01 13:45:19 runtime_logs INFO home_id (3)	Epoch ( 17 / 150)	 train_loss: 0.56	train_acc (balanced): 0.81		eval_acc (balanced): 0.65	
+2022-07-01 13:45:19 runtime_logs INFO home_id (3)	Epoch ( 18 / 150)	 train_loss: 0.55	train_acc (balanced): 0.81		eval_acc (balanced): 0.65	
+2022-07-01 13:45:19 runtime_logs INFO home_id (3)	Epoch ( 19 / 150)	 train_loss: 0.55	train_acc (balanced): 0.81		eval_acc (balanced): 0.65	
+2022-07-01 13:45:19 runtime_logs INFO home_id (3)	Epoch ( 20 / 150)	 train_loss: 0.55	train_acc (balanced): 0.81		eval_acc (balanced): 0.65	
+2022-07-01 13:45:19 runtime_logs INFO home_id (3)	Epoch ( 21 / 150)	 train_loss: 0.55	train_acc (balanced): 0.81		eval_acc (balanced): 0.65	
+2022-07-01 13:45:19 runtime_logs INFO home_id (3)	Epoch ( 22 / 150)	 train_loss: 0.54	train_acc (balanced): 0.81		eval_acc (balanced): 0.65	
+2022-07-01 13:45:19 runtime_logs INFO home_id (3)	Epoch ( 23 / 150)	 train_loss: 0.54	train_acc (balanced): 0.81		eval_acc (balanced): 0.63	
+2022-07-01 13:45:19 runtime_logs INFO home_id (3)	Epoch ( 24 / 150)	 train_loss: 0.54	train_acc (balanced): 0.81		eval_acc (balanced): 0.63	
+2022-07-01 13:45:20 runtime_logs INFO home_id (3)	Epoch ( 25 / 150)	 train_loss: 0.54	train_acc (balanced): 0.80		eval_acc (balanced): 0.63	
+2022-07-01 13:45:20 runtime_logs INFO home_id (3)	Epoch ( 26 / 150)	 train_loss: 0.54	train_acc (balanced): 0.81		eval_acc (balanced): 0.63	
+2022-07-01 13:45:20 runtime_logs INFO home_id (3)	Epoch ( 27 / 150)	 train_loss: 0.53	train_acc (balanced): 0.81		eval_acc (balanced): 0.63	
+2022-07-01 13:45:20 runtime_logs INFO home_id (3)	Epoch ( 28 / 150)	 train_loss: 0.53	train_acc (balanced): 0.81		eval_acc (balanced): 0.63	
+2022-07-01 13:45:20 runtime_logs INFO home_id (3)	Epoch ( 29 / 150)	 train_loss: 0.53	train_acc (balanced): 0.81		eval_acc (balanced): 0.63	
+2022-07-01 13:45:20 runtime_logs INFO home_id (3)	Epoch ( 30 / 150)	 train_loss: 0.53	train_acc (balanced): 0.81		eval_acc (balanced): 0.63	
+2022-07-01 13:45:20 runtime_logs INFO home_id (3)	Epoch ( 31 / 150)	 train_loss: 0.52	train_acc (balanced): 0.81		eval_acc (balanced): 0.63	
+2022-07-01 13:45:20 runtime_logs INFO home_id (3)	Epoch ( 32 / 150)	 train_loss: 0.52	train_acc (balanced): 0.80		eval_acc (balanced): 0.63	
+2022-07-01 13:45:20 runtime_logs INFO home_id (3)	Epoch ( 33 / 150)	 train_loss: 0.52	train_acc (balanced): 0.80		eval_acc (balanced): 0.63	
+2022-07-01 13:45:20 runtime_logs INFO home_id (3)	Epoch ( 34 / 150)	 train_loss: 0.52	train_acc (balanced): 0.80		eval_acc (balanced): 0.63	
+2022-07-01 13:45:21 runtime_logs INFO home_id (3)	Epoch ( 35 / 150)	 train_loss: 0.52	train_acc (balanced): 0.81		eval_acc (balanced): 0.63	
+2022-07-01 13:45:21 runtime_logs INFO home_id (3)	Epoch ( 36 / 150)	 train_loss: 0.52	train_acc (balanced): 0.81		eval_acc (balanced): 0.63	
+2022-07-01 13:45:21 runtime_logs INFO home_id (3)	Epoch ( 37 / 150)	 train_loss: 0.51	train_acc (balanced): 0.81		eval_acc (balanced): 0.63	
+2022-07-01 13:45:21 runtime_logs INFO home_id (3)	Epoch ( 38 / 150)	 train_loss: 0.51	train_acc (balanced): 0.81		eval_acc (balanced): 0.63	
+2022-07-01 13:45:21 runtime_logs INFO home_id (3)	Epoch ( 39 / 150)	 train_loss: 0.51	train_acc (balanced): 0.81		eval_acc (balanced): 0.63	
+2022-07-01 13:45:21 runtime_logs INFO home_id (3)	Epoch ( 40 / 150)	 train_loss: 0.51	train_acc (balanced): 0.81		eval_acc (balanced): 0.63	
+2022-07-01 13:45:21 runtime_logs INFO home_id (3)	Epoch ( 41 / 150)	 train_loss: 0.51	train_acc (balanced): 0.81		eval_acc (balanced): 0.63	
+2022-07-01 13:45:21 runtime_logs INFO home_id (3)	Epoch ( 42 / 150)	 train_loss: 0.50	train_acc (balanced): 0.81		eval_acc (balanced): 0.63	
+2022-07-01 13:45:21 runtime_logs INFO home_id (3)	Epoch ( 43 / 150)	 train_loss: 0.50	train_acc (balanced): 0.81		eval_acc (balanced): 0.63	
+2022-07-01 13:45:21 runtime_logs INFO home_id (3)	Epoch ( 44 / 150)	 train_loss: 0.50	train_acc (balanced): 0.81		eval_acc (balanced): 0.63	
+2022-07-01 13:45:22 runtime_logs INFO home_id (3)	Epoch ( 45 / 150)	 train_loss: 0.50	train_acc (balanced): 0.82		eval_acc (balanced): 0.63	
+2022-07-01 13:45:22 runtime_logs INFO home_id (3)	Epoch ( 46 / 150)	 train_loss: 0.50	train_acc (balanced): 0.81		eval_acc (balanced): 0.63	
+2022-07-01 13:45:22 runtime_logs INFO Early stopping the training due to no change in validation accuracies
+2022-07-01 13:45:22 runtime_logs INFO Sequential(
+  (0): Linear(in_features=5, out_features=128, bias=True)
+  (1): ReLU()
+  (2): Linear(in_features=128, out_features=3, bias=True)
+  (3): ReLU()
+)
+2022-07-01 13:45:22 runtime_logs INFO Training the model for home 4 with datasize 213
+2022-07-01 13:45:22 runtime_logs INFO home_id (4)	Epoch (  1 / 150)	 train_loss: 0.62	train_acc (balanced): 0.87		eval_acc (balanced): 0.85	
+2022-07-01 13:45:22 runtime_logs INFO home_id (4)	Epoch (  2 / 150)	 train_loss: 0.48	train_acc (balanced): 0.87		eval_acc (balanced): 0.85	
+2022-07-01 13:45:22 runtime_logs INFO home_id (4)	Epoch (  3 / 150)	 train_loss: 0.46	train_acc (balanced): 0.87		eval_acc (balanced): 0.85	
+2022-07-01 13:45:22 runtime_logs INFO home_id (4)	Epoch (  4 / 150)	 train_loss: 0.45	train_acc (balanced): 0.87		eval_acc (balanced): 0.85	
+2022-07-01 13:45:22 runtime_logs INFO home_id (4)	Epoch (  5 / 150)	 train_loss: 0.44	train_acc (balanced): 0.87		eval_acc (balanced): 0.85	
+2022-07-01 13:45:22 runtime_logs INFO home_id (4)	Epoch (  6 / 150)	 train_loss: 0.44	train_acc (balanced): 0.87		eval_acc (balanced): 0.85	
+2022-07-01 13:45:22 runtime_logs INFO home_id (4)	Epoch (  7 / 150)	 train_loss: 0.43	train_acc (balanced): 0.87		eval_acc (balanced): 0.85	
+2022-07-01 13:45:22 runtime_logs INFO home_id (4)	Epoch (  8 / 150)	 train_loss: 0.43	train_acc (balanced): 0.87		eval_acc (balanced): 0.85	
+2022-07-01 13:45:23 runtime_logs INFO home_id (4)	Epoch (  9 / 150)	 train_loss: 0.42	train_acc (balanced): 0.88		eval_acc (balanced): 0.85	
+2022-07-01 13:45:23 runtime_logs INFO home_id (4)	Epoch ( 10 / 150)	 train_loss: 0.42	train_acc (balanced): 0.88		eval_acc (balanced): 0.85	
+2022-07-01 13:45:23 runtime_logs INFO home_id (4)	Epoch ( 11 / 150)	 train_loss: 0.41	train_acc (balanced): 0.88		eval_acc (balanced): 0.85	
+2022-07-01 13:45:23 runtime_logs INFO home_id (4)	Epoch ( 12 / 150)	 train_loss: 0.41	train_acc (balanced): 0.88		eval_acc (balanced): 0.85	
+2022-07-01 13:45:23 runtime_logs INFO home_id (4)	Epoch ( 13 / 150)	 train_loss: 0.41	train_acc (balanced): 0.88		eval_acc (balanced): 0.85	
+2022-07-01 13:45:23 runtime_logs INFO home_id (4)	Epoch ( 14 / 150)	 train_loss: 0.40	train_acc (balanced): 0.88		eval_acc (balanced): 0.85	
+2022-07-01 13:45:23 runtime_logs INFO home_id (4)	Epoch ( 15 / 150)	 train_loss: 0.40	train_acc (balanced): 0.88		eval_acc (balanced): 0.85	
+2022-07-01 13:45:23 runtime_logs INFO home_id (4)	Epoch ( 16 / 150)	 train_loss: 0.40	train_acc (balanced): 0.88		eval_acc (balanced): 0.85	
+2022-07-01 13:45:23 runtime_logs INFO home_id (4)	Epoch ( 17 / 150)	 train_loss: 0.40	train_acc (balanced): 0.88		eval_acc (balanced): 0.85	
+2022-07-01 13:45:23 runtime_logs INFO home_id (4)	Epoch ( 18 / 150)	 train_loss: 0.40	train_acc (balanced): 0.88		eval_acc (balanced): 0.85	
+2022-07-01 13:45:23 runtime_logs INFO home_id (4)	Epoch ( 19 / 150)	 train_loss: 0.39	train_acc (balanced): 0.88		eval_acc (balanced): 0.85	
+2022-07-01 13:45:24 runtime_logs INFO home_id (4)	Epoch ( 20 / 150)	 train_loss: 0.39	train_acc (balanced): 0.88		eval_acc (balanced): 0.85	
+2022-07-01 13:45:24 runtime_logs INFO home_id (4)	Epoch ( 21 / 150)	 train_loss: 0.39	train_acc (balanced): 0.88		eval_acc (balanced): 0.85	
+2022-07-01 13:45:24 runtime_logs INFO home_id (4)	Epoch ( 22 / 150)	 train_loss: 0.39	train_acc (balanced): 0.88		eval_acc (balanced): 0.85	
+2022-07-01 13:45:24 runtime_logs INFO home_id (4)	Epoch ( 23 / 150)	 train_loss: 0.39	train_acc (balanced): 0.88		eval_acc (balanced): 0.85	
+2022-07-01 13:45:24 runtime_logs INFO home_id (4)	Epoch ( 24 / 150)	 train_loss: 0.39	train_acc (balanced): 0.88		eval_acc (balanced): 0.85	
+2022-07-01 13:45:24 runtime_logs INFO home_id (4)	Epoch ( 25 / 150)	 train_loss: 0.39	train_acc (balanced): 0.88		eval_acc (balanced): 0.85	
+2022-07-01 13:45:24 runtime_logs INFO home_id (4)	Epoch ( 26 / 150)	 train_loss: 0.38	train_acc (balanced): 0.88		eval_acc (balanced): 0.85	
+2022-07-01 13:45:24 runtime_logs INFO home_id (4)	Epoch ( 27 / 150)	 train_loss: 0.38	train_acc (balanced): 0.88		eval_acc (balanced): 0.85	
+2022-07-01 13:45:24 runtime_logs INFO home_id (4)	Epoch ( 28 / 150)	 train_loss: 0.38	train_acc (balanced): 0.88		eval_acc (balanced): 0.85	
+2022-07-01 13:45:24 runtime_logs INFO home_id (4)	Epoch ( 29 / 150)	 train_loss: 0.38	train_acc (balanced): 0.88		eval_acc (balanced): 0.85	
+2022-07-01 13:45:24 runtime_logs INFO home_id (4)	Epoch ( 30 / 150)	 train_loss: 0.38	train_acc (balanced): 0.88		eval_acc (balanced): 0.85	
+2022-07-01 13:45:25 runtime_logs INFO home_id (4)	Epoch ( 31 / 150)	 train_loss: 0.38	train_acc (balanced): 0.88		eval_acc (balanced): 0.85	
+2022-07-01 13:45:25 runtime_logs INFO Early stopping the training due to no change in validation accuracies
+2022-07-01 13:45:25 runtime_logs INFO Sequential(
+  (0): Linear(in_features=5, out_features=128, bias=True)
+  (1): ReLU()
+  (2): Linear(in_features=128, out_features=3, bias=True)
+  (3): ReLU()
+)
+2022-07-01 13:45:25 runtime_logs INFO Training the model for home 5 with datasize 215
+2022-07-01 13:45:25 runtime_logs INFO home_id (5)	Epoch (  1 / 150)	 train_loss: 1.04	train_acc (balanced): 0.50		eval_acc (balanced): 0.78	
+2022-07-01 13:45:25 runtime_logs INFO home_id (5)	Epoch (  2 / 150)	 train_loss: 0.87	train_acc (balanced): 0.67		eval_acc (balanced): 0.78	
+2022-07-01 13:45:25 runtime_logs INFO home_id (5)	Epoch (  3 / 150)	 train_loss: 0.79	train_acc (balanced): 0.70		eval_acc (balanced): 0.78	
+2022-07-01 13:45:25 runtime_logs INFO home_id (5)	Epoch (  4 / 150)	 train_loss: 0.75	train_acc (balanced): 0.71		eval_acc (balanced): 0.78	
+2022-07-01 13:45:25 runtime_logs INFO home_id (5)	Epoch (  5 / 150)	 train_loss: 0.71	train_acc (balanced): 0.71		eval_acc (balanced): 0.78	
+2022-07-01 13:45:25 runtime_logs INFO home_id (5)	Epoch (  6 / 150)	 train_loss: 0.69	train_acc (balanced): 0.72		eval_acc (balanced): 0.78	
+2022-07-01 13:45:25 runtime_logs INFO home_id (5)	Epoch (  7 / 150)	 train_loss: 0.67	train_acc (balanced): 0.72		eval_acc (balanced): 0.78	
+2022-07-01 13:45:25 runtime_logs INFO home_id (5)	Epoch (  8 / 150)	 train_loss: 0.66	train_acc (balanced): 0.72		eval_acc (balanced): 0.80	
+2022-07-01 13:45:25 runtime_logs INFO home_id (5)	Epoch (  9 / 150)	 train_loss: 0.64	train_acc (balanced): 0.72		eval_acc (balanced): 0.80	
+2022-07-01 13:45:26 runtime_logs INFO home_id (5)	Epoch ( 10 / 150)	 train_loss: 0.64	train_acc (balanced): 0.73		eval_acc (balanced): 0.80	
+2022-07-01 13:45:26 runtime_logs INFO home_id (5)	Epoch ( 11 / 150)	 train_loss: 0.63	train_acc (balanced): 0.74		eval_acc (balanced): 0.80	
+2022-07-01 13:45:26 runtime_logs INFO home_id (5)	Epoch ( 12 / 150)	 train_loss: 0.62	train_acc (balanced): 0.75		eval_acc (balanced): 0.80	
+2022-07-01 13:45:26 runtime_logs INFO home_id (5)	Epoch ( 13 / 150)	 train_loss: 0.61	train_acc (balanced): 0.76		eval_acc (balanced): 0.80	
+2022-07-01 13:45:26 runtime_logs INFO home_id (5)	Epoch ( 14 / 150)	 train_loss: 0.61	train_acc (balanced): 0.76		eval_acc (balanced): 0.80	
+2022-07-01 13:45:26 runtime_logs INFO home_id (5)	Epoch ( 15 / 150)	 train_loss: 0.60	train_acc (balanced): 0.76		eval_acc (balanced): 0.80	
+2022-07-01 13:45:26 runtime_logs INFO home_id (5)	Epoch ( 16 / 150)	 train_loss: 0.60	train_acc (balanced): 0.76		eval_acc (balanced): 0.80	
+2022-07-01 13:45:26 runtime_logs INFO home_id (5)	Epoch ( 17 / 150)	 train_loss: 0.59	train_acc (balanced): 0.76		eval_acc (balanced): 0.80	
+2022-07-01 13:45:26 runtime_logs INFO home_id (5)	Epoch ( 18 / 150)	 train_loss: 0.59	train_acc (balanced): 0.77		eval_acc (balanced): 0.80	
+2022-07-01 13:45:26 runtime_logs INFO home_id (5)	Epoch ( 19 / 150)	 train_loss: 0.58	train_acc (balanced): 0.76		eval_acc (balanced): 0.80	
+2022-07-01 13:45:26 runtime_logs INFO home_id (5)	Epoch ( 20 / 150)	 train_loss: 0.58	train_acc (balanced): 0.77		eval_acc (balanced): 0.80	
+2022-07-01 13:45:26 runtime_logs INFO home_id (5)	Epoch ( 21 / 150)	 train_loss: 0.57	train_acc (balanced): 0.77		eval_acc (balanced): 0.80	
+2022-07-01 13:45:27 runtime_logs INFO home_id (5)	Epoch ( 22 / 150)	 train_loss: 0.57	train_acc (balanced): 0.77		eval_acc (balanced): 0.80	
+2022-07-01 13:45:27 runtime_logs INFO home_id (5)	Epoch ( 23 / 150)	 train_loss: 0.57	train_acc (balanced): 0.76		eval_acc (balanced): 0.80	
+2022-07-01 13:45:27 runtime_logs INFO home_id (5)	Epoch ( 24 / 150)	 train_loss: 0.56	train_acc (balanced): 0.77		eval_acc (balanced): 0.80	
+2022-07-01 13:45:27 runtime_logs INFO home_id (5)	Epoch ( 25 / 150)	 train_loss: 0.56	train_acc (balanced): 0.77		eval_acc (balanced): 0.80	
+2022-07-01 13:45:27 runtime_logs INFO home_id (5)	Epoch ( 26 / 150)	 train_loss: 0.56	train_acc (balanced): 0.77		eval_acc (balanced): 0.80	
+2022-07-01 13:45:27 runtime_logs INFO home_id (5)	Epoch ( 27 / 150)	 train_loss: 0.55	train_acc (balanced): 0.77		eval_acc (balanced): 0.80	
+2022-07-01 13:45:27 runtime_logs INFO home_id (5)	Epoch ( 28 / 150)	 train_loss: 0.55	train_acc (balanced): 0.77		eval_acc (balanced): 0.80	
+2022-07-01 13:45:27 runtime_logs INFO home_id (5)	Epoch ( 29 / 150)	 train_loss: 0.55	train_acc (balanced): 0.78		eval_acc (balanced): 0.80	
+2022-07-01 13:45:27 runtime_logs INFO home_id (5)	Epoch ( 30 / 150)	 train_loss: 0.55	train_acc (balanced): 0.77		eval_acc (balanced): 0.80	
+2022-07-01 13:45:27 runtime_logs INFO home_id (5)	Epoch ( 31 / 150)	 train_loss: 0.54	train_acc (balanced): 0.78		eval_acc (balanced): 0.80	
+2022-07-01 13:45:27 runtime_logs INFO home_id (5)	Epoch ( 32 / 150)	 train_loss: 0.54	train_acc (balanced): 0.78		eval_acc (balanced): 0.80	
+2022-07-01 13:45:27 runtime_logs INFO home_id (5)	Epoch ( 33 / 150)	 train_loss: 0.54	train_acc (balanced): 0.78		eval_acc (balanced): 0.80	
+2022-07-01 13:45:28 runtime_logs INFO home_id (5)	Epoch ( 34 / 150)	 train_loss: 0.54	train_acc (balanced): 0.78		eval_acc (balanced): 0.80	
+2022-07-01 13:45:28 runtime_logs INFO home_id (5)	Epoch ( 35 / 150)	 train_loss: 0.53	train_acc (balanced): 0.78		eval_acc (balanced): 0.80	
+2022-07-01 13:45:28 runtime_logs INFO home_id (5)	Epoch ( 36 / 150)	 train_loss: 0.53	train_acc (balanced): 0.78		eval_acc (balanced): 0.80	
+2022-07-01 13:45:28 runtime_logs INFO home_id (5)	Epoch ( 37 / 150)	 train_loss: 0.53	train_acc (balanced): 0.79		eval_acc (balanced): 0.80	
+2022-07-01 13:45:28 runtime_logs INFO home_id (5)	Epoch ( 38 / 150)	 train_loss: 0.53	train_acc (balanced): 0.78		eval_acc (balanced): 0.80	
+2022-07-01 13:45:28 runtime_logs INFO Early stopping the training due to no change in validation accuracies
+2022-07-01 13:45:28 runtime_logs INFO Sequential(
+  (0): Linear(in_features=5, out_features=128, bias=True)
+  (1): ReLU()
+  (2): Linear(in_features=128, out_features=3, bias=True)
+  (3): ReLU()
+)
+2022-07-01 13:45:28 runtime_logs INFO Training the model for home 6 with datasize 193
+2022-07-01 13:45:28 runtime_logs INFO home_id (6)	Epoch (  1 / 150)	 train_loss: 1.08	train_acc (balanced): 0.47		eval_acc (balanced): 0.49	
+2022-07-01 13:45:28 runtime_logs INFO home_id (6)	Epoch (  2 / 150)	 train_loss: 1.00	train_acc (balanced): 0.54		eval_acc (balanced): 0.45	
+2022-07-01 13:45:28 runtime_logs INFO home_id (6)	Epoch (  3 / 150)	 train_loss: 0.97	train_acc (balanced): 0.55		eval_acc (balanced): 0.43	
+2022-07-01 13:45:28 runtime_logs INFO home_id (6)	Epoch (  4 / 150)	 train_loss: 0.96	train_acc (balanced): 0.54		eval_acc (balanced): 0.43	
+2022-07-01 13:45:28 runtime_logs INFO home_id (6)	Epoch (  5 / 150)	 train_loss: 0.95	train_acc (balanced): 0.55		eval_acc (balanced): 0.43	
+2022-07-01 13:45:28 runtime_logs INFO home_id (6)	Epoch (  6 / 150)	 train_loss: 0.94	train_acc (balanced): 0.55		eval_acc (balanced): 0.41	
+2022-07-01 13:45:28 runtime_logs INFO home_id (6)	Epoch (  7 / 150)	 train_loss: 0.94	train_acc (balanced): 0.58		eval_acc (balanced): 0.41	
+2022-07-01 13:45:29 runtime_logs INFO home_id (6)	Epoch (  8 / 150)	 train_loss: 0.93	train_acc (balanced): 0.58		eval_acc (balanced): 0.41	
+2022-07-01 13:45:29 runtime_logs INFO home_id (6)	Epoch (  9 / 150)	 train_loss: 0.93	train_acc (balanced): 0.59		eval_acc (balanced): 0.41	
+2022-07-01 13:45:29 runtime_logs INFO home_id (6)	Epoch ( 10 / 150)	 train_loss: 0.92	train_acc (balanced): 0.59		eval_acc (balanced): 0.41	
+2022-07-01 13:45:29 runtime_logs INFO home_id (6)	Epoch ( 11 / 150)	 train_loss: 0.92	train_acc (balanced): 0.59		eval_acc (balanced): 0.41	
+2022-07-01 13:45:29 runtime_logs INFO home_id (6)	Epoch ( 12 / 150)	 train_loss: 0.92	train_acc (balanced): 0.60		eval_acc (balanced): 0.43	
+2022-07-01 13:45:29 runtime_logs INFO home_id (6)	Epoch ( 13 / 150)	 train_loss: 0.91	train_acc (balanced): 0.60		eval_acc (balanced): 0.43	
+2022-07-01 13:45:29 runtime_logs INFO home_id (6)	Epoch ( 14 / 150)	 train_loss: 0.91	train_acc (balanced): 0.60		eval_acc (balanced): 0.43	
+2022-07-01 13:45:29 runtime_logs INFO home_id (6)	Epoch ( 15 / 150)	 train_loss: 0.91	train_acc (balanced): 0.60		eval_acc (balanced): 0.43	
+2022-07-01 13:45:29 runtime_logs INFO home_id (6)	Epoch ( 16 / 150)	 train_loss: 0.91	train_acc (balanced): 0.61		eval_acc (balanced): 0.43	
+2022-07-01 13:45:29 runtime_logs INFO home_id (6)	Epoch ( 17 / 150)	 train_loss: 0.90	train_acc (balanced): 0.61		eval_acc (balanced): 0.43	
+2022-07-01 13:45:29 runtime_logs INFO home_id (6)	Epoch ( 18 / 150)	 train_loss: 0.90	train_acc (balanced): 0.61		eval_acc (balanced): 0.43	
+2022-07-01 13:45:29 runtime_logs INFO home_id (6)	Epoch ( 19 / 150)	 train_loss: 0.90	train_acc (balanced): 0.62		eval_acc (balanced): 0.43	
+2022-07-01 13:45:29 runtime_logs INFO home_id (6)	Epoch ( 20 / 150)	 train_loss: 0.90	train_acc (balanced): 0.62		eval_acc (balanced): 0.43	
+2022-07-01 13:45:30 runtime_logs INFO home_id (6)	Epoch ( 21 / 150)	 train_loss: 0.89	train_acc (balanced): 0.62		eval_acc (balanced): 0.43	
+2022-07-01 13:45:30 runtime_logs INFO home_id (6)	Epoch ( 22 / 150)	 train_loss: 0.89	train_acc (balanced): 0.62		eval_acc (balanced): 0.43	
+2022-07-01 13:45:30 runtime_logs INFO home_id (6)	Epoch ( 23 / 150)	 train_loss: 0.89	train_acc (balanced): 0.61		eval_acc (balanced): 0.43	
+2022-07-01 13:45:30 runtime_logs INFO home_id (6)	Epoch ( 24 / 150)	 train_loss: 0.89	train_acc (balanced): 0.61		eval_acc (balanced): 0.43	
+2022-07-01 13:45:30 runtime_logs INFO home_id (6)	Epoch ( 25 / 150)	 train_loss: 0.88	train_acc (balanced): 0.61		eval_acc (balanced): 0.43	
+2022-07-01 13:45:30 runtime_logs INFO home_id (6)	Epoch ( 26 / 150)	 train_loss: 0.88	train_acc (balanced): 0.61		eval_acc (balanced): 0.43	
+2022-07-01 13:45:30 runtime_logs INFO home_id (6)	Epoch ( 27 / 150)	 train_loss: 0.88	train_acc (balanced): 0.61		eval_acc (balanced): 0.43	
+2022-07-01 13:45:30 runtime_logs INFO home_id (6)	Epoch ( 28 / 150)	 train_loss: 0.88	train_acc (balanced): 0.61		eval_acc (balanced): 0.43	
+2022-07-01 13:45:30 runtime_logs INFO home_id (6)	Epoch ( 29 / 150)	 train_loss: 0.88	train_acc (balanced): 0.61		eval_acc (balanced): 0.43	
+2022-07-01 13:45:30 runtime_logs INFO home_id (6)	Epoch ( 30 / 150)	 train_loss: 0.87	train_acc (balanced): 0.62		eval_acc (balanced): 0.43	
+2022-07-01 13:45:30 runtime_logs INFO home_id (6)	Epoch ( 31 / 150)	 train_loss: 0.87	train_acc (balanced): 0.62		eval_acc (balanced): 0.43	
+2022-07-01 13:45:30 runtime_logs INFO Early stopping the training due to no change in validation accuracies
+2022-07-01 13:45:30 runtime_logs INFO Sequential(
+  (0): Linear(in_features=5, out_features=128, bias=True)
+  (1): ReLU()
+  (2): Linear(in_features=128, out_features=3, bias=True)
+  (3): ReLU()
+)
+2022-07-01 13:45:30 runtime_logs INFO Training the model for home 7 with datasize 314
+2022-07-01 13:45:30 runtime_logs INFO home_id (7)	Epoch (  1 / 150)	 train_loss: 0.94	train_acc (balanced): 0.66		eval_acc (balanced): 0.76	
+2022-07-01 13:45:31 runtime_logs INFO home_id (7)	Epoch (  2 / 150)	 train_loss: 0.85	train_acc (balanced): 0.67		eval_acc (balanced): 0.77	
+2022-07-01 13:45:31 runtime_logs INFO home_id (7)	Epoch (  3 / 150)	 train_loss: 0.80	train_acc (balanced): 0.68		eval_acc (balanced): 0.76	
+2022-07-01 13:45:31 runtime_logs INFO home_id (7)	Epoch (  4 / 150)	 train_loss: 0.77	train_acc (balanced): 0.69		eval_acc (balanced): 0.73	
+2022-07-01 13:45:31 runtime_logs INFO home_id (7)	Epoch (  5 / 150)	 train_loss: 0.76	train_acc (balanced): 0.69		eval_acc (balanced): 0.71	
+2022-07-01 13:45:31 runtime_logs INFO home_id (7)	Epoch (  6 / 150)	 train_loss: 0.75	train_acc (balanced): 0.70		eval_acc (balanced): 0.67	
+2022-07-01 13:45:31 runtime_logs INFO home_id (7)	Epoch (  7 / 150)	 train_loss: 0.74	train_acc (balanced): 0.70		eval_acc (balanced): 0.66	
+2022-07-01 13:45:31 runtime_logs INFO home_id (7)	Epoch (  8 / 150)	 train_loss: 0.73	train_acc (balanced): 0.70		eval_acc (balanced): 0.66	
+2022-07-01 13:45:31 runtime_logs INFO home_id (7)	Epoch (  9 / 150)	 train_loss: 0.73	train_acc (balanced): 0.72		eval_acc (balanced): 0.62	
+2022-07-01 13:45:32 runtime_logs INFO home_id (7)	Epoch ( 10 / 150)	 train_loss: 0.72	train_acc (balanced): 0.72		eval_acc (balanced): 0.62	
+2022-07-01 13:45:32 runtime_logs INFO home_id (7)	Epoch ( 11 / 150)	 train_loss: 0.72	train_acc (balanced): 0.73		eval_acc (balanced): 0.62	
+2022-07-01 13:45:32 runtime_logs INFO home_id (7)	Epoch ( 12 / 150)	 train_loss: 0.71	train_acc (balanced): 0.72		eval_acc (balanced): 0.62	
+2022-07-01 13:45:32 runtime_logs INFO home_id (7)	Epoch ( 13 / 150)	 train_loss: 0.71	train_acc (balanced): 0.72		eval_acc (balanced): 0.62	
+2022-07-01 13:45:32 runtime_logs INFO home_id (7)	Epoch ( 14 / 150)	 train_loss: 0.71	train_acc (balanced): 0.73		eval_acc (balanced): 0.62	
+2022-07-01 13:45:32 runtime_logs INFO home_id (7)	Epoch ( 15 / 150)	 train_loss: 0.70	train_acc (balanced): 0.73		eval_acc (balanced): 0.59	
+2022-07-01 13:45:32 runtime_logs INFO home_id (7)	Epoch ( 16 / 150)	 train_loss: 0.70	train_acc (balanced): 0.73		eval_acc (balanced): 0.59	
+2022-07-01 13:45:32 runtime_logs INFO home_id (7)	Epoch ( 17 / 150)	 train_loss: 0.70	train_acc (balanced): 0.73		eval_acc (balanced): 0.61	
+2022-07-01 13:45:33 runtime_logs INFO home_id (7)	Epoch ( 18 / 150)	 train_loss: 0.69	train_acc (balanced): 0.73		eval_acc (balanced): 0.62	
+2022-07-01 13:45:33 runtime_logs INFO home_id (7)	Epoch ( 19 / 150)	 train_loss: 0.69	train_acc (balanced): 0.74		eval_acc (balanced): 0.61	
+2022-07-01 13:45:33 runtime_logs INFO home_id (7)	Epoch ( 20 / 150)	 train_loss: 0.69	train_acc (balanced): 0.74		eval_acc (balanced): 0.62	
+2022-07-01 13:45:33 runtime_logs INFO home_id (7)	Epoch ( 21 / 150)	 train_loss: 0.68	train_acc (balanced): 0.74		eval_acc (balanced): 0.61	
+2022-07-01 13:45:33 runtime_logs INFO home_id (7)	Epoch ( 22 / 150)	 train_loss: 0.68	train_acc (balanced): 0.74		eval_acc (balanced): 0.59	
+2022-07-01 13:45:33 runtime_logs INFO home_id (7)	Epoch ( 23 / 150)	 train_loss: 0.68	train_acc (balanced): 0.73		eval_acc (balanced): 0.58	
+2022-07-01 13:45:33 runtime_logs INFO home_id (7)	Epoch ( 24 / 150)	 train_loss: 0.67	train_acc (balanced): 0.74		eval_acc (balanced): 0.58	
+2022-07-01 13:45:33 runtime_logs INFO home_id (7)	Epoch ( 25 / 150)	 train_loss: 0.67	train_acc (balanced): 0.74		eval_acc (balanced): 0.63	
+2022-07-01 13:45:34 runtime_logs INFO home_id (7)	Epoch ( 26 / 150)	 train_loss: 0.67	train_acc (balanced): 0.74		eval_acc (balanced): 0.59	
+2022-07-01 13:45:34 runtime_logs INFO home_id (7)	Epoch ( 27 / 150)	 train_loss: 0.67	train_acc (balanced): 0.74		eval_acc (balanced): 0.63	
+2022-07-01 13:45:34 runtime_logs INFO home_id (7)	Epoch ( 28 / 150)	 train_loss: 0.66	train_acc (balanced): 0.74		eval_acc (balanced): 0.62	
+2022-07-01 13:45:34 runtime_logs INFO home_id (7)	Epoch ( 29 / 150)	 train_loss: 0.66	train_acc (balanced): 0.74		eval_acc (balanced): 0.62	
+2022-07-01 13:45:34 runtime_logs INFO home_id (7)	Epoch ( 30 / 150)	 train_loss: 0.66	train_acc (balanced): 0.74		eval_acc (balanced): 0.61	
+2022-07-01 13:45:34 runtime_logs INFO home_id (7)	Epoch ( 31 / 150)	 train_loss: 0.66	train_acc (balanced): 0.74		eval_acc (balanced): 0.61	
+2022-07-01 13:45:34 runtime_logs INFO home_id (7)	Epoch ( 32 / 150)	 train_loss: 0.65	train_acc (balanced): 0.74		eval_acc (balanced): 0.61	
+2022-07-01 13:45:34 runtime_logs INFO Early stopping the training due to no change in validation accuracies
+2022-07-01 13:45:34 runtime_logs INFO Sequential(
+  (0): Linear(in_features=5, out_features=128, bias=True)
+  (1): ReLU()
+  (2): Linear(in_features=128, out_features=3, bias=True)
+  (3): ReLU()
+)
+2022-07-01 13:45:34 runtime_logs INFO Training the model for home 8 with datasize 282
+2022-07-01 13:45:34 runtime_logs INFO home_id (8)	Epoch (  1 / 150)	 train_loss: 0.69	train_acc (balanced): 0.83		eval_acc (balanced): 0.86	
+2022-07-01 13:45:35 runtime_logs INFO home_id (8)	Epoch (  2 / 150)	 train_loss: 0.49	train_acc (balanced): 0.87		eval_acc (balanced): 0.86	
+2022-07-01 13:45:35 runtime_logs INFO home_id (8)	Epoch (  3 / 150)	 train_loss: 0.43	train_acc (balanced): 0.88		eval_acc (balanced): 0.86	
+2022-07-01 13:45:35 runtime_logs INFO home_id (8)	Epoch (  4 / 150)	 train_loss: 0.40	train_acc (balanced): 0.88		eval_acc (balanced): 0.86	
+2022-07-01 13:45:35 runtime_logs INFO home_id (8)	Epoch (  5 / 150)	 train_loss: 0.38	train_acc (balanced): 0.88		eval_acc (balanced): 0.86	
+2022-07-01 13:45:35 runtime_logs INFO home_id (8)	Epoch (  6 / 150)	 train_loss: 0.37	train_acc (balanced): 0.88		eval_acc (balanced): 0.86	
+2022-07-01 13:45:35 runtime_logs INFO home_id (8)	Epoch (  7 / 150)	 train_loss: 0.36	train_acc (balanced): 0.89		eval_acc (balanced): 0.86	
+2022-07-01 13:45:35 runtime_logs INFO home_id (8)	Epoch (  8 / 150)	 train_loss: 0.35	train_acc (balanced): 0.89		eval_acc (balanced): 0.86	
+2022-07-01 13:45:35 runtime_logs INFO home_id (8)	Epoch (  9 / 150)	 train_loss: 0.34	train_acc (balanced): 0.89		eval_acc (balanced): 0.86	
+2022-07-01 13:45:35 runtime_logs INFO home_id (8)	Epoch ( 10 / 150)	 train_loss: 0.33	train_acc (balanced): 0.89		eval_acc (balanced): 0.86	
+2022-07-01 13:45:36 runtime_logs INFO home_id (8)	Epoch ( 11 / 150)	 train_loss: 0.33	train_acc (balanced): 0.90		eval_acc (balanced): 0.86	
+2022-07-01 13:45:36 runtime_logs INFO home_id (8)	Epoch ( 12 / 150)	 train_loss: 0.32	train_acc (balanced): 0.90		eval_acc (balanced): 0.86	
+2022-07-01 13:45:36 runtime_logs INFO home_id (8)	Epoch ( 13 / 150)	 train_loss: 0.32	train_acc (balanced): 0.90		eval_acc (balanced): 0.86	
+2022-07-01 13:45:36 runtime_logs INFO home_id (8)	Epoch ( 14 / 150)	 train_loss: 0.31	train_acc (balanced): 0.89		eval_acc (balanced): 0.86	
+2022-07-01 13:45:36 runtime_logs INFO home_id (8)	Epoch ( 15 / 150)	 train_loss: 0.31	train_acc (balanced): 0.89		eval_acc (balanced): 0.85	
+2022-07-01 13:45:36 runtime_logs INFO home_id (8)	Epoch ( 16 / 150)	 train_loss: 0.31	train_acc (balanced): 0.89		eval_acc (balanced): 0.86	
+2022-07-01 13:45:36 runtime_logs INFO home_id (8)	Epoch ( 17 / 150)	 train_loss: 0.30	train_acc (balanced): 0.89		eval_acc (balanced): 0.86	
+2022-07-01 13:45:36 runtime_logs INFO home_id (8)	Epoch ( 18 / 150)	 train_loss: 0.30	train_acc (balanced): 0.89		eval_acc (balanced): 0.86	
+2022-07-01 13:45:36 runtime_logs INFO home_id (8)	Epoch ( 19 / 150)	 train_loss: 0.30	train_acc (balanced): 0.89		eval_acc (balanced): 0.86	
+2022-07-01 13:45:37 runtime_logs INFO home_id (8)	Epoch ( 20 / 150)	 train_loss: 0.29	train_acc (balanced): 0.89		eval_acc (balanced): 0.86	
+2022-07-01 13:45:37 runtime_logs INFO home_id (8)	Epoch ( 21 / 150)	 train_loss: 0.29	train_acc (balanced): 0.89		eval_acc (balanced): 0.86	
+2022-07-01 13:45:37 runtime_logs INFO home_id (8)	Epoch ( 22 / 150)	 train_loss: 0.29	train_acc (balanced): 0.89		eval_acc (balanced): 0.86	
+2022-07-01 13:45:37 runtime_logs INFO home_id (8)	Epoch ( 23 / 150)	 train_loss: 0.28	train_acc (balanced): 0.89		eval_acc (balanced): 0.86	
+2022-07-01 13:45:37 runtime_logs INFO home_id (8)	Epoch ( 24 / 150)	 train_loss: 0.28	train_acc (balanced): 0.89		eval_acc (balanced): 0.86	
+2022-07-01 13:45:37 runtime_logs INFO home_id (8)	Epoch ( 25 / 150)	 train_loss: 0.28	train_acc (balanced): 0.90		eval_acc (balanced): 0.86	
+2022-07-01 13:45:37 runtime_logs INFO home_id (8)	Epoch ( 26 / 150)	 train_loss: 0.28	train_acc (balanced): 0.90		eval_acc (balanced): 0.86	
+2022-07-01 13:45:37 runtime_logs INFO home_id (8)	Epoch ( 27 / 150)	 train_loss: 0.27	train_acc (balanced): 0.90		eval_acc (balanced): 0.86	
+2022-07-01 13:45:37 runtime_logs INFO home_id (8)	Epoch ( 28 / 150)	 train_loss: 0.27	train_acc (balanced): 0.90		eval_acc (balanced): 0.86	
+2022-07-01 13:45:38 runtime_logs INFO home_id (8)	Epoch ( 29 / 150)	 train_loss: 0.27	train_acc (balanced): 0.90		eval_acc (balanced): 0.86	
+2022-07-01 13:45:38 runtime_logs INFO home_id (8)	Epoch ( 30 / 150)	 train_loss: 0.27	train_acc (balanced): 0.90		eval_acc (balanced): 0.86	
+2022-07-01 13:45:38 runtime_logs INFO home_id (8)	Epoch ( 31 / 150)	 train_loss: 0.26	train_acc (balanced): 0.90		eval_acc (balanced): 0.86	
+2022-07-01 13:45:38 runtime_logs INFO Early stopping the training due to no change in validation accuracies
+2022-07-01 13:45:38 runtime_logs INFO Sequential(
+  (0): Linear(in_features=5, out_features=128, bias=True)
+  (1): ReLU()
+  (2): Linear(in_features=128, out_features=3, bias=True)
+  (3): ReLU()
+)
+2022-07-01 13:45:38 runtime_logs INFO Training the model for home 9 with datasize 202
+2022-07-01 13:45:38 runtime_logs INFO home_id (9)	Epoch (  1 / 150)	 train_loss: 0.94	train_acc (balanced): 0.62		eval_acc (balanced): 0.75	
+2022-07-01 13:45:38 runtime_logs INFO home_id (9)	Epoch (  2 / 150)	 train_loss: 0.68	train_acc (balanced): 0.81		eval_acc (balanced): 0.75	
+2022-07-01 13:45:38 runtime_logs INFO home_id (9)	Epoch (  3 / 150)	 train_loss: 0.63	train_acc (balanced): 0.81		eval_acc (balanced): 0.75	
+2022-07-01 13:45:38 runtime_logs INFO home_id (9)	Epoch (  4 / 150)	 train_loss: 0.62	train_acc (balanced): 0.81		eval_acc (balanced): 0.75	
+2022-07-01 13:45:38 runtime_logs INFO home_id (9)	Epoch (  5 / 150)	 train_loss: 0.60	train_acc (balanced): 0.81		eval_acc (balanced): 0.75	
+2022-07-01 13:45:38 runtime_logs INFO home_id (9)	Epoch (  6 / 150)	 train_loss: 0.60	train_acc (balanced): 0.81		eval_acc (balanced): 0.75	
+2022-07-01 13:45:38 runtime_logs INFO home_id (9)	Epoch (  7 / 150)	 train_loss: 0.59	train_acc (balanced): 0.81		eval_acc (balanced): 0.75	
+2022-07-01 13:45:38 runtime_logs INFO home_id (9)	Epoch (  8 / 150)	 train_loss: 0.58	train_acc (balanced): 0.81		eval_acc (balanced): 0.75	
+2022-07-01 13:45:39 runtime_logs INFO home_id (9)	Epoch (  9 / 150)	 train_loss: 0.58	train_acc (balanced): 0.81		eval_acc (balanced): 0.75	
+2022-07-01 13:45:39 runtime_logs INFO home_id (9)	Epoch ( 10 / 150)	 train_loss: 0.57	train_acc (balanced): 0.81		eval_acc (balanced): 0.75	
+2022-07-01 13:45:39 runtime_logs INFO home_id (9)	Epoch ( 11 / 150)	 train_loss: 0.57	train_acc (balanced): 0.81		eval_acc (balanced): 0.75	
+2022-07-01 13:45:39 runtime_logs INFO home_id (9)	Epoch ( 12 / 150)	 train_loss: 0.56	train_acc (balanced): 0.81		eval_acc (balanced): 0.75	
+2022-07-01 13:45:39 runtime_logs INFO home_id (9)	Epoch ( 13 / 150)	 train_loss: 0.56	train_acc (balanced): 0.81		eval_acc (balanced): 0.75	
+2022-07-01 13:45:39 runtime_logs INFO home_id (9)	Epoch ( 14 / 150)	 train_loss: 0.55	train_acc (balanced): 0.81		eval_acc (balanced): 0.75	
+2022-07-01 13:45:39 runtime_logs INFO home_id (9)	Epoch ( 15 / 150)	 train_loss: 0.55	train_acc (balanced): 0.81		eval_acc (balanced): 0.75	
+2022-07-01 13:45:39 runtime_logs INFO home_id (9)	Epoch ( 16 / 150)	 train_loss: 0.55	train_acc (balanced): 0.81		eval_acc (balanced): 0.75	
+2022-07-01 13:45:39 runtime_logs INFO home_id (9)	Epoch ( 17 / 150)	 train_loss: 0.54	train_acc (balanced): 0.81		eval_acc (balanced): 0.75	
+2022-07-01 13:45:39 runtime_logs INFO home_id (9)	Epoch ( 18 / 150)	 train_loss: 0.54	train_acc (balanced): 0.81		eval_acc (balanced): 0.75	
+2022-07-01 13:45:39 runtime_logs INFO home_id (9)	Epoch ( 19 / 150)	 train_loss: 0.54	train_acc (balanced): 0.81		eval_acc (balanced): 0.75	
+2022-07-01 13:45:39 runtime_logs INFO home_id (9)	Epoch ( 20 / 150)	 train_loss: 0.53	train_acc (balanced): 0.81		eval_acc (balanced): 0.75	
+2022-07-01 13:45:40 runtime_logs INFO home_id (9)	Epoch ( 21 / 150)	 train_loss: 0.53	train_acc (balanced): 0.81		eval_acc (balanced): 0.75	
+2022-07-01 13:45:40 runtime_logs INFO home_id (9)	Epoch ( 22 / 150)	 train_loss: 0.53	train_acc (balanced): 0.81		eval_acc (balanced): 0.75	
+2022-07-01 13:45:40 runtime_logs INFO home_id (9)	Epoch ( 23 / 150)	 train_loss: 0.53	train_acc (balanced): 0.81		eval_acc (balanced): 0.75	
+2022-07-01 13:45:40 runtime_logs INFO home_id (9)	Epoch ( 24 / 150)	 train_loss: 0.52	train_acc (balanced): 0.81		eval_acc (balanced): 0.75	
+2022-07-01 13:45:40 runtime_logs INFO home_id (9)	Epoch ( 25 / 150)	 train_loss: 0.52	train_acc (balanced): 0.81		eval_acc (balanced): 0.75	
+2022-07-01 13:45:40 runtime_logs INFO home_id (9)	Epoch ( 26 / 150)	 train_loss: 0.52	train_acc (balanced): 0.81		eval_acc (balanced): 0.75	
+2022-07-01 13:45:40 runtime_logs INFO home_id (9)	Epoch ( 27 / 150)	 train_loss: 0.52	train_acc (balanced): 0.82		eval_acc (balanced): 0.75	
+2022-07-01 13:45:40 runtime_logs INFO home_id (9)	Epoch ( 28 / 150)	 train_loss: 0.51	train_acc (balanced): 0.82		eval_acc (balanced): 0.75	
+2022-07-01 13:45:40 runtime_logs INFO home_id (9)	Epoch ( 29 / 150)	 train_loss: 0.51	train_acc (balanced): 0.82		eval_acc (balanced): 0.75	
+2022-07-01 13:45:40 runtime_logs INFO home_id (9)	Epoch ( 30 / 150)	 train_loss: 0.51	train_acc (balanced): 0.82		eval_acc (balanced): 0.75	
+2022-07-01 13:45:40 runtime_logs INFO home_id (9)	Epoch ( 31 / 150)	 train_loss: 0.50	train_acc (balanced): 0.82		eval_acc (balanced): 0.75	
+2022-07-01 13:45:40 runtime_logs INFO Early stopping the training due to no change in validation accuracies
+2022-07-01 13:45:40 runtime_logs INFO Sequential(
+  (0): Linear(in_features=5, out_features=128, bias=True)
+  (1): ReLU()
+  (2): Linear(in_features=128, out_features=3, bias=True)
+  (3): ReLU()
+)
+2022-07-01 13:45:40 runtime_logs INFO Training the model for home 10 with datasize 204
+2022-07-01 13:45:40 runtime_logs INFO home_id (10)	Epoch (  1 / 150)	 train_loss: 1.03	train_acc (balanced): 0.52		eval_acc (balanced): 0.69	
+2022-07-01 13:45:41 runtime_logs INFO home_id (10)	Epoch (  2 / 150)	 train_loss: 0.94	train_acc (balanced): 0.60		eval_acc (balanced): 0.69	
+2022-07-01 13:45:41 runtime_logs INFO home_id (10)	Epoch (  3 / 150)	 train_loss: 0.91	train_acc (balanced): 0.60		eval_acc (balanced): 0.71	
+2022-07-01 13:45:41 runtime_logs INFO home_id (10)	Epoch (  4 / 150)	 train_loss: 0.88	train_acc (balanced): 0.60		eval_acc (balanced): 0.71	
+2022-07-01 13:45:41 runtime_logs INFO home_id (10)	Epoch (  5 / 150)	 train_loss: 0.87	train_acc (balanced): 0.60		eval_acc (balanced): 0.71	
+2022-07-01 13:45:41 runtime_logs INFO home_id (10)	Epoch (  6 / 150)	 train_loss: 0.86	train_acc (balanced): 0.61		eval_acc (balanced): 0.71	
+2022-07-01 13:45:41 runtime_logs INFO home_id (10)	Epoch (  7 / 150)	 train_loss: 0.86	train_acc (balanced): 0.62		eval_acc (balanced): 0.71	
+2022-07-01 13:45:41 runtime_logs INFO home_id (10)	Epoch (  8 / 150)	 train_loss: 0.85	train_acc (balanced): 0.61		eval_acc (balanced): 0.71	
+2022-07-01 13:45:41 runtime_logs INFO home_id (10)	Epoch (  9 / 150)	 train_loss: 0.85	train_acc (balanced): 0.62		eval_acc (balanced): 0.71	
+2022-07-01 13:45:41 runtime_logs INFO home_id (10)	Epoch ( 10 / 150)	 train_loss: 0.84	train_acc (balanced): 0.62		eval_acc (balanced): 0.71	
+2022-07-01 13:45:41 runtime_logs INFO home_id (10)	Epoch ( 11 / 150)	 train_loss: 0.84	train_acc (balanced): 0.63		eval_acc (balanced): 0.71	
+2022-07-01 13:45:41 runtime_logs INFO home_id (10)	Epoch ( 12 / 150)	 train_loss: 0.84	train_acc (balanced): 0.64		eval_acc (balanced): 0.71	
+2022-07-01 13:45:41 runtime_logs INFO home_id (10)	Epoch ( 13 / 150)	 train_loss: 0.83	train_acc (balanced): 0.64		eval_acc (balanced): 0.71	
+2022-07-01 13:45:42 runtime_logs INFO home_id (10)	Epoch ( 14 / 150)	 train_loss: 0.83	train_acc (balanced): 0.64		eval_acc (balanced): 0.71	
+2022-07-01 13:45:42 runtime_logs INFO home_id (10)	Epoch ( 15 / 150)	 train_loss: 0.83	train_acc (balanced): 0.64		eval_acc (balanced): 0.71	
+2022-07-01 13:45:42 runtime_logs INFO home_id (10)	Epoch ( 16 / 150)	 train_loss: 0.82	train_acc (balanced): 0.64		eval_acc (balanced): 0.71	
+2022-07-01 13:45:42 runtime_logs INFO home_id (10)	Epoch ( 17 / 150)	 train_loss: 0.82	train_acc (balanced): 0.63		eval_acc (balanced): 0.71	
+2022-07-01 13:45:42 runtime_logs INFO home_id (10)	Epoch ( 18 / 150)	 train_loss: 0.81	train_acc (balanced): 0.63		eval_acc (balanced): 0.71	
+2022-07-01 13:45:42 runtime_logs INFO home_id (10)	Epoch ( 19 / 150)	 train_loss: 0.81	train_acc (balanced): 0.64		eval_acc (balanced): 0.69	
+2022-07-01 13:45:42 runtime_logs INFO home_id (10)	Epoch ( 20 / 150)	 train_loss: 0.81	train_acc (balanced): 0.64		eval_acc (balanced): 0.69	
+2022-07-01 13:45:42 runtime_logs INFO home_id (10)	Epoch ( 21 / 150)	 train_loss: 0.80	train_acc (balanced): 0.64		eval_acc (balanced): 0.69	
+2022-07-01 13:45:42 runtime_logs INFO home_id (10)	Epoch ( 22 / 150)	 train_loss: 0.80	train_acc (balanced): 0.64		eval_acc (balanced): 0.69	
+2022-07-01 13:45:42 runtime_logs INFO home_id (10)	Epoch ( 23 / 150)	 train_loss: 0.80	train_acc (balanced): 0.65		eval_acc (balanced): 0.69	
+2022-07-01 13:45:43 runtime_logs INFO home_id (10)	Epoch ( 24 / 150)	 train_loss: 0.79	train_acc (balanced): 0.65		eval_acc (balanced): 0.69	
+2022-07-01 13:45:43 runtime_logs INFO home_id (10)	Epoch ( 25 / 150)	 train_loss: 0.79	train_acc (balanced): 0.65		eval_acc (balanced): 0.69	
+2022-07-01 13:45:43 runtime_logs INFO home_id (10)	Epoch ( 26 / 150)	 train_loss: 0.79	train_acc (balanced): 0.65		eval_acc (balanced): 0.69	
+2022-07-01 13:45:43 runtime_logs INFO home_id (10)	Epoch ( 27 / 150)	 train_loss: 0.79	train_acc (balanced): 0.65		eval_acc (balanced): 0.69	
+2022-07-01 13:45:43 runtime_logs INFO home_id (10)	Epoch ( 28 / 150)	 train_loss: 0.78	train_acc (balanced): 0.65		eval_acc (balanced): 0.69	
+2022-07-01 13:45:43 runtime_logs INFO home_id (10)	Epoch ( 29 / 150)	 train_loss: 0.78	train_acc (balanced): 0.65		eval_acc (balanced): 0.69	
+2022-07-01 13:45:43 runtime_logs INFO home_id (10)	Epoch ( 30 / 150)	 train_loss: 0.78	train_acc (balanced): 0.66		eval_acc (balanced): 0.69	
+2022-07-01 13:45:43 runtime_logs INFO home_id (10)	Epoch ( 31 / 150)	 train_loss: 0.77	train_acc (balanced): 0.66		eval_acc (balanced): 0.69	
+2022-07-01 13:45:43 runtime_logs INFO home_id (10)	Epoch ( 32 / 150)	 train_loss: 0.77	train_acc (balanced): 0.67		eval_acc (balanced): 0.69	
+2022-07-01 13:45:44 runtime_logs INFO home_id (10)	Epoch ( 33 / 150)	 train_loss: 0.77	train_acc (balanced): 0.67		eval_acc (balanced): 0.69	
+2022-07-01 13:45:44 runtime_logs INFO Early stopping the training due to no change in validation accuracies
+2022-07-01 13:45:44 runtime_logs INFO Sequential(
+  (0): Linear(in_features=5, out_features=128, bias=True)
+  (1): ReLU()
+  (2): Linear(in_features=128, out_features=3, bias=True)
+  (3): ReLU()
+)
+2022-07-01 13:45:44 runtime_logs INFO Training the model for home 11 with datasize 319
+2022-07-01 13:45:44 runtime_logs INFO home_id (11)	Epoch (  1 / 150)	 train_loss: 0.99	train_acc (balanced): 0.43		eval_acc (balanced): 0.91	
+2022-07-01 13:45:44 runtime_logs INFO home_id (11)	Epoch (  2 / 150)	 train_loss: 0.75	train_acc (balanced): 0.75		eval_acc (balanced): 0.91	
+2022-07-01 13:45:44 runtime_logs INFO home_id (11)	Epoch (  3 / 150)	 train_loss: 0.70	train_acc (balanced): 0.74		eval_acc (balanced): 0.91	
+2022-07-01 13:45:44 runtime_logs INFO home_id (11)	Epoch (  4 / 150)	 train_loss: 0.68	train_acc (balanced): 0.75		eval_acc (balanced): 0.91	
+2022-07-01 13:45:44 runtime_logs INFO home_id (11)	Epoch (  5 / 150)	 train_loss: 0.66	train_acc (balanced): 0.75		eval_acc (balanced): 0.91	
+2022-07-01 13:45:44 runtime_logs INFO home_id (11)	Epoch (  6 / 150)	 train_loss: 0.65	train_acc (balanced): 0.76		eval_acc (balanced): 0.91	
+2022-07-01 13:45:45 runtime_logs INFO home_id (11)	Epoch (  7 / 150)	 train_loss: 0.64	train_acc (balanced): 0.76		eval_acc (balanced): 0.91	
+2022-07-01 13:45:45 runtime_logs INFO home_id (11)	Epoch (  8 / 150)	 train_loss: 0.63	train_acc (balanced): 0.76		eval_acc (balanced): 0.91	
+2022-07-01 13:45:45 runtime_logs INFO home_id (11)	Epoch (  9 / 150)	 train_loss: 0.63	train_acc (balanced): 0.76		eval_acc (balanced): 0.91	
+2022-07-01 13:45:45 runtime_logs INFO home_id (11)	Epoch ( 10 / 150)	 train_loss: 0.62	train_acc (balanced): 0.76		eval_acc (balanced): 0.91	
+2022-07-01 13:45:45 runtime_logs INFO home_id (11)	Epoch ( 11 / 150)	 train_loss: 0.62	train_acc (balanced): 0.76		eval_acc (balanced): 0.91	
+2022-07-01 13:45:45 runtime_logs INFO home_id (11)	Epoch ( 12 / 150)	 train_loss: 0.61	train_acc (balanced): 0.76		eval_acc (balanced): 0.91	
+2022-07-01 13:45:45 runtime_logs INFO home_id (11)	Epoch ( 13 / 150)	 train_loss: 0.61	train_acc (balanced): 0.76		eval_acc (balanced): 0.91	
+2022-07-01 13:45:46 runtime_logs INFO home_id (11)	Epoch ( 14 / 150)	 train_loss: 0.60	train_acc (balanced): 0.76		eval_acc (balanced): 0.91	
+2022-07-01 13:45:46 runtime_logs INFO home_id (11)	Epoch ( 15 / 150)	 train_loss: 0.60	train_acc (balanced): 0.76		eval_acc (balanced): 0.91	
+2022-07-01 13:45:46 runtime_logs INFO home_id (11)	Epoch ( 16 / 150)	 train_loss: 0.60	train_acc (balanced): 0.76		eval_acc (balanced): 0.91	
+2022-07-01 13:45:46 runtime_logs INFO home_id (11)	Epoch ( 17 / 150)	 train_loss: 0.60	train_acc (balanced): 0.76		eval_acc (balanced): 0.91	
+2022-07-01 13:45:46 runtime_logs INFO home_id (11)	Epoch ( 18 / 150)	 train_loss: 0.59	train_acc (balanced): 0.76		eval_acc (balanced): 0.91	
+2022-07-01 13:45:46 runtime_logs INFO home_id (11)	Epoch ( 19 / 150)	 train_loss: 0.59	train_acc (balanced): 0.76		eval_acc (balanced): 0.91	
+2022-07-01 13:45:46 runtime_logs INFO home_id (11)	Epoch ( 20 / 150)	 train_loss: 0.59	train_acc (balanced): 0.76		eval_acc (balanced): 0.91	
+2022-07-01 13:45:46 runtime_logs INFO home_id (11)	Epoch ( 21 / 150)	 train_loss: 0.59	train_acc (balanced): 0.76		eval_acc (balanced): 0.91	
+2022-07-01 13:45:47 runtime_logs INFO home_id (11)	Epoch ( 22 / 150)	 train_loss: 0.58	train_acc (balanced): 0.76		eval_acc (balanced): 0.91	
+2022-07-01 13:45:47 runtime_logs INFO home_id (11)	Epoch ( 23 / 150)	 train_loss: 0.58	train_acc (balanced): 0.76		eval_acc (balanced): 0.91	
+2022-07-01 13:45:47 runtime_logs INFO home_id (11)	Epoch ( 24 / 150)	 train_loss: 0.58	train_acc (balanced): 0.76		eval_acc (balanced): 0.91	
+2022-07-01 13:45:47 runtime_logs INFO home_id (11)	Epoch ( 25 / 150)	 train_loss: 0.58	train_acc (balanced): 0.76		eval_acc (balanced): 0.91	
+2022-07-01 13:45:47 runtime_logs INFO home_id (11)	Epoch ( 26 / 150)	 train_loss: 0.58	train_acc (balanced): 0.76		eval_acc (balanced): 0.91	
+2022-07-01 13:45:47 runtime_logs INFO home_id (11)	Epoch ( 27 / 150)	 train_loss: 0.57	train_acc (balanced): 0.76		eval_acc (balanced): 0.91	
+2022-07-01 13:45:47 runtime_logs INFO home_id (11)	Epoch ( 28 / 150)	 train_loss: 0.57	train_acc (balanced): 0.76		eval_acc (balanced): 0.91	
+2022-07-01 13:45:48 runtime_logs INFO home_id (11)	Epoch ( 29 / 150)	 train_loss: 0.57	train_acc (balanced): 0.76		eval_acc (balanced): 0.91	
+2022-07-01 13:45:48 runtime_logs INFO home_id (11)	Epoch ( 30 / 150)	 train_loss: 0.57	train_acc (balanced): 0.76		eval_acc (balanced): 0.91	
+2022-07-01 13:45:48 runtime_logs INFO home_id (11)	Epoch ( 31 / 150)	 train_loss: 0.57	train_acc (balanced): 0.76		eval_acc (balanced): 0.91	
+2022-07-01 13:45:48 runtime_logs INFO Early stopping the training due to no change in validation accuracies
+2022-07-01 13:45:48 runtime_logs INFO Sequential(
+  (0): Linear(in_features=5, out_features=128, bias=True)
+  (1): ReLU()
+  (2): Linear(in_features=128, out_features=3, bias=True)
+  (3): ReLU()
+)
+2022-07-01 13:45:48 runtime_logs INFO Training the model for home 12 with datasize 131
+2022-07-01 13:45:48 runtime_logs INFO home_id (12)	Epoch (  1 / 150)	 train_loss: 0.97	train_acc (balanced): 0.65		eval_acc (balanced): 0.55	
+2022-07-01 13:45:48 runtime_logs INFO home_id (12)	Epoch (  2 / 150)	 train_loss: 0.89	train_acc (balanced): 0.66		eval_acc (balanced): 0.55	
+2022-07-01 13:45:48 runtime_logs INFO home_id (12)	Epoch (  3 / 150)	 train_loss: 0.86	train_acc (balanced): 0.66		eval_acc (balanced): 0.55	
+2022-07-01 13:45:48 runtime_logs INFO home_id (12)	Epoch (  4 / 150)	 train_loss: 0.85	train_acc (balanced): 0.66		eval_acc (balanced): 0.55	
+2022-07-01 13:45:48 runtime_logs INFO home_id (12)	Epoch (  5 / 150)	 train_loss: 0.84	train_acc (balanced): 0.66		eval_acc (balanced): 0.55	
+2022-07-01 13:45:48 runtime_logs INFO home_id (12)	Epoch (  6 / 150)	 train_loss: 0.84	train_acc (balanced): 0.66		eval_acc (balanced): 0.55	
+2022-07-01 13:45:48 runtime_logs INFO home_id (12)	Epoch (  7 / 150)	 train_loss: 0.83	train_acc (balanced): 0.66		eval_acc (balanced): 0.55	
+2022-07-01 13:45:48 runtime_logs INFO home_id (12)	Epoch (  8 / 150)	 train_loss: 0.83	train_acc (balanced): 0.66		eval_acc (balanced): 0.55	
+2022-07-01 13:45:48 runtime_logs INFO home_id (12)	Epoch (  9 / 150)	 train_loss: 0.82	train_acc (balanced): 0.66		eval_acc (balanced): 0.55	
+2022-07-01 13:45:48 runtime_logs INFO home_id (12)	Epoch ( 10 / 150)	 train_loss: 0.82	train_acc (balanced): 0.66		eval_acc (balanced): 0.55	
+2022-07-01 13:45:48 runtime_logs INFO home_id (12)	Epoch ( 11 / 150)	 train_loss: 0.81	train_acc (balanced): 0.66		eval_acc (balanced): 0.52	
+2022-07-01 13:45:48 runtime_logs INFO home_id (12)	Epoch ( 12 / 150)	 train_loss: 0.81	train_acc (balanced): 0.66		eval_acc (balanced): 0.52	
+2022-07-01 13:45:49 runtime_logs INFO home_id (12)	Epoch ( 13 / 150)	 train_loss: 0.81	train_acc (balanced): 0.66		eval_acc (balanced): 0.52	
+2022-07-01 13:45:49 runtime_logs INFO home_id (12)	Epoch ( 14 / 150)	 train_loss: 0.81	train_acc (balanced): 0.66		eval_acc (balanced): 0.52	
+2022-07-01 13:45:49 runtime_logs INFO home_id (12)	Epoch ( 15 / 150)	 train_loss: 0.80	train_acc (balanced): 0.66		eval_acc (balanced): 0.52	
+2022-07-01 13:45:49 runtime_logs INFO home_id (12)	Epoch ( 16 / 150)	 train_loss: 0.80	train_acc (balanced): 0.66		eval_acc (balanced): 0.48	
+2022-07-01 13:45:49 runtime_logs INFO home_id (12)	Epoch ( 17 / 150)	 train_loss: 0.80	train_acc (balanced): 0.66		eval_acc (balanced): 0.48	
+2022-07-01 13:45:49 runtime_logs INFO home_id (12)	Epoch ( 18 / 150)	 train_loss: 0.80	train_acc (balanced): 0.67		eval_acc (balanced): 0.48	
+2022-07-01 13:45:49 runtime_logs INFO home_id (12)	Epoch ( 19 / 150)	 train_loss: 0.79	train_acc (balanced): 0.66		eval_acc (balanced): 0.48	
+2022-07-01 13:45:49 runtime_logs INFO home_id (12)	Epoch ( 20 / 150)	 train_loss: 0.79	train_acc (balanced): 0.67		eval_acc (balanced): 0.48	
+2022-07-01 13:45:49 runtime_logs INFO home_id (12)	Epoch ( 21 / 150)	 train_loss: 0.79	train_acc (balanced): 0.67		eval_acc (balanced): 0.48	
+2022-07-01 13:45:49 runtime_logs INFO home_id (12)	Epoch ( 22 / 150)	 train_loss: 0.79	train_acc (balanced): 0.67		eval_acc (balanced): 0.48	
+2022-07-01 13:45:49 runtime_logs INFO home_id (12)	Epoch ( 23 / 150)	 train_loss: 0.79	train_acc (balanced): 0.67		eval_acc (balanced): 0.48	
+2022-07-01 13:45:49 runtime_logs INFO home_id (12)	Epoch ( 24 / 150)	 train_loss: 0.79	train_acc (balanced): 0.67		eval_acc (balanced): 0.48	
+2022-07-01 13:45:49 runtime_logs INFO home_id (12)	Epoch ( 25 / 150)	 train_loss: 0.78	train_acc (balanced): 0.67		eval_acc (balanced): 0.48	
+2022-07-01 13:45:49 runtime_logs INFO home_id (12)	Epoch ( 26 / 150)	 train_loss: 0.78	train_acc (balanced): 0.67		eval_acc (balanced): 0.48	
+2022-07-01 13:45:49 runtime_logs INFO home_id (12)	Epoch ( 27 / 150)	 train_loss: 0.78	train_acc (balanced): 0.67		eval_acc (balanced): 0.48	
+2022-07-01 13:45:49 runtime_logs INFO home_id (12)	Epoch ( 28 / 150)	 train_loss: 0.78	train_acc (balanced): 0.67		eval_acc (balanced): 0.48	
+2022-07-01 13:45:49 runtime_logs INFO home_id (12)	Epoch ( 29 / 150)	 train_loss: 0.78	train_acc (balanced): 0.67		eval_acc (balanced): 0.48	
+2022-07-01 13:45:49 runtime_logs INFO home_id (12)	Epoch ( 30 / 150)	 train_loss: 0.77	train_acc (balanced): 0.67		eval_acc (balanced): 0.48	
+2022-07-01 13:45:49 runtime_logs INFO home_id (12)	Epoch ( 31 / 150)	 train_loss: 0.77	train_acc (balanced): 0.67		eval_acc (balanced): 0.48	
+2022-07-01 13:45:49 runtime_logs INFO Early stopping the training due to no change in validation accuracies
+2022-07-01 13:45:50 runtime_logs INFO Sequential(
+  (0): Linear(in_features=5, out_features=128, bias=True)
+  (1): ReLU()
+  (2): Linear(in_features=128, out_features=3, bias=True)
+  (3): ReLU()
+)
+2022-07-01 13:45:50 runtime_logs INFO Training the model for home 13 with datasize 158
+2022-07-01 13:45:50 runtime_logs INFO home_id (13)	Epoch (  1 / 150)	 train_loss: 0.92	train_acc (balanced): 0.66		eval_acc (balanced): 0.70	
+2022-07-01 13:45:50 runtime_logs INFO home_id (13)	Epoch (  2 / 150)	 train_loss: 0.80	train_acc (balanced): 0.67		eval_acc (balanced): 0.70	
+2022-07-01 13:45:50 runtime_logs INFO home_id (13)	Epoch (  3 / 150)	 train_loss: 0.74	train_acc (balanced): 0.66		eval_acc (balanced): 0.65	
+2022-07-01 13:45:50 runtime_logs INFO home_id (13)	Epoch (  4 / 150)	 train_loss: 0.66	train_acc (balanced): 0.75		eval_acc (balanced): 0.70	
+2022-07-01 13:45:50 runtime_logs INFO home_id (13)	Epoch (  5 / 150)	 train_loss: 0.59	train_acc (balanced): 0.78		eval_acc (balanced): 0.70	
+2022-07-01 13:45:50 runtime_logs INFO home_id (13)	Epoch (  6 / 150)	 train_loss: 0.56	train_acc (balanced): 0.77		eval_acc (balanced): 0.70	
+2022-07-01 13:45:50 runtime_logs INFO home_id (13)	Epoch (  7 / 150)	 train_loss: 0.54	train_acc (balanced): 0.77		eval_acc (balanced): 0.70	
+2022-07-01 13:45:50 runtime_logs INFO home_id (13)	Epoch (  8 / 150)	 train_loss: 0.52	train_acc (balanced): 0.77		eval_acc (balanced): 0.70	
+2022-07-01 13:45:50 runtime_logs INFO home_id (13)	Epoch (  9 / 150)	 train_loss: 0.51	train_acc (balanced): 0.77		eval_acc (balanced): 0.70	
+2022-07-01 13:45:50 runtime_logs INFO home_id (13)	Epoch ( 10 / 150)	 train_loss: 0.50	train_acc (balanced): 0.77		eval_acc (balanced): 0.70	
+2022-07-01 13:45:50 runtime_logs INFO home_id (13)	Epoch ( 11 / 150)	 train_loss: 0.49	train_acc (balanced): 0.77		eval_acc (balanced): 0.70	
+2022-07-01 13:45:50 runtime_logs INFO home_id (13)	Epoch ( 12 / 150)	 train_loss: 0.49	train_acc (balanced): 0.77		eval_acc (balanced): 0.68	
+2022-07-01 13:45:50 runtime_logs INFO home_id (13)	Epoch ( 13 / 150)	 train_loss: 0.48	train_acc (balanced): 0.77		eval_acc (balanced): 0.68	
+2022-07-01 13:45:50 runtime_logs INFO home_id (13)	Epoch ( 14 / 150)	 train_loss: 0.48	train_acc (balanced): 0.78		eval_acc (balanced): 0.68	
+2022-07-01 13:45:50 runtime_logs INFO home_id (13)	Epoch ( 15 / 150)	 train_loss: 0.47	train_acc (balanced): 0.78		eval_acc (balanced): 0.68	
+2022-07-01 13:45:51 runtime_logs INFO home_id (13)	Epoch ( 16 / 150)	 train_loss: 0.47	train_acc (balanced): 0.78		eval_acc (balanced): 0.68	
+2022-07-01 13:45:51 runtime_logs INFO home_id (13)	Epoch ( 17 / 150)	 train_loss: 0.46	train_acc (balanced): 0.79		eval_acc (balanced): 0.65	
+2022-07-01 13:45:51 runtime_logs INFO home_id (13)	Epoch ( 18 / 150)	 train_loss: 0.46	train_acc (balanced): 0.79		eval_acc (balanced): 0.65	
+2022-07-01 13:45:51 runtime_logs INFO home_id (13)	Epoch ( 19 / 150)	 train_loss: 0.45	train_acc (balanced): 0.78		eval_acc (balanced): 0.65	
+2022-07-01 13:45:51 runtime_logs INFO home_id (13)	Epoch ( 20 / 150)	 train_loss: 0.45	train_acc (balanced): 0.78		eval_acc (balanced): 0.65	
+2022-07-01 13:45:51 runtime_logs INFO home_id (13)	Epoch ( 21 / 150)	 train_loss: 0.45	train_acc (balanced): 0.78		eval_acc (balanced): 0.65	
+2022-07-01 13:45:51 runtime_logs INFO home_id (13)	Epoch ( 22 / 150)	 train_loss: 0.44	train_acc (balanced): 0.78		eval_acc (balanced): 0.65	
+2022-07-01 13:45:51 runtime_logs INFO home_id (13)	Epoch ( 23 / 150)	 train_loss: 0.44	train_acc (balanced): 0.79		eval_acc (balanced): 0.65	
+2022-07-01 13:45:51 runtime_logs INFO home_id (13)	Epoch ( 24 / 150)	 train_loss: 0.44	train_acc (balanced): 0.79		eval_acc (balanced): 0.65	
+2022-07-01 13:45:51 runtime_logs INFO home_id (13)	Epoch ( 25 / 150)	 train_loss: 0.44	train_acc (balanced): 0.80		eval_acc (balanced): 0.65	
+2022-07-01 13:45:51 runtime_logs INFO home_id (13)	Epoch ( 26 / 150)	 train_loss: 0.43	train_acc (balanced): 0.80		eval_acc (balanced): 0.65	
+2022-07-01 13:45:51 runtime_logs INFO home_id (13)	Epoch ( 27 / 150)	 train_loss: 0.43	train_acc (balanced): 0.80		eval_acc (balanced): 0.65	
+2022-07-01 13:45:51 runtime_logs INFO home_id (13)	Epoch ( 28 / 150)	 train_loss: 0.43	train_acc (balanced): 0.80		eval_acc (balanced): 0.65	
+2022-07-01 13:45:51 runtime_logs INFO home_id (13)	Epoch ( 29 / 150)	 train_loss: 0.43	train_acc (balanced): 0.80		eval_acc (balanced): 0.65	
+2022-07-01 13:45:51 runtime_logs INFO home_id (13)	Epoch ( 30 / 150)	 train_loss: 0.42	train_acc (balanced): 0.80		eval_acc (balanced): 0.65	
+2022-07-01 13:45:51 runtime_logs INFO home_id (13)	Epoch ( 31 / 150)	 train_loss: 0.42	train_acc (balanced): 0.80		eval_acc (balanced): 0.65	
+2022-07-01 13:45:51 runtime_logs INFO Early stopping the training due to no change in validation accuracies
+2022-07-01 13:45:52 runtime_logs INFO Sequential(
+  (0): Linear(in_features=5, out_features=128, bias=True)
+  (1): ReLU()
+  (2): Linear(in_features=128, out_features=3, bias=True)
+  (3): ReLU()
+)
+2022-07-01 13:45:52 runtime_logs INFO Training the model for home 14 with datasize 257
+2022-07-01 13:45:52 runtime_logs INFO home_id (14)	Epoch (  1 / 150)	 train_loss: 0.81	train_acc (balanced): 0.75		eval_acc (balanced): 0.92	
+2022-07-01 13:45:52 runtime_logs INFO home_id (14)	Epoch (  2 / 150)	 train_loss: 0.66	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:45:52 runtime_logs INFO home_id (14)	Epoch (  3 / 150)	 train_loss: 0.65	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:45:52 runtime_logs INFO home_id (14)	Epoch (  4 / 150)	 train_loss: 0.64	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:45:52 runtime_logs INFO home_id (14)	Epoch (  5 / 150)	 train_loss: 0.63	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:45:52 runtime_logs INFO home_id (14)	Epoch (  6 / 150)	 train_loss: 0.63	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:45:52 runtime_logs INFO home_id (14)	Epoch (  7 / 150)	 train_loss: 0.62	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:45:52 runtime_logs INFO home_id (14)	Epoch (  8 / 150)	 train_loss: 0.62	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:45:52 runtime_logs INFO home_id (14)	Epoch (  9 / 150)	 train_loss: 0.62	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:45:53 runtime_logs INFO home_id (14)	Epoch ( 10 / 150)	 train_loss: 0.61	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:45:53 runtime_logs INFO home_id (14)	Epoch ( 11 / 150)	 train_loss: 0.61	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:45:53 runtime_logs INFO home_id (14)	Epoch ( 12 / 150)	 train_loss: 0.61	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:45:53 runtime_logs INFO home_id (14)	Epoch ( 13 / 150)	 train_loss: 0.60	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:45:53 runtime_logs INFO home_id (14)	Epoch ( 14 / 150)	 train_loss: 0.60	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:45:53 runtime_logs INFO home_id (14)	Epoch ( 15 / 150)	 train_loss: 0.60	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:45:53 runtime_logs INFO home_id (14)	Epoch ( 16 / 150)	 train_loss: 0.59	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:45:53 runtime_logs INFO home_id (14)	Epoch ( 17 / 150)	 train_loss: 0.59	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:45:53 runtime_logs INFO home_id (14)	Epoch ( 18 / 150)	 train_loss: 0.59	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:45:54 runtime_logs INFO home_id (14)	Epoch ( 19 / 150)	 train_loss: 0.59	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:45:54 runtime_logs INFO home_id (14)	Epoch ( 20 / 150)	 train_loss: 0.58	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:45:54 runtime_logs INFO home_id (14)	Epoch ( 21 / 150)	 train_loss: 0.58	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:45:54 runtime_logs INFO home_id (14)	Epoch ( 22 / 150)	 train_loss: 0.58	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:45:54 runtime_logs INFO home_id (14)	Epoch ( 23 / 150)	 train_loss: 0.57	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:45:54 runtime_logs INFO home_id (14)	Epoch ( 24 / 150)	 train_loss: 0.57	train_acc (balanced): 0.79		eval_acc (balanced): 0.92	
+2022-07-01 13:45:54 runtime_logs INFO home_id (14)	Epoch ( 25 / 150)	 train_loss: 0.57	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:45:54 runtime_logs INFO home_id (14)	Epoch ( 26 / 150)	 train_loss: 0.57	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:45:54 runtime_logs INFO home_id (14)	Epoch ( 27 / 150)	 train_loss: 0.56	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:45:55 runtime_logs INFO home_id (14)	Epoch ( 28 / 150)	 train_loss: 0.56	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:45:55 runtime_logs INFO home_id (14)	Epoch ( 29 / 150)	 train_loss: 0.56	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:45:55 runtime_logs INFO home_id (14)	Epoch ( 30 / 150)	 train_loss: 0.56	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:45:55 runtime_logs INFO home_id (14)	Epoch ( 31 / 150)	 train_loss: 0.55	train_acc (balanced): 0.80		eval_acc (balanced): 0.92	
+2022-07-01 13:45:55 runtime_logs INFO Early stopping the training due to no change in validation accuracies
+2022-07-01 13:45:55 runtime_logs INFO {1: 0.5483870967741935, 2: 0.49019607843137253, 3: 0.6307692307692307, 4: 0.8518518518518519, 5: 0.7962962962962963, 6: 0.42857142857142855, 7: 0.6075949367088608, 8: 0.8591549295774648, 9: 0.7450980392156863, 10: 0.6923076923076923, 11: 0.9125, 12: 0.48484848484848486, 13: 0.65, 14: 0.9230769230769231}
+2022-07-01 13:45:55 runtime_logs INFO The average overall accuracy for all the houses: 0.6871894991735347
