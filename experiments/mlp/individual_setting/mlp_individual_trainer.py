@@ -77,7 +77,6 @@ def train(
             )
 
         feature_size = train_ds.feature_selector.get_feature_size()
-        print(feature_size)
         model = build_mlp_model(
             [feature_size] + config["layers"]
         ).float()
@@ -149,6 +148,7 @@ def train(
                 eval_balanced_acc_avr += eval_balanced_acc * len(samples)
                 total_conf_matrix += eval_conf_matrix
 
+                eval_writer.add_scalar(f"home_id: {home_id}/loss", eval_loss, global_step)
                 eval_writer.add_scalar(f"home_id: {home_id}/accuracy", eval_acc, global_step)
                 eval_writer.add_scalar(f"home_id: {home_id}/balanced accuracy", eval_balanced_acc, global_step)
 
