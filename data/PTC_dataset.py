@@ -1,7 +1,7 @@
 import numpy as np
 from utils import *
 from Feature_selectors.interface import *
-from Feature_selectors.naive_feature_selector import simple_feature_selector
+from Feature_selectors.simple_feature_selector import simple_feature_selector
 from NAhandlers.interface import *
 from NAhandlers.dropping_method import dropping_handler
 from normalizers.interface import *
@@ -60,8 +60,8 @@ class PTC_dataset(Dataset):
         self.columns = self.dataset.columns
 
         # remap the categorical values
-        # self.convert_nominal_numerical()
-        self.convert_labels_nominal()
+        self.convert_nominal_numerical()
+        self.convert_labels_numerical()
 
         # correct the missing values
         if self.train:
@@ -91,20 +91,22 @@ class PTC_dataset(Dataset):
         return self.dataset, self.labels
 
     def convert_nominal_numerical(self):
-        # Todo: Make this part more smart (to detect the nominal features automatically)
         """
         Detect the nominal features in self.labels and self.data and convert them to numerical
         """
-        sex_dict = {key: value for value, key in enumerate(sorted(self.dataset.loc[:, "Sex"].unique()))}
-        self.dataset.loc[:, 'Sex'] = self.dataset.loc[:, "Sex"].map(sex_dict)
-
-        # Convert the datatype of the features
-        self.dataset, self.labels = self.dataset.to_numpy().astype(np.float32), self.labels.to_numpy().astype(np.int64)
+        object_columns = [column for column in self.dataset.columns if self.dataset[column].dtype == 'O']
+        if len(object_columns) == 0: return
+        object_columns = object_columns
+        dummies = []
+        for column in [object_columns]:
+            dummies.append(pd.get_dummies(self.dataset[column]))
+            self.dataset = self.dataset.drop(column, axis='columns')
+        self.dataset = pd.concat([self.dataset, *dummies], axis=1)
 
     def make_data_individual(self, home_id):
         self.dataset = self.dataset[self.dataset["ID"] == home_id]
 
-    def convert_labels_nominal(self):
+    def convert_labels_numerical(self):
         self.labels = self.labels.map({key: value for value, key in enumerate(sorted(self.labels.unique()))})
 
     @staticmethod

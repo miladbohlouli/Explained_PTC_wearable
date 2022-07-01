@@ -1,26 +1,15 @@
-from torch.utils.data import DataLoader
-from models.mlp import *
-from torch.utils.tensorboard import SummaryWriter
-from Feature_selectors.naive_feature_selector import simple_feature_selector
+from Feature_selectors.simple_feature_selector import simple_feature_selector
 from NAhandlers.averaging import averaging_na_handler
 from normalizers.guassian_normalizer import guassian_normalizer
-from data.mlp_data_loader import mlp_dataset_individual
-import numpy as np
-import logging
-from torch.nn import CrossEntropyLoss
-from torch.optim import Adam
 import os
-from utils import evaluate_predictions
-from utils import train_test_split
 import warnings
 warnings.filterwarnings("ignore")
 from ray import tune
 from ray.tune import CLIReporter
 from functools import partial
-from mlp_individual_trainer import train
+from trainers.mlp_overall_trainer import train
 
 if __name__ == '__main__':
-
     config = dict()
     # model parameters
     config["layers"] = tune.grid_search([[128, 3], [256, 3], [128, 128, 3], [128, 256, 3], [256, 256, 3], [128, 128, 128, 3]])
@@ -36,6 +25,7 @@ if __name__ == '__main__':
 
     data_dir = os.path.abspath("../../../data")
     logging_dir = os.path.abspath("")
+    print(logging_dir)
 
     feature_selector = simple_feature_selector()
     na_handler = averaging_na_handler()
@@ -49,8 +39,7 @@ if __name__ == '__main__':
                    logging_dir=logging_dir,
                    feature_selector=feature_selector,
                    na_handler=na_handler,
-                   normalizer=normalizer,
-                   parameter_tuning=True)
+                   normalizer=normalizer)
     result = tune.run(
         func,
         resources_per_trial={"cpu": 8},

@@ -1,9 +1,16 @@
 import pandas as pd
 
 class FeatureSelector:
-    def __init__(self):
+    def __init__(self, include_changing_parameters: bool = False):
         self.label_title = None
-        self.selected_features_list = None
+        self.selected_features_list = []
+        self.include_changing_parameters = include_changing_parameters
+
+
+        if self.include_changing_parameters:
+            print("Adding the unchangings")
+            self.add_unchanging_parameters()
+
 
     def fit(self, dataset):
         """
@@ -20,7 +27,11 @@ class FeatureSelector:
         raise Exception("not implemented")
 
     def get_feature_size(self):
-        if self.selected_features_list is None:
+        if self.selected_features_list is []:
             raise Exception("The model has not been trained yet")
         else:
             return len(self.selected_features_list)
+
+    def add_unchanging_parameters(self):
+        self.selected_features_list += ['Sex', 'Age', 'Height', 'Weight', 'ColdSens', 'ColdExp', 'Workhr',
+                                       'Coffeeintake', 'location']

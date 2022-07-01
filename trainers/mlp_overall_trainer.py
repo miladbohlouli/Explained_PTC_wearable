@@ -1,7 +1,7 @@
 from torch.utils.data import DataLoader
 from models.mlp import *
 from torch.utils.tensorboard import SummaryWriter
-from Feature_selectors.naive_feature_selector import simple_feature_selector
+from Feature_selectors.simple_feature_selector import simple_feature_selector
 from NAhandlers.averaging import averaging_na_handler
 from normalizers.guassian_normalizer import guassian_normalizer
 from data.mlp_data_loader import mlp_dataset_individual
@@ -185,7 +185,7 @@ if __name__ == '__main__':
     config["lr"] = 1e-3
     config["validation_not_improved"] = 30
 
-    data_dir = os.path.abspath("../../../data")
+    data_dir = os.path.abspath("../data")
     logging_dir = os.path.abspath("")
 
     feature_selector = simple_feature_selector()

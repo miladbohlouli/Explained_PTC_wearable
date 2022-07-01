@@ -1,7 +1,7 @@
 from torch.utils.data import DataLoader
 from models.mlp import *
 from torch.utils.tensorboard import SummaryWriter
-from Feature_selectors.naive_feature_selector import simple_feature_selector
+from Feature_selectors.simple_feature_selector import simple_feature_selector
 from NAhandlers.averaging import averaging_na_handler
 from normalizers.guassian_normalizer import guassian_normalizer
 from data.mlp_data_loader import mlp_dataset_individual
@@ -17,7 +17,7 @@ warnings.filterwarnings("ignore")
 from ray import tune
 from ray.tune import CLIReporter
 from functools import partial
-from mlp_overall_trainer import train
+from trainers.mlp_individual_trainer import train
 
 if __name__ == '__main__':
 
@@ -34,8 +34,9 @@ if __name__ == '__main__':
     config["lr"] = tune.grid_search([1e-3, 1e-4, 1e-5])
     config["validation_not_improved"] = 30
 
-    data_dir = os.path.abspath("../../../data")
+    data_dir = os.path.abspath("../../../../data")
     logging_dir = os.path.abspath("")
+    print(logging_dir)
 
     feature_selector = simple_feature_selector()
     na_handler = averaging_na_handler()
@@ -49,7 +50,8 @@ if __name__ == '__main__':
                    logging_dir=logging_dir,
                    feature_selector=feature_selector,
                    na_handler=na_handler,
-                   normalizer=normalizer)
+                   normalizer=normalizer,
+                   parameter_tuning=True)
     result = tune.run(
         func,
         resources_per_trial={"cpu": 8},

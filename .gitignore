@@ -1,6 +1,7 @@
 **.docx
-**__pycache__/
+*/__pycache__/*
 **tensorboard
 **.log
-
-
+**.DS
+*.
+.DS_Store
