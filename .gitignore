@@ -1,2 +1,6 @@
-#.docx
-# *cach*
+**.docx
+**__pycache__/
+**tensorboard
+**.log
+
+
