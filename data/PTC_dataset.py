@@ -8,6 +8,7 @@ from NAhandlers.interface import *
 from NAhandlers.dropping import dropping_handler
 from normalizers.interface import *
 from normalizers.guassian_normalizer import guassian_normalizer
+from samplers.interface import SAMPLING_INTERFACE
 from torch.utils.data import Dataset
 
 
@@ -15,8 +16,9 @@ class PTC_dataset(Dataset):
     def __init__(self,
                  shuffle: bool = True,
                  feature_selector: FeatureSelector = None,
-                 na_handler: NAhandler = None,
-                 normalizer: Normalizer = None,
+                 na_handler: NA_HANDLER_INTERFACE = None,
+                 normalizer: NORMALIZATION_INTERFACE = None,
+                 resampler: SAMPLING_INTERFACE = None,
                  train: bool = True):
         """
         A class to construct the train and test datasets as PyTorch Datasets
@@ -38,6 +40,7 @@ class PTC_dataset(Dataset):
         self.feature_selector = feature_selector
         self.na_handler = na_handler
         self.normalizer = normalizer
+        self.resampler = resampler
         self.shuffle = shuffle
 
     def load_dataset(self, path):
@@ -47,21 +50,29 @@ class PTC_dataset(Dataset):
         else:
             raise Exception("Path need to be provided for loading the dataset")
 
-    def pre_process_dataset(self):
+    def pre_process_dataset(self, logger):
         assert self.dataset is not None
-        # subsampling the original data according to the provided sampler
 
-        # Feature selections
+        logger.info(f"\n{30*'*'}\n"
+                    f"Preprocessing the {'train' if self.train else 'test'} dataset with the following config:\n"
+                    f"feature selector: {self.feature_selector.__class__.__name__}\n"
+                    f"missing value handler: {self.na_handler.__class__.__name__}\n"
+                    f"shuffle: {self.shuffle}\n"
+                    f"over sampling: {self.resampler.__class__.__name__}\n"
+                    f"normalization: {self.normalizer.__class__.__name__}\n"
+                    f"{30*'*'}")
+
         if self.train:
             self.feature_selector.fit(self.dataset)
+        logger.info(
+            f"Selecting the features (number of the features {len(self.feature_selector.selected_features_list)})...")
         self.dataset, self.labels = self.feature_selector.select_features(self.dataset)
         self.columns = self.feature_selector.selected_features_list
 
-        # remap the categorical values
         self.convert_nominal_numerical()
         self.convert_labels_numerical()
 
-        # correct the missing values
+        logger.info(f"Handling the missing values...")
         if self.train:
             self.na_handler.fit(self.dataset)
         self.dataset = self.na_handler.fix(self.dataset)
@@ -71,7 +82,12 @@ class PTC_dataset(Dataset):
             np.random.shuffle(sampler)
             self.dataset = self.dataset.iloc[sampler, :]
 
-        # Normalize the data using the normalizer class
+        logger.info(f"Resampling the dataset to have a balanced dataset (size of dataset: {len(self.dataset)})...")
+        if self.train and self.resampler is not None:
+            self.dataset, self.labels = self.resampler.fit_resample(self.dataset, self.labels)
+            logger.info(f"Dataset size after resampling : {len(self.dataset)}...")
+
+        logger.info(f"Normalizing the dataset...")
         if self.normalizer is not None:
             if self.train:
                 self.normalizer.fit(self.dataset)
