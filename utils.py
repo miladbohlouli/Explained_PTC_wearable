@@ -13,7 +13,8 @@ from NAhandlers.averaging import averaging_na_handler
 from NAhandlers.dropping import dropping_handler
 from NAhandlers.adaptive import  adaptive
 from normalizers.guassian_normalizer import guassian_normalizer
-from samplers.SMOTE import SMOTE
+from samplers.SMOTE import SMOTE_SAMPLER
+from samplers.ADASYN import ADASYN_SAMPLER
 
 
 def train_test_split(path, train_division=0.8):
@@ -61,8 +62,6 @@ def evaluate_predictions(logits, labels, train: bool = True):
     accuracy = accuracy_score(labels, predicted_labels)
     balanced_accuracy = balanced_accuracy_score(labels, predicted_labels)
     if not train:
-        print("predicted:", predicted_labels)
-        print("gt:", labels)
         kohen_kappa = cohen_kappa_score(labels, predicted_labels)
     return accuracy, balanced_accuracy, kohen_kappa
 
@@ -101,34 +100,31 @@ def train_step(
     return train_acc, train_balanced_acc, train_loss.detach().numpy()
 
 
-def get_preprocessing_tools(
-        feature_selector: str,
-        na_handler: str,
-        normlizer: str,
-        resampling: str,
-        config
-    ):
+def get_preprocessing_tools(config):
     fs = None
     na = None
     nor = None
     res = None
-    if feature_selector == "threshold_feature_selector":
+
+    if config["feature_selector"] == "threshold_feature_selector":
         fs = threshold_feature_selector(threshold=config["threshold"])
-    elif feature_selector == "simple_feature_selector":
+    elif config["feature_selector"] == "simple_feature_selector":
         fs = simple_feature_selector()
-    elif feature_selector == "all_feature_selector":
+    elif config["feature_selector"] == "all_feature_selector":
         fs = all_feature_selector()
 
-    if na_handler == "averaging":
+    if config["na_handler"] == "averaging":
         na = averaging_na_handler()
-    elif na_handler == "dropping":
+    elif config["na_handler"] == "dropping":
         na = dropping_handler()
-    elif na_handler == "adaptive":
+    elif config["na_handler"] == "adaptive":
         na = adaptive()
 
-    if normlizer == "guassian_normalizer":
+    if config["normalizer"] == "guassian_normalizer":
         nor = guassian_normalizer()
 
-    if resampling == "SMOTE":
-        res = SMOTE()
+    if config["resampler"] == "SMOTE":
+        res = SMOTE_SAMPLER()
+    elif config["resampler"] == "ADASYN":
+        res = ADASYN_SAMPLER()
     return fs, na, nor, res
