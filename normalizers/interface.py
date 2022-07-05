@@ -1,6 +1,6 @@
 import pandas as pd
 
-class Normalizer:
+class NORMALIZATION_INTERFACE:
     def __init__(self):
         self.mean = None
         self.std = None
