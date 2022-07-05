@@ -1,17 +1,18 @@
-from torch.nn import Linear, ReLU, Sequential, BatchNorm1d
+from torch.nn import Linear, ReLU, Sequential, BatchNorm1d, Dropout
 from utils import *
 
 
 def build_mlp_model(layers: list = [256, 256],
                     activation: str = "Relu",
+                    dropout:float = 0.0,
                     batch_norm: bool = True):
 
     torch_layers = []
-    for inp, out in zip(layers[:-1], layers[1:]):
+    for i, (inp, out) in enumerate(zip(layers[:-1], layers[1:])):
         torch_layers.append(Linear(inp, out))
         torch_layers.append(ReLU()) if activation.lower() == "relu" else None
-        # torch_layers.append(BatchNorm1d(out)) if batch_norm else None
-
+        if i < len(layers)-2:
+            torch_layers.append(Dropout(p=dropout))
     return Sequential(*torch_layers)
 
 
