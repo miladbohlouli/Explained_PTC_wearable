@@ -6,9 +6,9 @@ class simple_feature_selector(FeatureSelector):
         FeatureSelector.__init__(self, include_changing_parameters=include_changing_parameters)
 
         self.selected_features_list += ["mean.hr_5", "mean.WristT_5", "mean.AnkleT_5",
-                                       "mean.PantT_5", "mean.act_5"]
+                                       "mean.PantT_5"]
 
-        print(self.selected_features_list)
+        self.remove_redundant()
 
         self.label_title = 'therm_pref'
 
