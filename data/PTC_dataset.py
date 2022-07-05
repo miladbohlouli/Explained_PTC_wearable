@@ -1,9 +1,11 @@
 import numpy as np
+import torch
+
 from utils import *
 from Feature_selectors.interface import *
 from Feature_selectors.simple_feature_selector import simple_feature_selector
 from NAhandlers.interface import *
-from NAhandlers.dropping_method import dropping_handler
+from NAhandlers.dropping import dropping_handler
 from normalizers.interface import *
 from normalizers.guassian_normalizer import guassian_normalizer
 from torch.utils.data import Dataset
@@ -48,16 +50,12 @@ class PTC_dataset(Dataset):
     def pre_process_dataset(self):
         assert self.dataset is not None
         # subsampling the original data according to the provided sampler
-        if self.shuffle:
-            sampler = list(range(len(self.dataset)))
-            np.random.shuffle(sampler)
-            self.dataset = self.dataset.iloc[sampler, :]
 
         # Feature selections
         if self.train:
             self.feature_selector.fit(self.dataset)
         self.dataset, self.labels = self.feature_selector.select_features(self.dataset)
-        self.columns = self.dataset.columns
+        self.columns = self.feature_selector.selected_features_list
 
         # remap the categorical values
         self.convert_nominal_numerical()
@@ -68,7 +66,12 @@ class PTC_dataset(Dataset):
             self.na_handler.fit(self.dataset)
         self.dataset = self.na_handler.fix(self.dataset)
 
-        # normalize the data using the normalizer class
+        if self.shuffle:
+            sampler = list(range(len(self.dataset)))
+            np.random.shuffle(sampler)
+            self.dataset = self.dataset.iloc[sampler, :]
+
+        # Normalize the data using the normalizer class
         if self.normalizer is not None:
             if self.train:
                 self.normalizer.fit(self.dataset)
@@ -83,20 +86,12 @@ class PTC_dataset(Dataset):
     def __len__(self):
         return len(self.dataset)
 
-    def get_data(self):
-        """
-        For getting the whole data as whole and not batch-based
-        :return: The whole data as numpy arrays
-        """
-        return self.dataset, self.labels
-
     def convert_nominal_numerical(self):
         """
         Detect the nominal features in self.labels and self.data and convert them to numerical
         """
         object_columns = [column for column in self.dataset.columns if self.dataset[column].dtype == 'O']
         if len(object_columns) == 0: return
-        object_columns = object_columns
         dummies = []
         for column in [object_columns]:
             dummies.append(pd.get_dummies(self.dataset[column]))
@@ -108,6 +103,10 @@ class PTC_dataset(Dataset):
 
     def convert_labels_numerical(self):
         self.labels = self.labels.map({key: value for value, key in enumerate(sorted(self.labels.unique()))})
+
+    def get_tensor_data(self):
+        assert self.dataset is not None
+        return torch.from_numpy(self.dataset).float(), torch.from_numpy(self.labels)
 
     @staticmethod
     def cal_mean_std(dataset):
@@ -122,15 +121,7 @@ class PTC_dataset(Dataset):
 
 
 if __name__ == '__main__':
-    normalizer = guassian_normalizer()
-    na_handler = dropping_handler()
-    sfs = simple_feature_selector()
-    data = PTC_dataset(
-        path="PTC.csv",
-        normalizer=normalizer,
-        na_handler=na_handler,
-        feature_selector=sfs
-    )
+    pass
 
 
 
