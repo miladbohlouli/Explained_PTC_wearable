@@ -9,7 +9,7 @@ from data.PTC_dataset import PTC_dataset
 from Feature_selectors.interface import FeatureSelector
 from NAhandlers.interface import NAhandler
 from Feature_selectors.simple_feature_selector import simple_feature_selector
-from NAhandlers.dropping_method import dropping_handler
+from NAhandlers.dropping import dropping_handler
 from normalizers.guassian_normalizer import guassian_normalizer
 from normalizers.interface import Normalizer
 
