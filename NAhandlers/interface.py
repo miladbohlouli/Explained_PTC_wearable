@@ -1,6 +1,7 @@
 import pandas as pd
 
-class NAhandler:
+
+class NA_HANDLER_INTERFACE:
     def __init__(self):
         self.mean = None
         self.std = None

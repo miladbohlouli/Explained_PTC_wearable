@@ -1,8 +1,8 @@
 import pandas as pd
-from NAhandlers.interface import NAhandler
+from NAhandlers.interface import NA_HANDLER_INTERFACE
 
 
-class averaging_na_handler(NAhandler):
+class averaging_na_handler(NA_HANDLER_INTERFACE):
     def fit(self, dataset):
         self.mean, self.std = dataset.mean(), dataset.std()
 

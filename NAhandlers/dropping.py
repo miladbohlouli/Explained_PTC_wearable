@@ -1,10 +1,10 @@
 import numpy as np
 
-from NAhandlers.interface import NAhandler
+from NAhandlers.interface import NA_HANDLER_INTERFACE
 import pandas as pd
 
 
-class dropping_handler(NAhandler):
+class dropping_handler(NA_HANDLER_INTERFACE):
     def fit(self, dataset):
         pass
 

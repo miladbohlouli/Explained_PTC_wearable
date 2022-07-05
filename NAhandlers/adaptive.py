@@ -1,12 +1,12 @@
 import pandas as pd
-from NAhandlers.interface import NAhandler
+from NAhandlers.interface import NA_HANDLER_INTERFACE
 from sklearn.impute import SimpleImputer
 from sklearn.experimental import enable_iterative_imputer
 from sklearn.impute import IterativeImputer
 
-class adaptive(NAhandler):
+class adaptive(NA_HANDLER_INTERFACE):
     def __init__(self):
-        NAhandler.__init__(self)
+        NA_HANDLER_INTERFACE.__init__(self)
         self.imputer = IterativeImputer()
 
     def fit(self, dataset):
