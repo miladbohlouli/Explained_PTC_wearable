@@ -19,7 +19,7 @@ from Feature_selectors.threshold_feature_selector import threshold_feature_selec
 from Feature_selectors.all_features_selector import all_feature_selector
 from NAhandlers.averaging import averaging_na_handler
 from NAhandlers.dropping import dropping_handler
-from NAhandlers.interpolate import  interpolate
+from NAhandlers.adaptive import  adaptive
 from normalizers.guassian_normalizer import guassian_normalizer
 
 
@@ -124,8 +124,8 @@ def get_preprocessing_tools(
         na = averaging_na_handler()
     elif na_handler == "dropping":
         na = dropping_handler()
-    elif na_handler == "interpolate":
-        na = interpolate()
+    elif na_handler == "adaptive":
+        na = adaptive()
 
     if normlizer == "guassian_normalizer":
         nor = guassian_normalizer()
