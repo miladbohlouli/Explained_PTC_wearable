@@ -23,13 +23,7 @@ def train(
         data_dir = None,
         logging_dir = None,
         parameter_tuning = False,
-        feature_selector_type: str = None,
-        na_handler_type: str = None,
-        normalizer_type:str = None
     ):
-    assert feature_selector_type is not None
-    assert na_handler_type is not None
-    assert normalizer_type is not None
 
     # Setting the logging and the other tools for saving
     train_writer = SummaryWriter(os.path.join(os.path.join(logging_dir, "tensorboard"), "train"))
@@ -55,30 +49,31 @@ def train(
 
     for home_id in home_ids:
         house_eval_accuracies[home_id] = []
-        feature_selector, na_handler, normalizer = get_preprocessing_tools(
-            feature_selector_type,
-            na_handler_type,
-            normalizer_type,
-            config
-        )
+        feature_selector, na_handler, normalizer, resampler = get_preprocessing_tools(config)
+        logger.info("Processing the train dataset...")
         train_ds = mlp_dataset_individual(
             path=train_dataset_dir,
             shuffle=True,
             feature_selector=feature_selector,
             na_handler=na_handler,
             normalizer=normalizer,
+            resampler=resampler,
             home_id=home_id,
-            train=True
+            train=True,
+            logger=logger
         )
 
+        logger.info("Processing the test dataset...")
         test_ds = mlp_dataset_individual(
                 path=test_dataset_dir,
                 shuffle=True,
                 feature_selector=train_ds.feature_selector,
                 na_handler=train_ds.na_handler,
                 normalizer=train_ds.normalizer,
+                resampler=train_ds.resampler,
                 home_id=home_id,
-                train=False
+                train=False,
+                logger=logger
             )
 
         feature_size = train_ds.feature_selector.get_feature_size()
@@ -112,7 +107,6 @@ def train(
             train_loss_avr = 0
             train_acc_avr = 0
             train_balanced_acc_avr = 0
-            eval_balanced_acc_avr = 0
 
             for samples, labels in train_loader:
                 train_results = train_step(
@@ -138,7 +132,7 @@ def train(
 
             # evaluating the model
             model.eval()
-            eval_acc, eval_balanced_acc, eval_loss = evaluate_model(
+            eval_acc, eval_balanced_acc, eval_loss, kohen_kappa = evaluate_model(
                 loss_model=loss_model,
                 model=model,
                 test_ds=test_ds
@@ -147,15 +141,18 @@ def train(
             eval_writer.add_scalar(f"home_id: {home_id}/loss", eval_loss, global_step)
             eval_writer.add_scalar(f"home_id: {home_id}/accuracy", eval_acc, global_step)
             eval_writer.add_scalar(f"home_id: {home_id}/balanced accuracy", eval_balanced_acc, global_step)
+            eval_writer.add_scalar(f"home_id: {home_id}/kohen_kappa", kohen_kappa, global_step)
 
             logger.info(f"home_id ({home_id})\t"
-                        f"Epoch ({epoch+1:3} / {num_epochs})\t train_loss: {train_loss_avr / num_train_samples:.2f}\t"
+                        f"Epoch ({epoch+1:3} / {num_epochs})\t\t "
+                        f"train_loss: {train_loss_avr / num_train_samples:.2f}\t"
                         f"eval_loss: {eval_loss:.2f}\t\t"
-                        f"train_acc (balanced): {train_acc_avr / num_train_samples:.2f}\t\t"
-                        f"eval_acc (balanced): {eval_acc:.2f}\t")
+                        f"train_acc: {train_acc_avr / num_train_samples:.2f}\t\t"
+                        f"eval_acc: {eval_acc:.2f}\t\t"
+                        f"kohen_kappa: {kohen_kappa:.2f}\t")
 
-            if eval_balanced_acc_avr > best_eval_accuracy:
-                best_eval_accuracy = eval_balanced_acc_avr
+            if eval_acc > best_eval_accuracy:
+                best_eval_accuracy = eval_acc
                 validation_accuracy_not_improved_epochs = 0
 
             else:
@@ -179,12 +176,13 @@ if __name__ == '__main__':
     # model parameters
     config["layers"] = [128, 128, 3]
     config["activation"] = "Relu"
-    config["dropout"] = 0.2
+    config["dropout"] = 0.5
 
     # Data preprocessing parameters
-    feature_selector = "threshold_feature_selector"
-    na_handler = "adaptive"
-    normalizer = "guassian_normalizer"
+    config["feature_selector"] = "threshold_feature_selector"
+    config["na_handler"] = "adaptive"
+    config["normalizer"] = "guassian_normalizer"
+    config["resampler"] = "None"
 
     # Training parameters
     config["batch_size"] = 2
@@ -199,9 +197,6 @@ if __name__ == '__main__':
 
     train(
         config=config,
-        feature_selector_type=feature_selector,
-        na_handler_type=na_handler,
-        normalizer_type=normalizer,
         logging_dir=logging_dir,
         data_dir=data_dir
     )
