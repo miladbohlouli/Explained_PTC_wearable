@@ -1,8 +1,8 @@
 from Feature_selectors.interface import FeatureSelector
 import pandas as pd
 
-class simple_feature_selector(FeatureSelector):
-    def __init__(self, include_changing_parameters):
+class all_feature_selector(FeatureSelector):
+    def __init__(self, include_changing_parameters: bool = False):
         FeatureSelector.__init__(self, include_changing_parameters)
 
         self.selected_features_list += ['mean.Temperature_60', 'grad.Temperature_60', 'sd.Temperature_60',
@@ -23,6 +23,8 @@ class simple_feature_selector(FeatureSelector):
                                         'grad.PantT_60', 'sd.PantT_60', 'mean.act_5', 'grad.act_5', 'sd.act_5',
                                         'mean.act_15', 'grad.act_15', 'sd.act_15', 'mean.act_60', 'grad.act_60',
                                         'sd.act_60']
+
+        self.remove_redundant()
 
         self.label_title = 'therm_pref'
 
