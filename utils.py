@@ -10,6 +10,17 @@ from tqdm import tqdm
 import logging
 import pandas as pd
 import pickle as pk
+from scipy.special import softmax
+from sklearn.metrics import roc_auc_score
+from sklearn.preprocessing import OneHotEncoder
+from sklearn.metrics import cohen_kappa_score
+from Feature_selectors.simple_feature_selector import simple_feature_selector
+from Feature_selectors.threshold_feature_selector import threshold_feature_selector
+from Feature_selectors.all_features_selector import all_feature_selector
+from NAhandlers.averaging import averaging_na_handler
+from NAhandlers.dropping import dropping_handler
+from NAhandlers.interpolate import  interpolate
+from normalizers.guassian_normalizer import guassian_normalizer
 
 
 def train_test_split(path, train_division=0.8):
@@ -49,11 +60,14 @@ def get_available_home_ids(path):
 
 
 def evaluate_predictions(logits, labels):
+    probs = softmax(logits, axis=1)
+    binary_labels = np.zeros((len(labels), 3))
+    binary_labels[:, labels] = 1
     predicted_labels = np.argmax(logits, 1)
     accuracy = accuracy_score(labels, predicted_labels)
     balanced_accuracy = balanced_accuracy_score(labels, predicted_labels)
-    conf_matrix = confusion_matrix(labels, predicted_labels, labels=[0, 1, 2])
-    return accuracy, balanced_accuracy, conf_matrix
+    kohen_kappa = cohen_kappa_score(labels, predicted_labels)
+    return accuracy, balanced_accuracy, kohen_kappa
 
 
 def read_source_file(path):
@@ -62,3 +76,57 @@ def read_source_file(path):
 
 if __name__ == '__main__':
     train_test_split("data", train_division=0.8)
+
+
+def evaluate_model(loss_model, model, test_ds):
+    ds, labels = test_ds.get_tensor_data()
+    res = model(ds)
+    eval_loss = loss_model(res, labels)
+    eval_acc, eval_balanced_acc, eval_conf_matrix = evaluate_predictions(res.detach().numpy(), labels)
+    return eval_acc, eval_balanced_acc, eval_loss
+
+
+def train_step(
+        labels,
+        loss_model,
+        model,
+        optimizer,
+        samples
+):
+    res = model(samples.float())
+    train_loss = loss_model(res, labels)
+    optimizer.zero_grad()
+    train_loss.backward()
+    optimizer.step()
+
+    # Calculate the accuracy
+    train_acc, train_balanced_acc, _ = evaluate_predictions(res.detach().numpy(), labels)
+    return train_acc, train_balanced_acc, train_loss.detach().numpy()
+
+
+def get_preprocessing_tools(
+        feature_selector: str,
+        na_handler: str,
+        normlizer: str,
+        config
+    ):
+    fs = None
+    na = None
+    nor = None
+    if feature_selector == "threshold_feature_selector":
+        fs = threshold_feature_selector(threshold=config["threshold"])
+    elif feature_selector == "simple_feature_selector":
+        fs = simple_feature_selector()
+    elif feature_selector == "all_feature_selector":
+        fs = all_feature_selector()
+
+    if na_handler == "averaging":
+        na = averaging_na_handler()
+    elif na_handler == "dropping":
+        na = dropping_handler()
+    elif na_handler == "interpolate":
+        na = interpolate()
+
+    if normlizer == "guassian_normalizer":
+        nor = guassian_normalizer()
+    return fs, na, nor
