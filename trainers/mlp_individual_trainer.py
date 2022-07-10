@@ -3,10 +3,12 @@ from models.mlp import *
 from torch.utils.tensorboard import SummaryWriter
 from Feature_selectors.threshold_feature_selector import threshold_feature_selector
 from Feature_selectors.simple_feature_selector import simple_feature_selector
-from NAhandlers.adaptive import adaptive
+from NAhandlers.iterative_imputer import ITERATIVE_IMPUTER
 from normalizers.guassian_normalizer import guassian_normalizer
 from data.mlp_data_loader import mlp_dataset_individual
+from torch.utils.data import WeightedRandomSampler
 import numpy as np
+from torch import from_numpy
 import logging
 from torch.nn import CrossEntropyLoss
 from torch.optim import Adam
@@ -76,6 +78,7 @@ def train(
                 logger=logger
             )
 
+
         feature_size = train_ds.feature_selector.get_feature_size()
         model = build_mlp_model(
             layers=[feature_size] + config["layers"],
@@ -85,13 +88,20 @@ def train(
 
         logger.info(model)
 
-        loss_model = CrossEntropyLoss()
+        weights = from_numpy(1 / train_ds.label_counts).float()
+        if config["weighted_sampling"]:
+            weighted_sampler = WeightedRandomSampler(weights, len(weights))
+        else:
+            weighted_sampler = None
+
+        loss_model = CrossEntropyLoss(weight=weights)
         optimizer = Adam(model.parameters(), lr=config["lr"], weight_decay=config["weight_decay"])
         global_step = 0
 
         train_loader = DataLoader(
             dataset=train_ds,
             batch_size=config["batch_size"],
+            sampler=weighted_sampler
         )
 
         logger.info(f"Training the model for home {home_id} with datasize {len(train_ds)}")
@@ -148,7 +158,7 @@ def train(
                         f"train_loss: {train_loss_avr / num_train_samples:.2f}\t"
                         f"eval_loss: {eval_loss:.2f}\t\t"
                         f"train_acc: {train_acc_avr / num_train_samples:.2f}\t\t"
-                        f"eval_acc: {eval_acc:.2f}\t\t"
+                        f"eval_acc: {eval_balanced_acc:.2f}\t\t"
                         f"kohen_kappa: {kohen_kappa:.2f}\t")
 
             if eval_acc > best_eval_accuracy:
@@ -162,7 +172,8 @@ def train(
                 logger.info("Early stopping the training due to no change in validation accuracies")
                 break
 
-        house_eval_accuracies[home_id] = eval_acc
+        # Change this parameter based on the parameter you want the tuning to be done
+        house_eval_accuracies[home_id] = kohen_kappa
 
     if parameter_tuning:
         tune.report(accuracy=np.average(list(house_eval_accuracies.values())))
@@ -174,23 +185,24 @@ if __name__ == '__main__':
 
     config = dict()
     # model parameters
-    config["layers"] = [128, 128, 3]
+    config["layers"] = [32, 3]
     config["activation"] = "Relu"
     config["dropout"] = 0.5
 
     # Data preprocessing parameters
     config["feature_selector"] = "threshold_feature_selector"
-    config["na_handler"] = "adaptive"
+    config["na_handler"] = "iterative"
     config["normalizer"] = "guassian_normalizer"
     config["resampler"] = "None"
 
     # Training parameters
-    config["batch_size"] = 2
-    config["num_epochs"] = 30
+    config["batch_size"] = 16
+    config["num_epochs"] = 5
     config["weight_decay"] = 1e-4
     config["lr"] = 1e-4
     config["validation_not_improved"] = 10
-    config["threshold"] = 0.05
+    config["threshold"] = 0.4
+    config["weighted_sampling"] = None
 
     data_dir = os.path.abspath("../data")
     logging_dir = os.path.abspath("")

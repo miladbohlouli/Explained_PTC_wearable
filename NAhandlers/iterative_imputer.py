@@ -1,10 +1,9 @@
 import pandas as pd
 from NAhandlers.interface import NA_HANDLER_INTERFACE
-from sklearn.impute import SimpleImputer
-from sklearn.experimental import enable_iterative_imputer
 from sklearn.impute import IterativeImputer
 
-class adaptive(NA_HANDLER_INTERFACE):
+
+class ITERATIVE_IMPUTER(NA_HANDLER_INTERFACE):
     def __init__(self):
         NA_HANDLER_INTERFACE.__init__(self)
         self.imputer = IterativeImputer()

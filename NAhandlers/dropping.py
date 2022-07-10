@@ -4,7 +4,7 @@ from NAhandlers.interface import NA_HANDLER_INTERFACE
 import pandas as pd
 
 
-class dropping_handler(NA_HANDLER_INTERFACE):
+class DROPPING_IMPUTER(NA_HANDLER_INTERFACE):
     def fit(self, dataset):
         pass
 
